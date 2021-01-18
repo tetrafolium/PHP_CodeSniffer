@@ -1,0 +1,42 @@
+---
+inspecode:
+
+  global:
+
+  tools:
+
+    cpd:
+      thresholds: {num-issues: 999}
+
+    # fortify:
+    #   thresholds: {num-issues: 999}
+
+    fossology:
+      thresholds: {num-issues: 999}
+
+    grep:
+      thresholds: {num-issues: 999}
+
+    jscpd:
+      thresholds: {num-issues: 999}
+
+    misspell:
+      auto-fix: true
+      thresholds: {num-issues: 999}
+
+    phpcs:
+      auto-fix: true
+      thresholds: {num-issues: 999}
+
+    phpcsfixer:
+      auto-fix: true
+      thresholds: {num-issues: 999}
+
+    phpmd:
+      thresholds: {num-issues: 999}
+
+    # understand:
+    #   thresholds: {num-issues: 999}
+
+    unused:
+      thresholds: {num-issues: 999}
