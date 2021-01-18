@@ -6,40 +6,10 @@ inspecode:
   tools:
 
     cpd:
-      ignore:
+    - ignore:
         - "**/*UnitTest.php"
-      thresholds: {num-issues: 999}   # too many issues detected: 5135 > 1000
-
-    # fortify:
-    #   thresholds: {num-issues: 999}
-
-    fossology:
-      thresholds: {num-issues: 30}
-
-    grep:
-      thresholds: {num-issues: 53}
-
-    jscpd:
-      thresholds: {num-issues: 114}
-
-    misspell:
-      auto-fix: true
-      thresholds: {num-issues: 7}
-
-    phpcsfixer:
-      auto-fix: true
-      thresholds: {num-issues: 586}
-
-    phpcs:
-      auto-fix: true
-      thresholds: {num-issues: 0}   # cannot resolve dependencies
-
-    phpmd:
-      thresholds: {num-issues: 999} # Invalid field modifiers given, allowed modifiers are IS_PUBLIC, IS_PROTECTED, IS_PRIVATE and IS_STATIC.
-
-    # understand:
-    #   thresholds: {num-issues: 999}
-
-    unused:
-      options: [--single-occurrence, --all-likelihoods]
-      thresholds: {num-issues: 22}
+      thresholds: {num-issues: 999}   # too many issues detected: 3813 > 1000
+    - ignore:
+        - "tests/"
+        - "**/Tests/"
+      thresholds: {num-issues: 999}
