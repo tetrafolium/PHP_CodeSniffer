@@ -6,10 +6,12 @@ inspecode:
   tools:
 
     cpd:
-    - ignore:
-        - "**/*UnitTest.php"
-      thresholds: {num-issues: 999}   # too many issues detected: 3813 > 1000
+    - options:
+        --minimum-tokens: 200
+      thresholds: {num-issues: 999}
     - ignore:
         - "tests/"
         - "**/Tests/"
+      options:
+        --minimum-tokens: 200
       thresholds: {num-issues: 999}
