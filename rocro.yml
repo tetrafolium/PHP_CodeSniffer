@@ -7,8 +7,11 @@ inspecode:
 
     cpd:
       ignore:
-        - "**/*UnitTest.php"
-      thresholds: {num-issues: 999}   # too many issues detected: 5135 > 1000
+        - "tests/"
+        - "**/Tests/"
+      options:
+        --minimum-tokens: 250
+      thresholds: {num-issues: 835}
 
     # fortify:
     #   thresholds: {num-issues: 999}
@@ -42,4 +45,4 @@ inspecode:
 
     unused:
       options: [--single-occurrence, --all-likelihoods]
-      thresholds: {num-issues: 22}
+      thresholds: {num-issues: 9}
