@@ -6,12 +6,21 @@ inspecode:
   tools:
 
     cpd:
-    - options:
-        --minimum-tokens: 200
-      thresholds: {num-issues: 999}
     - ignore:
         - "tests/"
         - "**/Tests/"
       options:
         --minimum-tokens: 200
+      thresholds: {num-issues: 999}   # too many issues detected: 1449 > 1000
+    - ignore:
+        - "tests/"
+        - "**/Tests/"
+      options:
+        --minimum-tokens: 250
+      thresholds: {num-issues: 999}
+    - ignore:
+        - "tests/"
+        - "**/Tests/"
+      options:
+        --minimum-tokens: 300
       thresholds: {num-issues: 999}
