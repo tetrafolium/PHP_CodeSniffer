@@ -29,7 +29,6 @@ class CSSLintUnitTest extends AbstractSniffUnitTest
         }
 
         return false;
-
     }//end shouldSkipTest()
 
 
@@ -44,7 +43,6 @@ class CSSLintUnitTest extends AbstractSniffUnitTest
     public function getErrorList()
     {
         return [];
-
     }//end getErrorList()
 
 
@@ -63,8 +61,5 @@ class CSSLintUnitTest extends AbstractSniffUnitTest
             4 => 1,
             5 => 1,
         ];
-
     }//end getWarningList()
-
-
 }//end class

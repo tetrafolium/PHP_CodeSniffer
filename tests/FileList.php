@@ -69,7 +69,6 @@ class FileList
         $this->fileIterator = new \RegexIterator($flattened, $filter);
 
         return $this;
-
     }//end __construct()
 
 
@@ -87,8 +86,5 @@ class FileList
         }
 
         return $fileList;
-
     }//end getList()
-
-
 }//end class

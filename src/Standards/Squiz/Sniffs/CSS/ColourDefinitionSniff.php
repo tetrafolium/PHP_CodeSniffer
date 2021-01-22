@@ -31,7 +31,6 @@ class ColourDefinitionSniff implements Sniff
     public function register()
     {
         return [T_COLOUR];
-
     }//end register()
 
 
@@ -81,8 +80,5 @@ class ColourDefinitionSniff implements Sniff
                 $phpcsFile->fixer->replaceToken($stackPtr, $expected);
             }
         }
-
     }//end process()
-
-
 }//end class

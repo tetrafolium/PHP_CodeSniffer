@@ -40,7 +40,6 @@ class ScopeKeywordSpacingUnitTest extends AbstractSniffUnitTest
             71 => 1,
             98 => 1,
         ];
-
     }//end getErrorList()
 
 
@@ -55,8 +54,5 @@ class ScopeKeywordSpacingUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

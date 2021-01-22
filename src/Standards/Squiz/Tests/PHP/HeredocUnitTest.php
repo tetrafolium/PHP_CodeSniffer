@@ -29,7 +29,6 @@ class HeredocUnitTest extends AbstractSniffUnitTest
             2 => 1,
             8 => 1,
         ];
-
     }//end getErrorList()
 
 
@@ -44,8 +43,5 @@ class HeredocUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

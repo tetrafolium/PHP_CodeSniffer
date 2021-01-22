@@ -32,7 +32,6 @@ class BitwiseOrTest extends AbstractMethodUnitTest
         $opener = $this->getTargetToken($testMarker, [T_BITWISE_OR, T_TYPE_UNION]);
         $this->assertSame(T_BITWISE_OR, $tokens[$opener]['code']);
         $this->assertSame('T_BITWISE_OR', $tokens[$opener]['type']);
-
     }//end testBitwiseOr()
 
 
@@ -62,7 +61,6 @@ class BitwiseOrTest extends AbstractMethodUnitTest
             ['/* testBitwiseOrNonArrowFnFunctionCall */'],
             ['/* testLiveCoding */'],
         ];
-
     }//end dataBitwiseOr()
 
 
@@ -83,7 +81,6 @@ class BitwiseOrTest extends AbstractMethodUnitTest
         $opener = $this->getTargetToken($testMarker, [T_BITWISE_OR, T_TYPE_UNION]);
         $this->assertSame(T_TYPE_UNION, $tokens[$opener]['code']);
         $this->assertSame('T_TYPE_UNION', $tokens[$opener]['type']);
-
     }//end testTypeUnion()
 
 
@@ -115,8 +112,5 @@ class BitwiseOrTest extends AbstractMethodUnitTest
             ['/* testTypeUnionArrowReturnType */'],
             ['/* testTypeUnionNonArrowFunctionDeclaration */'],
         ];
-
     }//end dataTypeUnion()
-
-
 }//end class

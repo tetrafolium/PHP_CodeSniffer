@@ -34,7 +34,6 @@ class FunctionCallArgumentSpacingSniff implements Sniff
             T_CLOSE_CURLY_BRACKET,
             T_CLOSE_PARENTHESIS,
         ];
-
     }//end register()
 
 
@@ -83,7 +82,6 @@ class FunctionCallArgumentSpacingSniff implements Sniff
         }
 
         $this->checkSpacing($phpcsFile, $stackPtr, $openBracket);
-
     }//end process()
 
 
@@ -119,7 +117,7 @@ class FunctionCallArgumentSpacingSniff implements Sniff
                 // Skip closures.
                 $nextSeparator = $tokens[$nextSeparator]['scope_closer'];
                 continue;
-            } else if ($tokens[$nextSeparator]['code'] === T_OPEN_SHORT_ARRAY) {
+            } elseif ($tokens[$nextSeparator]['code'] === T_OPEN_SHORT_ARRAY) {
                 // Skips arrays using short notation.
                 $nextSeparator = $tokens[$nextSeparator]['bracket_closer'];
                 continue;
@@ -178,8 +176,5 @@ class FunctionCallArgumentSpacingSniff implements Sniff
                 }//end if
             }//end if
         }//end while
-
     }//end checkSpacing()
-
-
 }//end class

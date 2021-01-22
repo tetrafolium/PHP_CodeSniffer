@@ -49,7 +49,6 @@ class ObjectOperatorIndentUnitTest extends AbstractSniffUnitTest
             131 => 1,
             134 => 1,
         ];
-
     }//end getErrorList()
 
 
@@ -64,8 +63,5 @@ class ObjectOperatorIndentUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

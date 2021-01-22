@@ -44,7 +44,6 @@ class ScopeIndentUnitTest extends AbstractSniffUnitTest
             284 => 1,
             311 => 1,
         ];
-
     }//end getErrorList()
 
 
@@ -59,8 +58,5 @@ class ScopeIndentUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

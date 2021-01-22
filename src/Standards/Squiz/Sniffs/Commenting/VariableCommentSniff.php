@@ -66,7 +66,7 @@ class VariableCommentSniff extends AbstractVariableSniff
                 } else {
                     $foundVar = $tag;
                 }
-            } else if ($tokens[$tag]['content'] === '@see') {
+            } elseif ($tokens[$tag]['content'] === '@see') {
                 // Make sure the tag isn't empty.
                 $string = $phpcsFile->findNext(T_DOC_COMMENT_STRING, $tag, $commentEnd);
                 if ($string === false || $tokens[$string]['line'] !== $tokens[$tag]['line']) {
@@ -101,7 +101,7 @@ class VariableCommentSniff extends AbstractVariableSniff
             return;
         }
 
-         // Support both a var type and a description.
+        // Support both a var type and a description.
         preg_match('`^((?:\|?(?:array\([^\)]*\)|[\\\\a-z0-9\[\]]+))*)( .*)?`i', $tokens[($foundVar + 2)]['content'], $varParts);
         if (isset($varParts[1]) === false) {
             return;
@@ -137,7 +137,6 @@ class VariableCommentSniff extends AbstractVariableSniff
                 unset($replacement);
             }
         }
-
     }//end processMemberVar()
 
 
@@ -154,7 +153,6 @@ class VariableCommentSniff extends AbstractVariableSniff
      */
     protected function processVariable(File $phpcsFile, $stackPtr)
     {
-
     }//end processVariable()
 
 
@@ -171,8 +169,5 @@ class VariableCommentSniff extends AbstractVariableSniff
      */
     protected function processVariableInString(File $phpcsFile, $stackPtr)
     {
-
     }//end processVariableInString()
-
-
 }//end class

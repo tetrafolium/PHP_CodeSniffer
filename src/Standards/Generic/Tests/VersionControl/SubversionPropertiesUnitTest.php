@@ -24,7 +24,6 @@ class SubversionPropertiesUnitTest extends AbstractSniffUnitTest
     {
         // This sniff cannot be tested as no SVN version control directory is available.
         return true;
-
     }//end shouldSkipTest()
 
 
@@ -39,7 +38,6 @@ class SubversionPropertiesUnitTest extends AbstractSniffUnitTest
     public function getErrorList()
     {
         return [];
-
     }//end getErrorList()
 
 
@@ -54,8 +52,5 @@ class SubversionPropertiesUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

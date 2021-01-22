@@ -46,7 +46,6 @@ class ClassDeclarationSniff extends PEARClassDeclarationSniff
 
         $this->processOpen($phpcsFile, $stackPtr);
         $this->processClose($phpcsFile, $stackPtr);
-
     }//end process()
 
 
@@ -87,7 +86,7 @@ class ClassDeclarationSniff extends PEARClassDeclarationSniff
                         $phpcsFile->fixer->replaceToken(($stackPtr - 1), ' ');
                     }
                 }
-            } else if ($tokens[($stackPtr - 2)]['code'] === T_ABSTRACT
+            } elseif ($tokens[($stackPtr - 2)]['code'] === T_ABSTRACT
                 || $tokens[($stackPtr - 2)]['code'] === T_FINAL
             ) {
                 $prevContent = strtolower($tokens[($stackPtr - 2)]['content']);
@@ -138,7 +137,7 @@ class ClassDeclarationSniff extends PEARClassDeclarationSniff
             // Spacing of the keyword.
             if ($tokens[($stackPtr + 1)]['code'] !== T_WHITESPACE) {
                 $gap = 0;
-            } else if ($tokens[($stackPtr + 2)]['line'] !== $tokens[$stackPtr]['line']) {
+            } elseif ($tokens[($stackPtr + 2)]['line'] !== $tokens[$stackPtr]['line']) {
                 $gap = 'newline';
             } else {
                 $gap = $tokens[($stackPtr + 1)]['length'];
@@ -277,7 +276,7 @@ class ClassDeclarationSniff extends PEARClassDeclarationSniff
 
         if ($className !== null) {
             $start = $className;
-        } else if (isset($tokens[$stackPtr]['parenthesis_closer']) === true) {
+        } elseif (isset($tokens[$stackPtr]['parenthesis_closer']) === true) {
             $start = $tokens[$stackPtr]['parenthesis_closer'];
         } else {
             $start = $stackPtr;
@@ -338,7 +337,7 @@ class ClassDeclarationSniff extends PEARClassDeclarationSniff
                         $phpcsFile->fixer->addNewline($prev);
                         $phpcsFile->fixer->endChangeset();
                     }
-                } else if ($tokens[$prev]['line'] !== ($tokens[$className]['line'] - 1)) {
+                } elseif ($tokens[$prev]['line'] !== ($tokens[$className]['line'] - 1)) {
                     if ($keywordTokenType === T_EXTENDS) {
                         $error = 'Only one interface may be specified per line in a multi-line extends declaration';
                         $fix   = $phpcsFile->addFixableError($error, $className, 'ExtendsInterfaceSameLine');
@@ -386,7 +385,7 @@ class ClassDeclarationSniff extends PEARClassDeclarationSniff
                         }
                     }
                 }//end if
-            } else if ($tokens[($className - 1)]['code'] !== T_NS_SEPARATOR
+            } elseif ($tokens[($className - 1)]['code'] !== T_NS_SEPARATOR
                 || $tokens[($className - 2)]['code'] !== T_STRING
             ) {
                 // Not part of a longer fully qualified class name.
@@ -462,7 +461,6 @@ class ClassDeclarationSniff extends PEARClassDeclarationSniff
                 $nextComma = ($className + 1);
             }//end if
         }//end foreach
-
     }//end processOpen()
 
 
@@ -521,8 +519,5 @@ class ClassDeclarationSniff extends PEARClassDeclarationSniff
                 $phpcsFile->addError($error, $closeBrace, 'CloseBraceSameLine', $data);
             }
         }
-
     }//end processClose()
-
-
 }//end class

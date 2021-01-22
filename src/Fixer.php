@@ -128,7 +128,6 @@ class Fixer
                 $this->tokens[$index] = $token['content'];
             }
         }
-
     }//end startFile()
 
 
@@ -189,7 +188,7 @@ class Fixer
             if ($this->numFixes === 0 && $this->inConflict === false) {
                 // Nothing left to do.
                 break;
-            } else if (PHP_CODESNIFFER_VERBOSITY > 1) {
+            } elseif (PHP_CODESNIFFER_VERBOSITY > 1) {
                 echo "\t* fixed $this->numFixes violations, starting loop ".($this->loops + 1).' *'.PHP_EOL;
             }
         }//end while
@@ -210,7 +209,6 @@ class Fixer
         }
 
         return true;
-
     }//end fixFile()
 
 
@@ -284,7 +282,6 @@ class Fixer
         $diff = implode(PHP_EOL, $diff);
 
         return $diff;
-
     }//end generateDiff()
 
 
@@ -299,7 +296,6 @@ class Fixer
     public function getFixCount()
     {
         return $this->numFixes;
-
     }//end getFixCount()
 
 
@@ -312,7 +308,6 @@ class Fixer
     {
         $contents = implode($this->tokens);
         return $contents;
-
     }//end getContents()
 
 
@@ -335,7 +330,6 @@ class Fixer
         } else {
             return $this->tokens[$stackPtr];
         }
-
     }//end getTokenContent()
 
 
@@ -367,7 +361,6 @@ class Fixer
 
         $this->changeset   = [];
         $this->inChangeset = true;
-
     }//end beginChangeset()
 
 
@@ -406,7 +399,7 @@ class Fixer
                 echo "\t=> Changeset failed to apply".PHP_EOL;
                 ob_start();
             }
-        } else if (PHP_CODESNIFFER_VERBOSITY > 1) {
+        } elseif (PHP_CODESNIFFER_VERBOSITY > 1) {
             $fixes = count($this->changeset);
             @ob_end_clean();
             echo "\t=> Changeset ended: $fixes changes applied".PHP_EOL;
@@ -414,7 +407,6 @@ class Fixer
         }
 
         $this->changeset = [];
-
     }//end endChangeset()
 
 
@@ -451,7 +443,6 @@ class Fixer
 
             $this->changeset = [];
         }//end if
-
     }//end rollbackChangeset()
 
 
@@ -584,7 +575,6 @@ class Fixer
         }
 
         return true;
-
     }//end replaceToken()
 
 
@@ -642,7 +632,6 @@ class Fixer
         }
 
         return true;
-
     }//end revertToken()
 
 
@@ -667,7 +656,6 @@ class Fixer
         }
 
         return $this->replaceToken($stackPtr, $newContent);
-
     }//end substrToken()
 
 
@@ -682,7 +670,6 @@ class Fixer
     {
         $current = $this->getTokenContent($stackPtr);
         return $this->replaceToken($stackPtr, $current.$this->currentFile->eolChar);
-
     }//end addNewline()
 
 
@@ -697,7 +684,6 @@ class Fixer
     {
         $current = $this->getTokenContent($stackPtr);
         return $this->replaceToken($stackPtr, $this->currentFile->eolChar.$current);
-
     }//end addNewlineBefore()
 
 
@@ -713,7 +699,6 @@ class Fixer
     {
         $current = $this->getTokenContent($stackPtr);
         return $this->replaceToken($stackPtr, $current.$content);
-
     }//end addContent()
 
 
@@ -729,7 +714,6 @@ class Fixer
     {
         $current = $this->getTokenContent($stackPtr);
         return $this->replaceToken($stackPtr, $content.$current);
-
     }//end addContentBefore()
 
 
@@ -791,8 +775,5 @@ class Fixer
         if ($useChangeset === true) {
             $this->endChangeset();
         }
-
     }//end changeCodeBlockIndent()
-
-
 }//end class

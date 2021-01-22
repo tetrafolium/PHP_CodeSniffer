@@ -29,10 +29,8 @@ class LowercasePHPFunctionsSniff implements Sniff
      */
     public function __construct()
     {
-
         $allFunctions           = get_defined_functions();
         $this->builtInFunctions = array_flip($allFunctions['internal']);
-
     }//end __construct()
 
 
@@ -44,7 +42,6 @@ class LowercasePHPFunctionsSniff implements Sniff
     public function register()
     {
         return [T_STRING];
-
     }//end register()
 
 
@@ -155,8 +152,5 @@ class LowercasePHPFunctionsSniff implements Sniff
         if ($fix === true) {
             $phpcsFile->fixer->replaceToken($stackPtr, $contentLc);
         }
-
     }//end process()
-
-
 }//end class

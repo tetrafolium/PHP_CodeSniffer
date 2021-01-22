@@ -42,7 +42,6 @@ class OpeningFunctionBraceKernighanRitchieSniff implements Sniff
             T_FUNCTION,
             T_CLOSURE,
         ];
-
     }//end register()
 
 
@@ -159,7 +158,7 @@ class OpeningFunctionBraceKernighanRitchieSniff implements Sniff
 
         if ($tokens[($openingBrace - 1)]['code'] !== T_WHITESPACE) {
             $length = 0;
-        } else if ($spacing === "\t") {
+        } elseif ($spacing === "\t") {
             $length = '\t';
         } else {
             $length = strlen($spacing);
@@ -177,8 +176,5 @@ class OpeningFunctionBraceKernighanRitchieSniff implements Sniff
                 }
             }
         }
-
     }//end process()
-
-
 }//end class

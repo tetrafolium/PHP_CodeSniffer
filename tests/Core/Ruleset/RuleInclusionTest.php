@@ -51,7 +51,6 @@ class RuleInclusionTest extends TestCase
             // by relative location.
             $this->markTestSkipped('Test cannot run from a PEAR install');
         }
-
     }//end setUp()
 
 
@@ -90,7 +89,6 @@ class RuleInclusionTest extends TestCase
 
         $config        = new Config(["--standard=$standard"]);
         self::$ruleset = new Ruleset($config);
-
     }//end setUpBeforeClass()
 
 
@@ -102,7 +100,6 @@ class RuleInclusionTest extends TestCase
     public function tearDown()
     {
         file_put_contents(self::$standard, self::$contents);
-
     }//end tearDown()
 
 
@@ -115,7 +112,6 @@ class RuleInclusionTest extends TestCase
     {
         $this->assertObjectHasAttribute('sniffCodes', self::$ruleset);
         $this->assertCount(14, self::$ruleset->sniffCodes);
-
     }//end testHasSniffCodes()
 
 
@@ -133,7 +129,6 @@ class RuleInclusionTest extends TestCase
     {
         $this->assertArrayHasKey($key, self::$ruleset->sniffCodes);
         $this->assertSame($value, self::$ruleset->sniffCodes[$key]);
-
     }//end testRegisteredSniffCodes()
 
 
@@ -204,7 +199,6 @@ class RuleInclusionTest extends TestCase
                 'PHP_CodeSniffer\Standards\Generic\Sniffs\Metrics\NestingLevelSniff',
             ],
         ];
-
     }//end dataRegisteredSniffCodes()
 
 
@@ -228,7 +222,6 @@ class RuleInclusionTest extends TestCase
 
         $actualValue = self::$ruleset->sniffs[$sniffClass]->$propertyName;
         $this->assertSame($expectedValue, $actualValue);
-
     }//end testSettingProperties()
 
 
@@ -290,8 +283,5 @@ class RuleInclusionTest extends TestCase
                 10,
             ],
         ];
-
     }//end dataSettingProperties()
-
-
 }//end class

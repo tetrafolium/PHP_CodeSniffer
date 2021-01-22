@@ -33,7 +33,6 @@ class LowercaseClassKeywordsSniff implements Sniff
         $targets[] = T_CONST;
 
         return $targets;
-
     }//end register()
 
 
@@ -65,8 +64,5 @@ class LowercaseClassKeywordsSniff implements Sniff
                 $phpcsFile->fixer->replaceToken($stackPtr, $contentLc);
             }
         }
-
     }//end process()
-
-
 }//end class

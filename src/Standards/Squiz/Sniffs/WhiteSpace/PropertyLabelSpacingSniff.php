@@ -34,7 +34,6 @@ class PropertyLabelSpacingSniff implements Sniff
             T_PROPERTY,
             T_LABEL,
         ];
-
     }//end register()
 
 
@@ -72,8 +71,5 @@ class PropertyLabelSpacingSniff implements Sniff
                 }
             }
         }
-
     }//end process()
-
-
 }//end class

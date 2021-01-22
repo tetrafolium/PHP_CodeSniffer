@@ -39,7 +39,6 @@ class IndentationSniff implements Sniff
     public function register()
     {
         return [T_OPEN_TAG];
-
     }//end register()
 
 
@@ -125,7 +124,7 @@ class IndentationSniff implements Sniff
                         $phpcsFile->fixer->replaceToken($i, '');
                     }
                 }
-            } else if ($foundIndent !== $expectedIndent) {
+            } elseif ($foundIndent !== $expectedIndent) {
                 $error = 'Line indented incorrectly; expected %s spaces, found %s';
                 $data  = [
                     $expectedIndent,
@@ -143,8 +142,5 @@ class IndentationSniff implements Sniff
                 }
             }//end if
         }//end for
-
     }//end process()
-
-
 }//end class

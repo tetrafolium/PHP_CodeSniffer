@@ -38,7 +38,6 @@ class IncrementDecrementUsageUnitTest extends AbstractSniffUnitTest
             41 => 1,
             42 => 1,
         ];
-
     }//end getErrorList()
 
 
@@ -53,8 +52,5 @@ class IncrementDecrementUsageUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

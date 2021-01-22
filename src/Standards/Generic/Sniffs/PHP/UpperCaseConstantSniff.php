@@ -28,7 +28,6 @@ class UpperCaseConstantSniff implements Sniff
             T_FALSE,
             T_NULL,
         ];
-
     }//end register()
 
 
@@ -66,8 +65,5 @@ class UpperCaseConstantSniff implements Sniff
         } else {
             $phpcsFile->recordMetric($stackPtr, 'PHP constant case', 'upper');
         }
-
     }//end process()
-
-
 }//end class

@@ -45,7 +45,6 @@ class MultiLineConditionSniff implements Sniff
             T_IF,
             T_ELSEIF,
         ];
-
     }//end register()
 
 
@@ -242,9 +241,9 @@ class MultiLineConditionSniff implements Sniff
 
         if ($tokens[$openBrace]['line'] > $tokens[$closeBracket]['line']) {
             $length = -1;
-        } else if ($openBrace === ($closeBracket + 1)) {
+        } elseif ($openBrace === ($closeBracket + 1)) {
             $length = 0;
-        } else if ($openBrace === ($closeBracket + 2)
+        } elseif ($openBrace === ($closeBracket + 2)
             && $tokens[($closeBracket + 1)]['code'] === T_WHITESPACE
         ) {
             $length = $tokens[($closeBracket + 1)]['length'];
@@ -276,8 +275,5 @@ class MultiLineConditionSniff implements Sniff
                 $phpcsFile->fixer->replaceToken(($closeBracket + 1), ' ');
             }
         }
-
     }//end process()
-
-
 }//end class

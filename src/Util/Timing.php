@@ -34,9 +34,7 @@ class Timing
      */
     public static function startTiming()
     {
-
         self::$startTime = microtime(true);
-
     }//end startTiming()
 
 
@@ -69,7 +67,7 @@ class Timing
             if ($secs !== 0) {
                 $time .= ", $secs secs";
             }
-        } else if ($time > 1000) {
+        } elseif ($time > 1000) {
             $time = round(($time / 1000), 2).' secs';
         } else {
             $time = round($time).'ms';
@@ -79,8 +77,5 @@ class Timing
         echo "Time: $time; Memory: $mem".PHP_EOL.PHP_EOL;
 
         self::$printed = true;
-
     }//end printRunTime()
-
-
 }//end class

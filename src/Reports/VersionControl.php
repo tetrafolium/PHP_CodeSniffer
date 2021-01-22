@@ -127,7 +127,6 @@ abstract class VersionControl implements Report
         }
 
         return true;
-
     }//end generateFileReport()
 
 
@@ -349,7 +348,6 @@ abstract class VersionControl implements Report
         if ($toScreen === true && $interactive === false) {
             Timing::printRunTime();
         }
-
     }//end generate()
 
 
@@ -371,6 +369,4 @@ abstract class VersionControl implements Report
      * @return array
      */
     abstract protected function getBlameContent($filename);
-
-
 }//end class

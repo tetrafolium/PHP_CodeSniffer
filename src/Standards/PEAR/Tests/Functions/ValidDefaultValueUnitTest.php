@@ -36,7 +36,6 @@ class ValidDefaultValueUnitTest extends AbstractSniffUnitTest
             99  => 1,
             101 => 1,
         ];
-
     }//end getErrorList()
 
 
@@ -51,8 +50,5 @@ class ValidDefaultValueUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

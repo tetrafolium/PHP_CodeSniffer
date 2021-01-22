@@ -44,7 +44,6 @@ class ArrayIndentUnitTest extends AbstractSniffUnitTest
             87 => 1,
             88 => 1,
         ];
-
     }//end getErrorList()
 
 
@@ -59,8 +58,5 @@ class ArrayIndentUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

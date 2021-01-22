@@ -31,7 +31,6 @@ class AssignThisSniff implements Sniff
     public function register()
     {
         return [T_THIS];
-
     }//end register()
 
 
@@ -74,8 +73,5 @@ class AssignThisSniff implements Sniff
             $error = 'Keyword "this" can only be assigned to a variable called "self" or "_self"';
             $phpcsFile->addError($error, $prev, 'NotSelf');
         }
-
     }//end process()
-
-
 }//end class

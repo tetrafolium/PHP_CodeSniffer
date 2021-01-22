@@ -26,7 +26,6 @@ class GlobalFunctionUnitTest extends AbstractSniffUnitTest
     public function getErrorList()
     {
         return [];
-
     }//end getErrorList()
 
 
@@ -41,8 +40,5 @@ class GlobalFunctionUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [2 => 1];
-
     }//end getWarningList()
-
-
 }//end class

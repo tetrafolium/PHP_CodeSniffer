@@ -62,7 +62,6 @@ class ValidVariableNameSniff extends AbstractVariableSniff
             $phpcsFile->addError($error, $stackPtr, 'PublicUnderscore', $data);
             return;
         }
-
     }//end processMemberVar()
 
 
@@ -79,7 +78,6 @@ class ValidVariableNameSniff extends AbstractVariableSniff
         /*
             We don't care about normal variables.
         */
-
     }//end processVariable()
 
 
@@ -96,8 +94,5 @@ class ValidVariableNameSniff extends AbstractVariableSniff
         /*
             We don't care about normal variables.
         */
-
     }//end processVariableInString()
-
-
 }//end class

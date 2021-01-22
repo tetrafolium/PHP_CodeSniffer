@@ -37,7 +37,6 @@ class InlineHTMLSniff implements Sniff
     public function register()
     {
         return [T_INLINE_HTML];
-
     }//end register()
 
 
@@ -72,8 +71,5 @@ class InlineHTMLSniff implements Sniff
         $phpcsFile->addError($error, $stackPtr, 'Found');
 
         return $phpcsFile->numTokens;
-
     }//end process()
-
-
 }//end class

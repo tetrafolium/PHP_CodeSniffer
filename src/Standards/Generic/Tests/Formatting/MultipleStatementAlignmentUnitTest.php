@@ -26,7 +26,6 @@ class MultipleStatementAlignmentUnitTest extends AbstractSniffUnitTest
     public function getErrorList()
     {
         return [];
-
     }//end getErrorList()
 
 
@@ -156,8 +155,5 @@ class MultipleStatementAlignmentUnitTest extends AbstractSniffUnitTest
             return [];
             break;
         }//end switch
-
     }//end getWarningList()
-
-
 }//end class

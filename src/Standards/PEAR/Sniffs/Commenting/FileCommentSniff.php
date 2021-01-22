@@ -77,7 +77,6 @@ class FileCommentSniff implements Sniff
     public function register()
     {
         return [T_OPEN_TAG];
-
     }//end register()
 
 
@@ -123,12 +122,12 @@ class FileCommentSniff implements Sniff
         if ($tokens[$commentStart]['code'] === T_CLOSE_TAG) {
             // We are only interested if this is the first open tag.
             return ($phpcsFile->numTokens + 1);
-        } else if ($tokens[$commentStart]['code'] === T_COMMENT) {
+        } elseif ($tokens[$commentStart]['code'] === T_COMMENT) {
             $error = 'You must use "/**" style comments for a file comment';
             $phpcsFile->addError($error, $errorToken, 'WrongStyle');
             $phpcsFile->recordMetric($stackPtr, 'File has doc comment', 'yes');
             return ($phpcsFile->numTokens + 1);
-        } else if ($commentStart === false
+        } elseif ($commentStart === false
             || $tokens[$commentStart]['code'] !== T_DOC_COMMENT_OPEN_TAG
         ) {
             $phpcsFile->addError('Missing file doc comment', $errorToken, 'Missing');
@@ -174,7 +173,7 @@ class FileCommentSniff implements Sniff
         for ($i = ($commentStart + 1); $i < $commentEnd; $i++) {
             if ($tokens[$i]['code'] === T_DOC_COMMENT_TAG) {
                 break;
-            } else if ($tokens[$i]['code'] === T_DOC_COMMENT_STRING
+            } elseif ($tokens[$i]['code'] === T_DOC_COMMENT_STRING
                 && strstr(strtolower($tokens[$i]['content']), 'php version') !== false
             ) {
                 $found = true;
@@ -192,7 +191,6 @@ class FileCommentSniff implements Sniff
 
         // Ignore the rest of the file.
         return ($phpcsFile->numTokens + 1);
-
     }//end process()
 
 
@@ -291,7 +289,6 @@ class FileCommentSniff implements Sniff
                 $pos++;
             }
         }//end foreach
-
     }//end processTags()
 
 
@@ -333,7 +330,6 @@ class FileCommentSniff implements Sniff
                 $phpcsFile->addError($error, $tag, 'InvalidCategory', $data);
             }
         }//end foreach
-
     }//end processCategory()
 
 
@@ -386,7 +382,6 @@ class FileCommentSniff implements Sniff
                 $phpcsFile->addError($error, $tag, 'InvalidPackage', $data);
             }//end if
         }//end foreach
-
     }//end processPackage()
 
 
@@ -430,7 +425,6 @@ class FileCommentSniff implements Sniff
             ];
             $phpcsFile->addError($error, $tag, 'InvalidSubpackage', $data);
         }//end foreach
-
     }//end processSubpackage()
 
 
@@ -460,7 +454,6 @@ class FileCommentSniff implements Sniff
                 $phpcsFile->addError($error, $tag, 'InvalidAuthors');
             }
         }
-
     }//end processAuthor()
 
 
@@ -501,7 +494,6 @@ class FileCommentSniff implements Sniff
                 $phpcsFile->addError($error, $tag, 'IncompleteCopyright');
             }
         }//end foreach
-
     }//end processCopyright()
 
 
@@ -530,7 +522,6 @@ class FileCommentSniff implements Sniff
                 $phpcsFile->addError($error, $tag, 'IncompleteLicense');
             }
         }
-
     }//end processLicense()
 
 
@@ -562,8 +553,5 @@ class FileCommentSniff implements Sniff
                 $phpcsFile->addWarning($error, $tag, 'InvalidVersion', $data);
             }
         }
-
     }//end processVersion()
-
-
 }//end class

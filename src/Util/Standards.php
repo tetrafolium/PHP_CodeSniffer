@@ -45,7 +45,6 @@ class Standards
         }
 
         return $resolvedInstalledPaths;
-
     }//end getInstalledStandardPaths()
 
 
@@ -143,7 +142,6 @@ class Standards
         }//end foreach
 
         return $installedStandards;
-
     }//end getInstalledStandardDetails()
 
 
@@ -209,7 +207,6 @@ class Standards
         }//end foreach
 
         return $installedStandards;
-
     }//end getInstalledStandards()
 
 
@@ -256,7 +253,6 @@ class Standards
         }//end if
 
         return false;
-
     }//end isInstalledStandard()
 
 
@@ -292,7 +288,7 @@ class Standards
 
             if ($path !== false && is_file($path) === true) {
                 return $path;
-            } else if (Common::isPharFile($standardPath) === true) {
+            } elseif (Common::isPharFile($standardPath) === true) {
                 $path = Common::realpath($standardPath);
                 if ($path !== false) {
                     return $path;
@@ -301,7 +297,6 @@ class Standards
         }//end foreach
 
         return null;
-
     }//end getInstalledStandardPath()
 
 
@@ -327,8 +322,5 @@ class Standards
                 echo 'The installed coding standards are '.$standardList.PHP_EOL;
             }
         }
-
     }//end printInstalledStandards()
-
-
 }//end class

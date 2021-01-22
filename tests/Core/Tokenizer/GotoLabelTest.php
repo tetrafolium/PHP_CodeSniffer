@@ -34,7 +34,6 @@ class GotoLabelTest extends AbstractMethodUnitTest
 
         $this->assertInternalType('int', $label);
         $this->assertSame($testContent, $tokens[$label]['content']);
-
     }//end testGotoStatement()
 
 
@@ -57,7 +56,6 @@ class GotoLabelTest extends AbstractMethodUnitTest
                 'end',
             ],
         ];
-
     }//end dataGotoStatement()
 
 
@@ -80,7 +78,6 @@ class GotoLabelTest extends AbstractMethodUnitTest
 
         $this->assertInternalType('int', $label);
         $this->assertSame($testContent, $tokens[$label]['content']);
-
     }//end testGotoDeclaration()
 
 
@@ -103,7 +100,6 @@ class GotoLabelTest extends AbstractMethodUnitTest
                 'end:',
             ],
         ];
-
     }//end dataGotoDeclaration()
 
 
@@ -125,7 +121,6 @@ class GotoLabelTest extends AbstractMethodUnitTest
 
         $this->assertSame(T_STRING, $tokens[$target]['code']);
         $this->assertSame('T_STRING', $tokens[$target]['type']);
-
     }//end testNotAGotoDeclaration()
 
 
@@ -164,8 +159,5 @@ class GotoLabelTest extends AbstractMethodUnitTest
                 'CONST_B',
             ],
         ];
-
     }//end dataNotAGotoDeclaration()
-
-
 }//end class

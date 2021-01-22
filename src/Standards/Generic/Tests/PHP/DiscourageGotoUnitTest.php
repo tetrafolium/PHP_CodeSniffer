@@ -26,7 +26,6 @@ class DiscourageGotoUnitTest extends AbstractSniffUnitTest
     public function getErrorList()
     {
         return [];
-
     }//end getErrorList()
 
 
@@ -46,8 +45,5 @@ class DiscourageGotoUnitTest extends AbstractSniffUnitTest
             11 => 1,
             16 => 1,
         ];
-
     }//end getWarningList()
-
-
 }//end class

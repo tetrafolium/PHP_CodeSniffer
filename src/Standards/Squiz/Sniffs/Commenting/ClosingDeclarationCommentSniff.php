@@ -28,7 +28,6 @@ class ClosingDeclarationCommentSniff implements Sniff
             T_CLASS,
             T_INTERFACE,
         ];
-
     }//end register()
 
 
@@ -67,7 +66,7 @@ class ClosingDeclarationCommentSniff implements Sniff
 
             $decName = $phpcsFile->getDeclarationName($stackPtr);
             $comment = '//end '.$decName.'()';
-        } else if ($tokens[$stackPtr]['code'] === T_CLASS) {
+        } elseif ($tokens[$stackPtr]['code'] === T_CLASS) {
             $comment = '//end class';
         } else {
             $comment = '//end interface';
@@ -122,8 +121,5 @@ class ClosingDeclarationCommentSniff implements Sniff
 
             return;
         }
-
     }//end process()
-
-
 }//end class

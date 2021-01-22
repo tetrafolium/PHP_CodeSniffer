@@ -65,7 +65,6 @@ class SpaceAfterCastUnitTest extends AbstractSniffUnitTest
             88 => 1,
             93 => 1,
         ];
-
     }//end getErrorList()
 
 
@@ -80,8 +79,5 @@ class SpaceAfterCastUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

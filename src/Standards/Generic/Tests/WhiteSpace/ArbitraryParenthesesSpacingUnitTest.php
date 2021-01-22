@@ -60,7 +60,6 @@ class ArbitraryParenthesesSpacingUnitTest extends AbstractSniffUnitTest
             164 => 1,
             165 => 1,
         ];
-
     }//end getErrorList()
 
 
@@ -78,8 +77,5 @@ class ArbitraryParenthesesSpacingUnitTest extends AbstractSniffUnitTest
             55 => 1,
             56 => 1,
         ];
-
     }//end getWarningList()
-
-
 }//end class

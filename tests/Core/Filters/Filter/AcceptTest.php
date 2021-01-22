@@ -46,7 +46,6 @@ class AcceptTest extends TestCase
             // by relative location.
             $this->markTestSkipped('Test cannot run from a PEAR install');
         }
-
     }//end setUp()
 
 
@@ -65,7 +64,6 @@ class AcceptTest extends TestCase
         $standard      = __DIR__.'/'.basename(__FILE__, '.php').'.xml';
         self::$config  = new Config(["--standard=$standard", "--ignore=*/somethingelse/*"]);
         self::$ruleset = new Ruleset(self::$config);
-
     }//end setUpBeforeClass()
 
 
@@ -91,7 +89,6 @@ class AcceptTest extends TestCase
         }
 
         $this->assertEquals($expectedOutput, $files);
-
     }//end testExcludePatterns()
 
 
@@ -147,8 +144,5 @@ class AcceptTest extends TestCase
         }
 
         return $testCases;
-
     }//end dataExcludePatterns()
-
-
 }//end class

@@ -45,7 +45,6 @@ class UnconditionalIfStatementSniff implements Sniff
             T_IF,
             T_ELSEIF,
         ];
-
     }//end register()
 
 
@@ -77,7 +76,7 @@ class UnconditionalIfStatementSniff implements Sniff
 
             if (isset(Tokens::$emptyTokens[$code]) === true) {
                 continue;
-            } else if ($code !== T_TRUE && $code !== T_FALSE) {
+            } elseif ($code !== T_TRUE && $code !== T_FALSE) {
                 $goodCondition = true;
             }
         }
@@ -86,8 +85,5 @@ class UnconditionalIfStatementSniff implements Sniff
             $error = 'Avoid IF statements that are always true or false';
             $phpcsFile->addWarning($error, $stackPtr, 'Found');
         }
-
     }//end process()
-
-
 }//end class

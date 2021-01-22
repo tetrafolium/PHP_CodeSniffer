@@ -40,7 +40,6 @@ class JoinStringsUnitTest extends AbstractSniffUnitTest
             12 => 2,
             15 => 1,
         ];
-
     }//end getErrorList()
 
 
@@ -55,8 +54,5 @@ class JoinStringsUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

@@ -38,7 +38,6 @@ class ColonSpacingUnitTest extends AbstractSniffUnitTest
             32 => 1,
             41 => 1,
         ];
-
     }//end getErrorList()
 
 
@@ -53,8 +52,5 @@ class ColonSpacingUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

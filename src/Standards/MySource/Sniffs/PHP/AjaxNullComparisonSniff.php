@@ -27,7 +27,6 @@ class AjaxNullComparisonSniff implements Sniff
     public function register()
     {
         return [T_FUNCTION];
-
     }//end register()
 
 
@@ -96,8 +95,5 @@ class AjaxNullComparisonSniff implements Sniff
             $error = 'Values submitted via Ajax requests should not be compared directly to NULL; use empty() instead';
             $phpcsFile->addWarning($error, $nullValue, 'Found');
         }//end for
-
     }//end process()
-
-
 }//end class

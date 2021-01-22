@@ -143,7 +143,6 @@ class FunctionCommentUnitTest extends AbstractSniffUnitTest
         }
 
         return $errors;
-
     }//end getErrorList()
 
 
@@ -158,8 +157,5 @@ class FunctionCommentUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

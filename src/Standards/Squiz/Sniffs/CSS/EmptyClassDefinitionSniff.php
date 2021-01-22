@@ -32,7 +32,6 @@ class EmptyClassDefinitionSniff implements Sniff
     public function register()
     {
         return [T_OPEN_CURLY_BRACKET];
-
     }//end register()
 
 
@@ -54,8 +53,5 @@ class EmptyClassDefinitionSniff implements Sniff
             $error = 'Class definition is empty';
             $phpcsFile->addError($error, $stackPtr, 'Found');
         }
-
     }//end process()
-
-
 }//end class

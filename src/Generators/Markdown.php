@@ -38,7 +38,6 @@ class Markdown extends Generator
         ob_end_clean();
 
         echo $content;
-
     }//end generate()
 
 
@@ -52,7 +51,6 @@ class Markdown extends Generator
         $standard = $this->ruleset->name;
 
         echo "# $standard Coding Standard".PHP_EOL;
-
     }//end printHeader()
 
 
@@ -68,7 +66,6 @@ class Markdown extends Generator
         error_reporting(0);
         echo 'Documentation generated on '.date('r');
         echo ' by [PHP_CodeSniffer '.Config::VERSION.'](https://github.com/squizlabs/PHP_CodeSniffer)'.PHP_EOL;
-
     }//end printFooter()
 
 
@@ -89,11 +86,10 @@ class Markdown extends Generator
         foreach ($doc->childNodes as $node) {
             if ($node->nodeName === 'standard') {
                 $this->printTextBlock($node);
-            } else if ($node->nodeName === 'code_comparison') {
+            } elseif ($node->nodeName === 'code_comparison') {
                 $this->printCodeComparisonBlock($node);
             }
         }
-
     }//end processSniff()
 
 
@@ -113,7 +109,6 @@ class Markdown extends Generator
         $content = str_replace('&lt;/em&gt;', '*', $content);
 
         echo $content.PHP_EOL;
-
     }//end printTextBlock()
 
 
@@ -154,8 +149,5 @@ class Markdown extends Generator
         echo '</td>'.PHP_EOL;
         echo '   </tr>'.PHP_EOL;
         echo '  </table>'.PHP_EOL;
-
     }//end printCodeComparisonBlock()
-
-
 }//end class

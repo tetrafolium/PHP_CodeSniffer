@@ -37,7 +37,6 @@ class CamelCapsMethodNameUnitTest extends AbstractSniffUnitTest
             26 => 1,
             77 => 1,
         ];
-
     }//end getErrorList()
 
 
@@ -52,8 +51,5 @@ class CamelCapsMethodNameUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

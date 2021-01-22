@@ -26,7 +26,6 @@ class EvalUnitTest extends AbstractSniffUnitTest
     public function getErrorList()
     {
         return [];
-
     }//end getErrorList()
 
 
@@ -44,8 +43,5 @@ class EvalUnitTest extends AbstractSniffUnitTest
             2 => 1,
             4 => 1,
         ];
-
     }//end getWarningList()
-
-
 }//end class

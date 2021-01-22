@@ -31,7 +31,6 @@ class DisallowSelfActionsUnitTest extends AbstractSniffUnitTest
             28 => 1,
             29 => 1,
         ];
-
     }//end getErrorList()
 
 
@@ -46,8 +45,5 @@ class DisallowSelfActionsUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

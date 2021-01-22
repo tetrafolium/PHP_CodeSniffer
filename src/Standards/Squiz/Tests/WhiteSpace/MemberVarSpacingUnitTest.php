@@ -58,7 +58,6 @@ class MemberVarSpacingUnitTest extends AbstractSniffUnitTest
             292 => 1,
             333 => 1,
         ];
-
     }//end getErrorList()
 
 
@@ -73,8 +72,5 @@ class MemberVarSpacingUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

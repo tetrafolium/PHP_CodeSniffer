@@ -26,7 +26,6 @@ class DuplicateClassNameUnitTest extends AbstractSniffUnitTest
     public function getErrorList()
     {
         return [];
-
     }//end getErrorList()
 
 
@@ -70,8 +69,5 @@ class DuplicateClassNameUnitTest extends AbstractSniffUnitTest
             return [];
             break;
         }//end switch
-
     }//end getWarningList()
-
-
 }//end class

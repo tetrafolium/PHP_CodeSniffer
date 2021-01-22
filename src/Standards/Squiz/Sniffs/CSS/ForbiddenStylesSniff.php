@@ -79,7 +79,6 @@ class ForbiddenStylesSniff implements Sniff
         }
 
         return [T_STYLE];
-
     }//end register()
 
 
@@ -121,7 +120,6 @@ class ForbiddenStylesSniff implements Sniff
         }//end if
 
         $this->addError($phpcsFile, $stackPtr, $style, $pattern);
-
     }//end process()
 
 
@@ -170,8 +168,5 @@ class ForbiddenStylesSniff implements Sniff
                 $phpcsFile->addWarning($error, $stackPtr, $type, $data);
             }
         }
-
     }//end addError()
-
-
 }//end class

@@ -59,6 +59,4 @@ interface Report
         $interactive=false,
         $toScreen=true
     );
-
-
 }//end interface

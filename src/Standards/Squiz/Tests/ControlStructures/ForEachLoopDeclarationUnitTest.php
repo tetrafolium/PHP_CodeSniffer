@@ -34,7 +34,6 @@ class ForEachLoopDeclarationUnitTest extends AbstractSniffUnitTest
             26 => 2,
             28 => 2,
         ];
-
     }//end getErrorList()
 
 
@@ -49,8 +48,5 @@ class ForEachLoopDeclarationUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

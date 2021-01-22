@@ -38,7 +38,6 @@ class ForLoopShouldBeWhileLoopSniff implements Sniff
     public function register()
     {
         return [T_FOR];
-
     }//end register()
 
 
@@ -75,7 +74,7 @@ class ForLoopShouldBeWhileLoopSniff implements Sniff
             $code = $tokens[$next]['code'];
             if ($code === T_SEMICOLON) {
                 ++$index;
-            } else if (isset(Tokens::$emptyTokens[$code]) === false) {
+            } elseif (isset(Tokens::$emptyTokens[$code]) === false) {
                 ++$parts[$index];
             }
         }
@@ -84,8 +83,5 @@ class ForLoopShouldBeWhileLoopSniff implements Sniff
             $error = 'This FOR loop can be simplified to a WHILE loop';
             $phpcsFile->addWarning($error, $stackPtr, 'CanSimplify');
         }
-
     }//end process()
-
-
 }//end class

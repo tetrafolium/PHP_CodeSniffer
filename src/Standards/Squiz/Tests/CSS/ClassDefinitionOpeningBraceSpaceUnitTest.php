@@ -42,7 +42,6 @@ class ClassDefinitionOpeningBraceSpaceUnitTest extends AbstractSniffUnitTest
             84 => 1,
             97 => 1,
         ];
-
     }//end getErrorList()
 
 
@@ -57,8 +56,5 @@ class ClassDefinitionOpeningBraceSpaceUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

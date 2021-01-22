@@ -159,7 +159,6 @@ class Comment
         }
 
         return $tokens;
-
     }//end tokenizeString()
 
 
@@ -235,7 +234,6 @@ class Comment
         }
 
         return $tokens;
-
     }//end processLine()
 
 
@@ -270,8 +268,5 @@ class Comment
         ];
 
         return $token;
-
     }//end collectWhitespace()
-
-
 }//end class

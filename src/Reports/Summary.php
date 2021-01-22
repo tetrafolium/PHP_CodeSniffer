@@ -42,7 +42,6 @@ class Summary implements Report
 
         echo $report['filename'].'>>'.$report['errors'].'>>'.$report['warnings'].PHP_EOL;
         return true;
-
     }//end generateFileReport()
 
 
@@ -108,7 +107,7 @@ class Summary implements Report
 
                 if (empty($pathPartsA) === false && empty($pathPartsB) === true) {
                     return 1;
-                } else if (empty($pathPartsA) === true && empty($pathPartsB) === false) {
+                } elseif (empty($pathPartsA) === true && empty($pathPartsB) === false) {
                     return -1;
                 } else {
                     return strcasecmp($partA, $partB);
@@ -176,8 +175,5 @@ class Summary implements Report
         if ($toScreen === true && $interactive === false) {
             Util\Timing::printRunTime();
         }
-
     }//end generate()
-
-
 }//end class

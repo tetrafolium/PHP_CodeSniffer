@@ -37,7 +37,6 @@ class UselessOverridingMethodSniff implements Sniff
     public function register()
     {
         return [T_FUNCTION];
-
     }//end register()
 
 
@@ -77,7 +76,7 @@ class UselessOverridingMethodSniff implements Sniff
 
             if (isset(Tokens::$emptyTokens[$code]) === true) {
                 continue;
-            } else if ($code === T_RETURN) {
+            } elseif ($code === T_RETURN) {
                 continue;
             }
 
@@ -121,11 +120,11 @@ class UselessOverridingMethodSniff implements Sniff
 
             if ($code === T_OPEN_PARENTHESIS) {
                 ++$parenthesisCount;
-            } else if ($code === T_CLOSE_PARENTHESIS) {
+            } elseif ($code === T_CLOSE_PARENTHESIS) {
                 --$parenthesisCount;
-            } else if ($parenthesisCount === 1 && $code === T_COMMA) {
+            } elseif ($parenthesisCount === 1 && $code === T_COMMA) {
                 $parameters[] = '';
-            } else if (isset(Tokens::$emptyTokens[$code]) === false) {
+            } elseif (isset(Tokens::$emptyTokens[$code]) === false) {
                 $parameters[(count($parameters) - 1)] .= $tokens[$next]['content'];
             }
 
@@ -154,8 +153,5 @@ class UselessOverridingMethodSniff implements Sniff
         if (count($parameters) === count($signature) && $parameters === $signature) {
             $phpcsFile->addWarning('Possible useless method overriding detected', $stackPtr, 'Found');
         }
-
     }//end process()
-
-
 }//end class

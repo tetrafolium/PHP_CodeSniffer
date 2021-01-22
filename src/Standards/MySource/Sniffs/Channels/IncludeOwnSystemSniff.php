@@ -24,7 +24,6 @@ class IncludeOwnSystemSniff implements Sniff
     public function register()
     {
         return [T_DOUBLE_COLON];
-
     }//end register()
 
 
@@ -52,13 +51,13 @@ class IncludeOwnSystemSniff implements Sniff
         $typeName = $phpcsFile->findNext(T_CONSTANT_ENCAPSED_STRING, ($stackPtr + 2), null, false, true);
         $typeName = trim($tokens[$typeName]['content'], " '");
         switch (strtolower($tokens[($stackPtr + 1)]['content'])) {
-        case 'includesystem' :
+        case 'includesystem':
             $included = strtolower($typeName);
             break;
-        case 'includeasset' :
+        case 'includeasset':
             $included = strtolower($typeName).'assettype';
             break;
-        case 'includewidget' :
+        case 'includewidget':
             $included = strtolower($typeName).'widgettype';
             break;
         default:
@@ -70,7 +69,6 @@ class IncludeOwnSystemSniff implements Sniff
             $data  = [$ownClass];
             $phpcsFile->addError($error, $stackPtr, 'NotRequired', $data);
         }
-
     }//end process()
 
 
@@ -89,10 +87,6 @@ class IncludeOwnSystemSniff implements Sniff
         array $tokens,
         $stackPtr
     ) {
-
         return false;
-
     }//end getIncludedClassFromToken()
-
-
 }//end class

@@ -37,7 +37,6 @@ class CharacterBeforePHPOpeningTagSniff implements Sniff
     public function register()
     {
         return [T_OPEN_TAG];
-
     }//end register()
 
 
@@ -79,8 +78,5 @@ class CharacterBeforePHPOpeningTagSniff implements Sniff
         // Skip the rest of the file so we don't pick up additional
         // open tags, typically embedded in HTML.
         return $phpcsFile->numTokens;
-
     }//end process()
-
-
 }//end class

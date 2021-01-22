@@ -24,7 +24,6 @@ class DisallowNewWidgetSniff implements Sniff
     public function register()
     {
         return [T_NEW];
-
     }//end register()
 
 
@@ -52,8 +51,5 @@ class DisallowNewWidgetSniff implements Sniff
             $data       = [$widgetType];
             $phpcsFile->addError($error, $stackPtr, 'Found', $data);
         }
-
     }//end process()
-
-
 }//end class

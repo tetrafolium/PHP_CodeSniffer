@@ -32,7 +32,6 @@ class ConstructorNameUnitTest extends AbstractSniffUnitTest
             62 => 1,
             91 => 1,
         ];
-
     }//end getErrorList()
 
 
@@ -47,8 +46,5 @@ class ConstructorNameUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

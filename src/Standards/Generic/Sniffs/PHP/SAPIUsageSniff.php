@@ -24,7 +24,6 @@ class SAPIUsageSniff implements Sniff
     public function register()
     {
         return [T_STRING];
-
     }//end register()
 
 
@@ -60,8 +59,5 @@ class SAPIUsageSniff implements Sniff
             $error = 'Use the PHP_SAPI constant instead of calling php_sapi_name()';
             $phpcsFile->addError($error, $stackPtr, 'FunctionFound');
         }
-
     }//end process()
-
-
 }//end class

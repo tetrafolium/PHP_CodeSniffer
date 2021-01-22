@@ -25,7 +25,6 @@ class DisallowSelfActionsSniff implements Sniff
     public function register()
     {
         return [T_CLASS];
-
     }//end register()
 
 
@@ -108,7 +107,7 @@ class DisallowSelfActionsSniff implements Sniff
                 // Function was not in this class, might have come from the parent.
                 // Either way, we can't really check this.
                 continue;
-            } else if ($foundFunctions[$funcData['name']] === 'public') {
+            } elseif ($foundFunctions[$funcData['name']] === 'public') {
                 $type  = $funcData['type'];
                 $error = "Static calls to public methods in Action classes must not use the $type keyword; use %s::%s() instead";
                 $data  = [
@@ -118,8 +117,5 @@ class DisallowSelfActionsSniff implements Sniff
                 $phpcsFile->addError($error, $token, 'Found'.ucfirst($funcData['type']), $data);
             }
         }
-
     }//end process()
-
-
 }//end class

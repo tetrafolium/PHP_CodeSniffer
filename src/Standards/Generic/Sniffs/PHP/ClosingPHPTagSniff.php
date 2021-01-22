@@ -24,7 +24,6 @@ class ClosingPHPTagSniff implements Sniff
     public function register()
     {
         return [T_OPEN_TAG];
-
     }//end register()
 
 
@@ -44,8 +43,5 @@ class ClosingPHPTagSniff implements Sniff
             $error = 'The PHP open tag does not have a corresponding PHP close tag';
             $phpcsFile->addError($error, $stackPtr, 'NotFound');
         }
-
     }//end process()
-
-
 }//end class

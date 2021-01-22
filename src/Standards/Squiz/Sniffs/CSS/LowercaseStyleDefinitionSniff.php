@@ -31,7 +31,6 @@ class LowercaseStyleDefinitionSniff implements Sniff
     public function register()
     {
         return [T_OPEN_CURLY_BRACKET];
-
     }//end register()
 
 
@@ -90,8 +89,5 @@ class LowercaseStyleDefinitionSniff implements Sniff
                 }
             }
         }//end for
-
     }//end process()
-
-
 }//end class

@@ -50,7 +50,6 @@ class FunctionDeclarationArgumentSpacingSniff implements Sniff
             T_CLOSURE,
             T_FN,
         ];
-
     }//end register()
 
 
@@ -88,7 +87,6 @@ class FunctionDeclarationArgumentSpacingSniff implements Sniff
                 $this->processBracket($phpcsFile, $openBracket);
             }
         }
-
     }//end process()
 
 
@@ -293,7 +291,7 @@ class FunctionDeclarationArgumentSpacingSniff implements Sniff
                             if ($fix === true) {
                                 $phpcsFile->fixer->addContent($commaToken, ' ');
                             }
-                        } else if ($spacesAfter !== 1) {
+                        } elseif ($spacesAfter !== 1) {
                             $error = 'Expected 1 space between comma and argument "%s"; %s found';
                             $data  = [
                                 $param['name'],
@@ -385,8 +383,5 @@ class FunctionDeclarationArgumentSpacingSniff implements Sniff
                 }
             }
         }
-
     }//end processBracket()
-
-
 }//end class

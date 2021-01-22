@@ -38,7 +38,6 @@ class OpacityUnitTest extends AbstractSniffUnitTest
             33 => 1,
             34 => 1,
         ];
-
     }//end getErrorList()
 
 
@@ -53,8 +52,5 @@ class OpacityUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

@@ -123,7 +123,6 @@ class ValidFunctionNameUnitTest extends AbstractSniffUnitTest
             213 => 1,
             214 => 1,
         ];
-
     }//end getErrorList()
 
 
@@ -138,8 +137,5 @@ class ValidFunctionNameUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

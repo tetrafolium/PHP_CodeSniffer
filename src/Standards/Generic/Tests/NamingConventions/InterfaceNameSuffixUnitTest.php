@@ -25,7 +25,6 @@ class InterfaceSuffixNameUnitTest extends AbstractSniffUnitTest
     public function getErrorList()
     {
         return [8 => 1];
-
     }//end getErrorList()
 
 
@@ -40,8 +39,5 @@ class InterfaceSuffixNameUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

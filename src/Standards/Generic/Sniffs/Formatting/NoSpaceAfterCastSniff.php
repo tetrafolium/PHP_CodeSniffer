@@ -28,7 +28,6 @@ class NoSpaceAfterCastSniff implements Sniff
     public function register()
     {
         return Tokens::$castTokens;
-
     }//end register()
 
 
@@ -54,8 +53,5 @@ class NoSpaceAfterCastSniff implements Sniff
         if ($fix === true) {
             $phpcsFile->fixer->replaceToken(($stackPtr + 1), '');
         }
-
     }//end process()
-
-
 }//end class

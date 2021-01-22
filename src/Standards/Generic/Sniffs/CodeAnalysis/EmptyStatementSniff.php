@@ -51,7 +51,6 @@ class EmptyStatementSniff implements Sniff
             T_SWITCH,
             T_WHILE,
         ];
-
     }//end register()
 
 
@@ -89,8 +88,5 @@ class EmptyStatementSniff implements Sniff
         $name  = strtoupper($token['content']);
         $error = 'Empty %s statement detected';
         $phpcsFile->addError($error, $stackPtr, 'Detected'.ucfirst(strtolower($name)), [$name]);
-
     }//end process()
-
-
 }//end class

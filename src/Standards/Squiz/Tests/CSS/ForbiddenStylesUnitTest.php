@@ -35,7 +35,6 @@ class ForbiddenStylesUnitTest extends AbstractSniffUnitTest
             15 => 1,
             16 => 1,
         ];
-
     }//end getErrorList()
 
 
@@ -50,8 +49,5 @@ class ForbiddenStylesUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

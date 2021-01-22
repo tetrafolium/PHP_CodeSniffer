@@ -26,7 +26,6 @@ class ConstantVisibilityUnitTest extends AbstractSniffUnitTest
     public function getErrorList()
     {
         return [];
-
     }//end getErrorList()
 
 
@@ -41,8 +40,5 @@ class ConstantVisibilityUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [4 => 1];
-
     }//end getWarningList()
-
-
 }//end class

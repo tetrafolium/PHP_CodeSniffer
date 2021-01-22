@@ -32,7 +32,6 @@ class NonExecutableCodeSniff implements Sniff
             T_EXIT,
             T_GOTO,
         ];
-
     }//end register()
 
 
@@ -61,7 +60,7 @@ class NonExecutableCodeSniff implements Sniff
             if ($tokens[$i]['code'] === T_CLOSE_PARENTHESIS) {
                 $i = $tokens[$i]['parenthesis_opener'];
                 continue;
-            } else if (isset(Tokens::$emptyTokens[$tokens[$i]['code']]) === true) {
+            } elseif (isset(Tokens::$emptyTokens[$tokens[$i]['code']]) === true) {
                 continue;
             }
 
@@ -266,8 +265,5 @@ class NonExecutableCodeSniff implements Sniff
                 $lastLine = $line;
             }
         }//end for
-
     }//end process()
-
-
 }//end class

@@ -30,7 +30,6 @@ class ImportStatementUnitTest extends AbstractSniffUnitTest
             4 => 1,
             7 => 1,
         ];
-
     }//end getErrorList()
 
 
@@ -45,8 +44,5 @@ class ImportStatementUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

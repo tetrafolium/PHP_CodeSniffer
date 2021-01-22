@@ -26,7 +26,6 @@ class DisallowYodaConditionsSniff implements Sniff
     public function register()
     {
         return Tokens::$comparisonTokens;
-
     }//end register()
 
 
@@ -113,7 +112,7 @@ class DisallowYodaConditionsSniff implements Sniff
                 if ($prev === false) {
                     return;
                 }
-            } else if ($tokens[$closeParenthesisIndex]['code'] === T_ARRAY
+            } elseif ($tokens[$closeParenthesisIndex]['code'] === T_ARRAY
                 && $this->isArrayStatic($phpcsFile, $closeParenthesisIndex) === false
             ) {
                 return;
@@ -125,7 +124,6 @@ class DisallowYodaConditionsSniff implements Sniff
             $stackPtr,
             'Found'
         );
-
     }//end process()
 
 
@@ -145,7 +143,7 @@ class DisallowYodaConditionsSniff implements Sniff
         if ($tokens[$arrayToken]['code'] === T_OPEN_SHORT_ARRAY) {
             $start = $arrayToken;
             $end   = $tokens[$arrayToken]['bracket_closer'];
-        } else if ($tokens[$arrayToken]['code'] === T_ARRAY) {
+        } elseif ($tokens[$arrayToken]['code'] === T_ARRAY) {
             $start = $tokens[$arrayToken]['parenthesis_opener'];
             $end   = $tokens[$arrayToken]['parenthesis_closer'];
         } else {
@@ -181,8 +179,5 @@ class DisallowYodaConditionsSniff implements Sniff
         }
 
         return true;
-
     }//end isArrayStatic()
-
-
 }//end class

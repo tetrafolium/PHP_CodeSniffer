@@ -99,7 +99,6 @@ class ForLoopDeclarationUnitTest extends AbstractSniffUnitTest
         default:
             return [];
         }//end switch
-
     }//end getErrorList()
 
 
@@ -125,8 +124,5 @@ class ForLoopDeclarationUnitTest extends AbstractSniffUnitTest
         default:
             return [];
         }//end switch
-
     }//end getWarningList()
-
-
 }//end class

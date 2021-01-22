@@ -33,7 +33,6 @@ class PropertyLabelSpacingUnitTest extends AbstractSniffUnitTest
             12 => 1,
             18 => 1,
         ];
-
     }//end getErrorList()
 
 
@@ -48,8 +47,5 @@ class PropertyLabelSpacingUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

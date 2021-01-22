@@ -41,7 +41,6 @@ class NullsafeObjectOperatorTest extends AbstractMethodUnitTest
         $operator = $this->getTargetToken('/* testObjectOperator */', $this->find);
         $this->assertSame(T_OBJECT_OPERATOR, $tokens[$operator]['code'], 'Failed asserting code is object operator');
         $this->assertSame('T_OBJECT_OPERATOR', $tokens[$operator]['type'], 'Failed asserting type is object operator');
-
     }//end testObjectOperator()
 
 
@@ -62,7 +61,6 @@ class NullsafeObjectOperatorTest extends AbstractMethodUnitTest
         $operator = $this->getTargetToken($testMarker, $this->find);
         $this->assertSame(T_NULLSAFE_OBJECT_OPERATOR, $tokens[$operator]['code'], 'Failed asserting code is nullsafe object operator');
         $this->assertSame('T_NULLSAFE_OBJECT_OPERATOR', $tokens[$operator]['type'], 'Failed asserting type is nullsafe object operator');
-
     }//end testNullsafeObjectOperator()
 
 
@@ -79,7 +77,6 @@ class NullsafeObjectOperatorTest extends AbstractMethodUnitTest
             ['/* testNullsafeObjectOperator */'],
             ['/* testNullsafeObjectOperatorWriteContext */'],
         ];
-
     }//end dataNullsafeObjectOperator()
 
 
@@ -108,7 +105,6 @@ class NullsafeObjectOperatorTest extends AbstractMethodUnitTest
             $this->assertSame(T_OBJECT_OPERATOR, $tokens[$next]['code'], 'Failed asserting code is object operator');
             $this->assertSame('T_OBJECT_OPERATOR', $tokens[$next]['type'], 'Failed asserting type is object operator');
         }
-
     }//end testTernaryThen()
 
 
@@ -133,8 +129,5 @@ class NullsafeObjectOperatorTest extends AbstractMethodUnitTest
             ],
             ['/* testLiveCoding */'],
         ];
-
     }//end dataTernaryThen()
-
-
 }//end class

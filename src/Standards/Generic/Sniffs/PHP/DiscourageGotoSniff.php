@@ -27,7 +27,6 @@ class DiscourageGotoSniff implements Sniff
             T_GOTO,
             T_GOTO_LABEL,
         ];
-
     }//end register()
 
 
@@ -43,8 +42,5 @@ class DiscourageGotoSniff implements Sniff
     public function process(File $phpcsFile, $stackPtr)
     {
         $phpcsFile->addWarning('Use of the GOTO language construct is discouraged', $stackPtr, 'Found');
-
     }//end process()
-
-
 }//end class

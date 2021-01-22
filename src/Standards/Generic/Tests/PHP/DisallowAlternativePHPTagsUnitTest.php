@@ -38,7 +38,6 @@ class DisallowAlternativePHPTagsUnitTest extends AbstractSniffUnitTest
         }
 
         return $testFiles;
-
     }//end getTestFiles()
 
 
@@ -72,7 +71,6 @@ class DisallowAlternativePHPTagsUnitTest extends AbstractSniffUnitTest
         default:
             return [];
         }//end switch
-
     }//end getErrorList()
 
 
@@ -98,8 +96,5 @@ class DisallowAlternativePHPTagsUnitTest extends AbstractSniffUnitTest
         }
 
         return [];
-
     }//end getWarningList()
-
-
 }//end class

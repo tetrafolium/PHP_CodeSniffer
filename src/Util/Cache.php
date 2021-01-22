@@ -68,7 +68,7 @@ class Cache
                 if (PHP_CODESNIFFER_VERBOSITY > 1) {
                     echo "\t\t=> external file: $file".PHP_EOL;
                 }
-            } else if (PHP_CODESNIFFER_VERBOSITY > 1) {
+            } elseif (PHP_CODESNIFFER_VERBOSITY > 1) {
                 echo "\t\t=> internal sniff: $file".PHP_EOL;
             }
 
@@ -84,7 +84,7 @@ class Cache
                 if (PHP_CODESNIFFER_VERBOSITY > 1) {
                     echo "\t\t=> external ruleset: $file".PHP_EOL;
                 }
-            } else if (PHP_CODESNIFFER_VERBOSITY > 1) {
+            } elseif (PHP_CODESNIFFER_VERBOSITY > 1) {
                 echo "\t\t=> internal ruleset: $file".PHP_EOL;
             }
 
@@ -272,12 +272,11 @@ class Cache
                     echo "\t* cache was invalid and has been cleared *".PHP_EOL;
                 }
             }
-        } else if (PHP_CODESNIFFER_VERBOSITY > 1) {
+        } elseif (PHP_CODESNIFFER_VERBOSITY > 1) {
             echo "\t* cache file does not exist *".PHP_EOL;
         }
 
         self::$cache['config'] = $configData;
-
     }//end load()
 
 
@@ -289,7 +288,6 @@ class Cache
     public static function save()
     {
         file_put_contents(self::$path, json_encode(self::$cache));
-
     }//end save()
 
 
@@ -312,7 +310,6 @@ class Cache
         }
 
         return false;
-
     }//end get()
 
 
@@ -332,7 +329,6 @@ class Cache
         } else {
             self::$cache[$key] = $value;
         }
-
     }//end set()
 
 
@@ -344,8 +340,5 @@ class Cache
     public static function getSize()
     {
         return (count(self::$cache) - 1);
-
     }//end getSize()
-
-
 }//end class

@@ -90,7 +90,6 @@ class OperatorBracketUnitTest extends AbstractSniffUnitTest
             return [];
             break;
         }//end switch
-
     }//end getErrorList()
 
 
@@ -105,8 +104,5 @@ class OperatorBracketUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

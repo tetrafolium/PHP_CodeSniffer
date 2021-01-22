@@ -30,7 +30,6 @@ class FunctionDuplicateArgumentUnitTest extends AbstractSniffUnitTest
             4 => 2,
             5 => 1,
         ];
-
     }//end getErrorList()
 
 
@@ -45,8 +44,5 @@ class FunctionDuplicateArgumentUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

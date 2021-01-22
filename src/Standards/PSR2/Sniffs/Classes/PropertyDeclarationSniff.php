@@ -79,7 +79,7 @@ class PropertyDeclarationSniff extends AbstractVariableSniff
                 if ($fix === true) {
                     $phpcsFile->fixer->addContent($typeToken, ' ');
                 }
-            } else if ($tokens[($typeToken + 1)]['content'] !== ' ') {
+            } elseif ($tokens[($typeToken + 1)]['content'] !== ' ') {
                 $next = $phpcsFile->findNext(T_WHITESPACE, ($typeToken + 1), null, true);
                 if ($tokens[$next]['line'] !== $tokens[$typeToken]['line']) {
                     $found = 'newline';
@@ -143,7 +143,6 @@ class PropertyDeclarationSniff extends AbstractVariableSniff
                 $phpcsFile->fixer->endChangeset();
             }
         }//end if
-
     }//end processMemberVar()
 
 
@@ -160,7 +159,6 @@ class PropertyDeclarationSniff extends AbstractVariableSniff
         /*
             We don't care about normal variables.
         */
-
     }//end processVariable()
 
 
@@ -177,8 +175,5 @@ class PropertyDeclarationSniff extends AbstractVariableSniff
         /*
             We don't care about normal variables.
         */
-
     }//end processVariableInString()
-
-
 }//end class

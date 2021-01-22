@@ -36,7 +36,6 @@ class FirebugConsoleSniff implements Sniff
             T_LABEL,
             T_OBJECT,
         ];
-
     }//end register()
 
 
@@ -57,8 +56,5 @@ class FirebugConsoleSniff implements Sniff
             $error = 'Variables, functions and labels must not be named "console"; name may conflict with Firebug internal variable';
             $phpcsFile->addError($error, $stackPtr, 'ConflictFound');
         }
-
     }//end process()
-
-
 }//end class

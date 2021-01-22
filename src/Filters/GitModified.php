@@ -23,7 +23,6 @@ class GitModified extends ExactMatch
     protected function getBlacklist()
     {
         return [];
-
     }//end getBlacklist()
 
 
@@ -59,8 +58,5 @@ class GitModified extends ExactMatch
         }
 
         return $modified;
-
     }//end getWhitelist()
-
-
 }//end class

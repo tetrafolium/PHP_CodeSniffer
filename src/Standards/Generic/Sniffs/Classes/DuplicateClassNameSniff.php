@@ -31,7 +31,6 @@ class DuplicateClassNameSniff implements Sniff
     public function register()
     {
         return [T_OPEN_TAG];
-
     }//end register()
 
 
@@ -110,8 +109,5 @@ class DuplicateClassNameSniff implements Sniff
 
             $stackPtr = $phpcsFile->findNext($findTokens, ($stackPtr + 1));
         }//end while
-
     }//end process()
-
-
 }//end class

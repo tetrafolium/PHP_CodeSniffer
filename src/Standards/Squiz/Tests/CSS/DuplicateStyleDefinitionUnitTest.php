@@ -26,7 +26,6 @@ class DuplicateStyleDefinitionUnitTest extends AbstractSniffUnitTest
     public function getErrorList()
     {
         return [7 => 1];
-
     }//end getErrorList()
 
 
@@ -41,8 +40,5 @@ class DuplicateStyleDefinitionUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

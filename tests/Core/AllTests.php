@@ -26,7 +26,6 @@ class AllTests
     public static function main()
     {
         TestRunner::run(self::suite());
-
     }//end main()
 
 
@@ -56,8 +55,5 @@ class AllTests
         }
 
         return $suite;
-
     }//end suite()
-
-
 }//end class

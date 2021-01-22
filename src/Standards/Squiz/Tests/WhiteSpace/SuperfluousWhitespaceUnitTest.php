@@ -91,7 +91,6 @@ class SuperfluousWhitespaceUnitTest extends AbstractSniffUnitTest
             return [];
             break;
         }//end switch
-
     }//end getErrorList()
 
 
@@ -106,8 +105,5 @@ class SuperfluousWhitespaceUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

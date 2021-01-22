@@ -50,7 +50,6 @@ class DeclareStatementUnitTest extends AbstractSniffUnitTest
             47 => 1,
             49 => 1,
         ];
-
     }//end getErrorList()
 
 
@@ -65,8 +64,5 @@ class DeclareStatementUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

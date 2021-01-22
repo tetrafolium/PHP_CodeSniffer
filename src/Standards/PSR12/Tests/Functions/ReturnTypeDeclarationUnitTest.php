@@ -39,7 +39,6 @@ class ReturnTypeDeclarationUnitTest extends AbstractSniffUnitTest
             62 => 1,
             64 => 1,
         ];
-
     }//end getErrorList()
 
 
@@ -54,8 +53,5 @@ class ReturnTypeDeclarationUnitTest extends AbstractSniffUnitTest
     protected function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

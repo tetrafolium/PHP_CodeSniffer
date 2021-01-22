@@ -28,8 +28,5 @@ class TestSuite extends PHPUnit_TestSuite
         $result = parent::run($result);
         printPHPCodeSnifferTestOutput();
         return $result;
-
     }//end run()
-
-
 }//end class

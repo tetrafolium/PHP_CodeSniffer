@@ -26,7 +26,6 @@ class UnconditionalIfStatementUnitTest extends AbstractSniffUnitTest
     public function getErrorList()
     {
         return [];
-
     }//end getErrorList()
 
 
@@ -45,8 +44,5 @@ class UnconditionalIfStatementUnitTest extends AbstractSniffUnitTest
             5 => 1,
             7 => 1,
         ];
-
     }//end getWarningList()
-
-
 }//end class

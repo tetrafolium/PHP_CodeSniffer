@@ -32,7 +32,6 @@ class ForbiddenFunctionsUnitTest extends AbstractSniffUnitTest
         ];
 
         return $errors;
-
     }//end getErrorList()
 
 
@@ -47,8 +46,5 @@ class ForbiddenFunctionsUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

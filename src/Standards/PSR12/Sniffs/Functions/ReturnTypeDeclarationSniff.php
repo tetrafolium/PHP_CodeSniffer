@@ -28,7 +28,6 @@ class ReturnTypeDeclarationSniff implements Sniff
             T_CLOSURE,
             T_FN,
         ];
-
     }//end register()
 
 
@@ -75,7 +74,7 @@ class ReturnTypeDeclarationSniff implements Sniff
                 if ($fix === true) {
                     $phpcsFile->fixer->replaceToken(($returnType - 1), ' ');
                 }
-            } else if ($tokens[($returnType - 1)]['code'] === T_COLON) {
+            } elseif ($tokens[($returnType - 1)]['code'] === T_COLON) {
                 $fix = $phpcsFile->addFixableError($error, $returnType, 'SpaceBeforeReturnType');
                 if ($fix === true) {
                     $phpcsFile->fixer->addContentBefore($returnType, ' ');
@@ -103,8 +102,5 @@ class ReturnTypeDeclarationSniff implements Sniff
                 $phpcsFile->addError($error, $colon, 'SpaceBeforeColon');
             }
         }
-
     }//end process()
-
-
 }//end class

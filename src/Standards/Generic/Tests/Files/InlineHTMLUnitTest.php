@@ -41,7 +41,6 @@ class InlineHTMLUnitTest extends AbstractSniffUnitTest
             return [];
             break;
         }//end switch
-
     }//end getErrorList()
 
 
@@ -58,8 +57,5 @@ class InlineHTMLUnitTest extends AbstractSniffUnitTest
     public function getWarningList($testFile='')
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

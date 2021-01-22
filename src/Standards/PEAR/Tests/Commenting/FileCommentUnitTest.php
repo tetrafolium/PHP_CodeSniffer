@@ -42,7 +42,6 @@ class FileCommentUnitTest extends AbstractSniffUnitTest
             41 => 2,
             43 => 1,
         ];
-
     }//end getErrorList()
 
 
@@ -62,8 +61,5 @@ class FileCommentUnitTest extends AbstractSniffUnitTest
             34 => 1,
             43 => 1,
         ];
-
     }//end getWarningList()
-
-
 }//end class

@@ -28,7 +28,6 @@ class CallTimePassByReferenceSniff implements Sniff
             T_STRING,
             T_VARIABLE,
         ];
-
     }//end register()
 
 
@@ -134,8 +133,5 @@ class CallTimePassByReferenceSniff implements Sniff
                 $phpcsFile->addError($error, $tokenBefore, 'NotAllowed');
             }//end if
         }//end while
-
     }//end process()
-
-
 }//end class

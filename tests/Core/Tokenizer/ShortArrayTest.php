@@ -38,7 +38,6 @@ class ShortArrayTest extends AbstractMethodUnitTest
             $this->assertSame(T_CLOSE_SQUARE_BRACKET, $tokens[$closer]['code']);
             $this->assertSame('T_CLOSE_SQUARE_BRACKET', $tokens[$closer]['type']);
         }
-
     }//end testSquareBrackets()
 
 
@@ -76,7 +75,6 @@ class ShortArrayTest extends AbstractMethodUnitTest
             ['/* testInterpolatedStringDereferencing */'],
             ['/* testLiveCoding */'],
         ];
-
     }//end dataSquareBrackets()
 
 
@@ -103,7 +101,6 @@ class ShortArrayTest extends AbstractMethodUnitTest
             $this->assertSame(T_CLOSE_SHORT_ARRAY, $tokens[$closer]['code']);
             $this->assertSame('T_CLOSE_SHORT_ARRAY', $tokens[$closer]['type']);
         }
-
     }//end testShortArrays()
 
 
@@ -125,8 +122,5 @@ class ShortArrayTest extends AbstractMethodUnitTest
             ['/* testNestedListDeclaration */'],
             ['/* testArrayWithinFunctionCall */'],
         ];
-
     }//end dataShortArrays()
-
-
 }//end class

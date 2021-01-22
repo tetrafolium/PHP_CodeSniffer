@@ -124,7 +124,6 @@ class SwitchDeclarationUnitTest extends AbstractSniffUnitTest
         default:
             return [];
         }//end switch
-
     }//end getErrorList()
 
 
@@ -145,8 +144,5 @@ class SwitchDeclarationUnitTest extends AbstractSniffUnitTest
         }
 
         return [];
-
     }//end getWarningList()
-
-
 }//end class

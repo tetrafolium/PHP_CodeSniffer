@@ -55,7 +55,6 @@ class UnnecessaryStringConcatSniff implements Sniff
             T_STRING_CONCAT,
             T_PLUS,
         ];
-
     }//end register()
 
 
@@ -118,8 +117,5 @@ class UnnecessaryStringConcatSniff implements Sniff
                 }
             }//end if
         }//end if
-
     }//end process()
-
-
 }//end class

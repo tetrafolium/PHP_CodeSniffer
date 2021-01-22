@@ -25,7 +25,6 @@ class SideEffectsSniff implements Sniff
     public function register()
     {
         return [T_OPEN_TAG];
-
     }//end register()
 
 
@@ -57,7 +56,6 @@ class SideEffectsSniff implements Sniff
 
         // Ignore the rest of the file.
         return ($phpcsFile->numTokens + 1);
-
     }//end process()
 
 
@@ -188,7 +186,7 @@ class SideEffectsSniff implements Sniff
 
                 $i = $tokens[$i]['scope_closer'];
                 continue;
-            } else if ($tokens[$i]['code'] === T_STRING
+            } elseif ($tokens[$i]['code'] === T_STRING
                 && strtolower($tokens[$i]['content']) === 'define'
             ) {
                 $prev = $phpcsFile->findPrevious(Tokens::$emptyTokens, ($i - 1), null, true);
@@ -283,8 +281,5 @@ class SideEffectsSniff implements Sniff
             'symbol' => $firstSymbol,
             'effect' => $firstEffect,
         ];
-
     }//end searchForConflict()
-
-
 }//end class

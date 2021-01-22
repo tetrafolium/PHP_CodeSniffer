@@ -37,7 +37,6 @@ class FunctionClosingBraceSpaceSniff implements Sniff
             T_FUNCTION,
             T_CLOSURE,
         ];
-
     }//end register()
 
 
@@ -100,7 +99,7 @@ class FunctionClosingBraceSpaceSniff implements Sniff
                 if ($fix === true) {
                     $phpcsFile->fixer->addNewlineBefore($closeBrace);
                 }
-            } else if ($found > 0) {
+            } elseif ($found > 0) {
                 $error = 'Expected 0 blank lines before closing brace of nested function; %s found';
                 $data  = [$found];
                 $fix   = $phpcsFile->addFixableError($error, $closeBrace, 'SpacingBeforeNestedClose', $data);
@@ -157,8 +156,5 @@ class FunctionClosingBraceSpaceSniff implements Sniff
                 }
             }//end if
         }//end if
-
     }//end process()
-
-
 }//end class

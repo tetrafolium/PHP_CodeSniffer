@@ -40,7 +40,6 @@ class EndFileNoNewlineUnitTest extends AbstractSniffUnitTest
         default:
             return [];
         }//end switch
-
     }//end getErrorList()
 
 
@@ -57,8 +56,5 @@ class EndFileNoNewlineUnitTest extends AbstractSniffUnitTest
     public function getWarningList($testFile='')
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

@@ -29,7 +29,6 @@ class CodeAnalyzerUnitTest extends AbstractSniffUnitTest
         }
 
         return false;
-
     }//end shouldSkipTest()
 
 
@@ -44,7 +43,6 @@ class CodeAnalyzerUnitTest extends AbstractSniffUnitTest
     public function getErrorList()
     {
         return [];
-
     }//end getErrorList()
 
 
@@ -59,8 +57,5 @@ class CodeAnalyzerUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [2 => 1];
-
     }//end getWarningList()
-
-
 }//end class

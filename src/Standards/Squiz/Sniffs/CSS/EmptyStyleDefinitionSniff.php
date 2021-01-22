@@ -32,7 +32,6 @@ class EmptyStyleDefinitionSniff implements Sniff
     public function register()
     {
         return [T_STYLE];
-
     }//end register()
 
 
@@ -57,8 +56,5 @@ class EmptyStyleDefinitionSniff implements Sniff
             $error = 'Style definition is empty';
             $phpcsFile->addError($error, $stackPtr, 'Found');
         }
-
     }//end process()
-
-
 }//end class

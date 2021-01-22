@@ -31,7 +31,6 @@ class DuplicateStyleDefinitionSniff implements Sniff
     public function register()
     {
         return [T_OPEN_CURLY_BRACKET];
-
     }//end register()
 
 
@@ -81,8 +80,5 @@ class DuplicateStyleDefinitionSniff implements Sniff
                 $styleNames[$name] = $next;
             }
         } while ($next !== false);
-
     }//end process()
-
-
 }//end class

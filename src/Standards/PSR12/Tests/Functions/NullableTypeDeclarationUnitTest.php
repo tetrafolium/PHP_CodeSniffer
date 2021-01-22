@@ -42,7 +42,6 @@ class NullableTypeDeclarationUnitTest extends AbstractSniffUnitTest
             59 => 2,
             87 => 1,
         ];
-
     }//end getErrorList()
 
 
@@ -57,8 +56,5 @@ class NullableTypeDeclarationUnitTest extends AbstractSniffUnitTest
     protected function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

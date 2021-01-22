@@ -26,7 +26,6 @@ class ExecutableFileUnitTest extends AbstractSniffUnitTest
         // tests when running in a PEAR install.
         // Also skip on Windows which doesn't have the concept of executable files.
         return ($GLOBALS['PHP_CODESNIFFER_PEAR'] || (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN'));
-
     }//end shouldSkipTest()
 
 
@@ -48,7 +47,6 @@ class ExecutableFileUnitTest extends AbstractSniffUnitTest
         default:
             return [];
         }//end switch
-
     }//end getErrorList()
 
 
@@ -65,8 +63,5 @@ class ExecutableFileUnitTest extends AbstractSniffUnitTest
     public function getWarningList($testFile='')
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

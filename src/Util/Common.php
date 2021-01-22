@@ -44,7 +44,6 @@ class Common
         }
 
         return false;
-
     }//end isPharFile()
 
 
@@ -72,7 +71,6 @@ class Common
         }
 
         return false;
-
     }//end isReadable()
 
 
@@ -125,7 +123,6 @@ class Common
         }
 
         return false;
-
     }//end realpath()
 
 
@@ -155,7 +152,6 @@ class Common
         }
 
         return $path;
-
     }//end stripBasepath()
 
 
@@ -176,7 +172,6 @@ class Common
         }
 
         return $eolChar;
-
     }//end detectLineEndings()
 
 
@@ -235,7 +230,6 @@ class Common
         $isTTY = ($mode !== $type['S_IFIFO']);
 
         return $isTTY;
-
     }//end isStdinATTY()
 
 
@@ -284,7 +278,6 @@ class Common
         }//end if
 
         return $content;
-
     }//end prepareForOutput()
 
 
@@ -369,7 +362,6 @@ class Common
         }//end if
 
         return true;
-
     }//end isCamelCaps()
 
 
@@ -407,7 +399,6 @@ class Common
         }
 
         return $validName;
-
     }//end isUnderscoreName()
 
 
@@ -473,7 +464,7 @@ class Common
                 } else {
                     return 'array';
                 }//end if
-            } else if (in_array($lowerVarType, self::$allowedTypes, true) === true) {
+            } elseif (in_array($lowerVarType, self::$allowedTypes, true) === true) {
                 // A valid type, but not lower cased.
                 return $lowerVarType;
             } else {
@@ -481,7 +472,6 @@ class Common
                 return $varType;
             }//end if
         }//end if
-
     }//end suggestType()
 
 
@@ -510,7 +500,6 @@ class Common
         $standard = array_pop($parts);
         $code     = $standard.'.'.$category.'.'.$sniff;
         return $code;
-
     }//end getSniffCode()
 
 
@@ -541,8 +530,5 @@ class Common
 
         $newName = substr($newName, ($start + 1));
         return $newName;
-
     }//end cleanSniffClass()
-
-
 }//end class

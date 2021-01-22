@@ -599,10 +599,10 @@ class PHP extends Tokenizer
                     if (strpos($nextToken[1], "\r\n") === 0) {
                         $token[1] .= "\r\n";
                         $tokens[($stackPtr + 1)][1] = substr($nextToken[1], 2);
-                    } else if (strpos($nextToken[1], "\n\r") === 0) {
+                    } elseif (strpos($nextToken[1], "\n\r") === 0) {
                         $token[1] .= "\n\r";
                         $tokens[($stackPtr + 1)][1] = substr($nextToken[1], 2);
-                    } else if (strpos($nextToken[1], "\n") === 0) {
+                    } elseif (strpos($nextToken[1], "\n") === 0) {
                         $token[1] .= "\n";
                         $tokens[($stackPtr + 1)][1] = substr($nextToken[1], 1);
                     }
@@ -1376,7 +1376,7 @@ class PHP extends Tokenizer
                         $newToken['code'] = T_NULLABLE;
                         $newToken['type'] = 'T_NULLABLE';
                         break;
-                    } else if (in_array($tokenType, [T_DOUBLE_ARROW, T_OPEN_TAG, T_OPEN_TAG_WITH_ECHO, '=', '{', ';'], true) === true) {
+                    } elseif (in_array($tokenType, [T_DOUBLE_ARROW, T_OPEN_TAG, T_OPEN_TAG_WITH_ECHO, '=', '{', ';'], true) === true) {
                         if (PHP_CODESNIFFER_VERBOSITY > 1) {
                             echo "\t\t* token $stackPtr changed from ? to T_INLINE_THEN".PHP_EOL;
                         }
@@ -1493,7 +1493,7 @@ class PHP extends Tokenizer
                 for ($x = ($stackPtr + 1); $x < $numTokens; $x++) {
                     if (is_array($tokens[$x]) === false && $tokens[$x] === '(') {
                         $parenthesisStack[] = $x;
-                    } else if (is_array($tokens[$x]) === false && $tokens[$x] === ')') {
+                    } elseif (is_array($tokens[$x]) === false && $tokens[$x] === ')') {
                         array_pop($parenthesisStack);
                         if (empty($parenthesisStack) === true) {
                             $parenthesisCloser = $x;
@@ -1577,7 +1577,7 @@ class PHP extends Tokenizer
                                 || (is_array($tokens[$x]) === true && isset($allowed[$tokens[$x][0]]) === false)
                             ) {
                                 break;
-                            } else if (is_array($tokens[$x]) === true && $tokens[$x][0] === T_ARRAY) {
+                            } elseif (is_array($tokens[$x]) === true && $tokens[$x][0] === T_ARRAY) {
                                 $tokens[$x][0] = T_STRING;
 
                                 if (PHP_CODESNIFFER_VERBOSITY > 1) {
@@ -1741,7 +1741,7 @@ class PHP extends Tokenizer
                     $cacheKey = null;
                     if ($token[0] === T_STRING) {
                         $cacheKey = strtolower($token[1]);
-                    } else if ($token[0] !== T_CURLY_OPEN) {
+                    } elseif ($token[0] !== T_CURLY_OPEN) {
                         $cacheKey = $token[0];
                     }
 
@@ -1797,7 +1797,7 @@ class PHP extends Tokenizer
                                     if ($parenCount === 0) {
                                         break;
                                     }
-                                } else if ($tokens[$i] === ')') {
+                                } elseif ($tokens[$i] === ')') {
                                     $parenCount++;
                                 }
                             }
@@ -1870,7 +1870,7 @@ class PHP extends Tokenizer
                     for ($i = $stackPtr; $i < $numTokens; $i++) {
                         if ($tokens[$i] === '(') {
                             break;
-                        } else if ($tokens[$i][0] === T_VARIABLE) {
+                        } elseif ($tokens[$i][0] === T_VARIABLE) {
                             $newToken['code'] = T_STRING;
                             $newToken['type'] = 'T_STRING';
                             break;
@@ -1935,7 +1935,6 @@ class PHP extends Tokenizer
         }
 
         return $finalTokens;
-
     }//end tokenize()
 
 
@@ -2004,7 +2003,7 @@ class PHP extends Tokenizer
                 }//end if
 
                 continue;
-            } else if ($this->tokens[$i]['code'] === T_CLASS && isset($this->tokens[$i]['scope_opener']) === true) {
+            } elseif ($this->tokens[$i]['code'] === T_CLASS && isset($this->tokens[$i]['scope_opener']) === true) {
                 /*
                     Detect anonymous classes and assign them a different token.
                 */
@@ -2058,7 +2057,7 @@ class PHP extends Tokenizer
                 }//end if
 
                 continue;
-            } else if ($this->tokens[$i]['code'] === T_FN && isset($this->tokens[($i + 1)]) === true) {
+            } elseif ($this->tokens[$i]['code'] === T_FN && isset($this->tokens[($i + 1)]) === true) {
                 // Possible arrow function.
                 for ($x = ($i + 1); $x < $numTokens; $x++) {
                     if (isset(Util\Tokens::$emptyTokens[$this->tokens[$x]['code']]) === false
@@ -2210,7 +2209,7 @@ class PHP extends Tokenizer
                     $this->tokens[$i]['code'] = T_STRING;
                     $this->tokens[$i]['type'] = 'T_STRING';
                 }
-            } else if ($this->tokens[$i]['code'] === T_OPEN_SQUARE_BRACKET) {
+            } elseif ($this->tokens[$i]['code'] === T_OPEN_SQUARE_BRACKET) {
                 if (isset($this->tokens[$i]['bracket_closer']) === false) {
                     continue;
                 }
@@ -2265,7 +2264,7 @@ class PHP extends Tokenizer
                 }
 
                 continue;
-            } else if ($this->tokens[$i]['code'] === T_BITWISE_OR) {
+            } elseif ($this->tokens[$i]['code'] === T_BITWISE_OR) {
                 /*
                     Convert "|" to T_TYPE_UNION or leave as T_BITWISE_OR.
                 */
@@ -2436,7 +2435,7 @@ class PHP extends Tokenizer
                 }
 
                 continue;
-            } else if ($this->tokens[$i]['code'] === T_STATIC) {
+            } elseif ($this->tokens[$i]['code'] === T_STATIC) {
                 for ($x = ($i - 1); $x > 0; $x--) {
                     if (isset(Util\Tokens::$emptyTokens[$this->tokens[$x]['code']]) === false) {
                         break;
@@ -2454,7 +2453,7 @@ class PHP extends Tokenizer
                 }
 
                 continue;
-            } else if ($this->tokens[$i]['code'] === T_TRUE
+            } elseif ($this->tokens[$i]['code'] === T_TRUE
                 || $this->tokens[$i]['code'] === T_FALSE
                 || $this->tokens[$i]['code'] === T_NULL
             ) {
@@ -2481,7 +2480,7 @@ class PHP extends Tokenizer
                     $this->tokens[$i]['code'] = T_STRING;
                     $this->tokens[$i]['type'] = 'T_STRING';
                 }
-            } else if ($this->tokens[$i]['code'] === T_CONST) {
+            } elseif ($this->tokens[$i]['code'] === T_CONST) {
                 // Context sensitive keywords support.
                 for ($x = ($i + 1); $i < $numTokens; $x++) {
                     if (isset(Util\Tokens::$emptyTokens[$this->tokens[$x]['code']]) === false) {
@@ -2647,7 +2646,6 @@ class PHP extends Tokenizer
         if (PHP_CODESNIFFER_VERBOSITY > 1) {
             echo "\t*** END ADDITIONAL PHP PROCESSING ***".PHP_EOL;
         }
-
     }//end processAdditional()
 
 
@@ -2669,7 +2667,7 @@ class PHP extends Tokenizer
             $cacheKey = null;
             if ($token[0] === T_STRING) {
                 $cacheKey = strtolower($token[1]);
-            } else if ($token[0] !== T_CURLY_OPEN) {
+            } elseif ($token[0] !== T_CURLY_OPEN) {
                 $cacheKey = $token[0];
             }
 
@@ -2709,7 +2707,7 @@ class PHP extends Tokenizer
             $newToken['code'] = constant($newToken['type']);
 
             self::$resolveTokenCache[$cacheKey] = $newToken;
-        } else if ($token[0] === T_CURLY_OPEN) {
+        } elseif ($token[0] === T_CURLY_OPEN) {
             $newToken = [
                 'code' => T_OPEN_CURLY_BRACKET,
                 'type' => 'T_OPEN_CURLY_BRACKET',
@@ -2725,7 +2723,6 @@ class PHP extends Tokenizer
 
         $newToken['content'] = $token[1];
         return $newToken;
-
     }//end standardiseToken()
 
 
@@ -2833,8 +2830,5 @@ class PHP extends Tokenizer
 
         self::$resolveTokenCache[$token] = $newToken;
         return $newToken;
-
     }//end resolveSimpleToken()
-
-
 }//end class

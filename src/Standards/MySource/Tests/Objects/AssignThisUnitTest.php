@@ -36,7 +36,6 @@ class AssignThisUnitTest extends AbstractSniffUnitTest
             11 => 1,
             16 => 1,
         ];
-
     }//end getErrorList()
 
 
@@ -51,8 +50,5 @@ class AssignThisUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

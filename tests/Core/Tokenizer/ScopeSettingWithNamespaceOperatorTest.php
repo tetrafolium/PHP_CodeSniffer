@@ -50,7 +50,6 @@ class ScopeSettingWithNamespaceOperatorTest extends AbstractMethodUnitTest
         $this->assertArrayHasKey('scope_closer', $tokens[$closer], 'Scope closer missing for close curly');
         $this->assertSame($opener, $tokens[$closer]['scope_opener'], 'Scope opener not same for close curly');
         $this->assertSame($closer, $tokens[$closer]['scope_closer'], 'Scope closer not same for close curly');
-
     }//end testScopeSetting()
 
 
@@ -91,8 +90,5 @@ class ScopeSettingWithNamespaceOperatorTest extends AbstractMethodUnitTest
                 [T_SEMICOLON],
             ],
         ];
-
     }//end dataScopeSetting()
-
-
 }//end class

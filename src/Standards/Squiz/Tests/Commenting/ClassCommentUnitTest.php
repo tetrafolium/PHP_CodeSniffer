@@ -31,7 +31,6 @@ class ClassCommentUnitTest extends AbstractSniffUnitTest
             31 => 1,
             54 => 1,
         ];
-
     }//end getErrorList()
 
 
@@ -52,8 +51,5 @@ class ClassCommentUnitTest extends AbstractSniffUnitTest
             66 => 1,
             67 => 1,
         ];
-
     }//end getWarningList()
-
-
 }//end class

@@ -65,7 +65,6 @@ class NamedFunctionCallArgumentsTest extends AbstractMethodUnitTest
                 'Token tokenized as '.$tokens[$colon]['type'].', not T_COLON (type)'
             );
         }//end foreach
-
     }//end testNamedFunctionCallArguments()
 
 
@@ -254,7 +253,6 @@ class NamedFunctionCallArgumentsTest extends AbstractMethodUnitTest
                 ['something'],
             ],
         ];
-
     }//end dataNamedFunctionCallArguments()
 
 
@@ -285,7 +283,6 @@ class NamedFunctionCallArgumentsTest extends AbstractMethodUnitTest
             $tokens[$label]['type'],
             'Token tokenized as '.$tokens[$label]['type'].', not T_STRING (type)'
         );
-
     }//end testOtherTstringInFunctionCall()
 
 
@@ -316,7 +313,6 @@ class NamedFunctionCallArgumentsTest extends AbstractMethodUnitTest
                 'count',
             ],
         ];
-
     }//end dataOtherTstringInFunctionCall()
 
 
@@ -368,7 +364,6 @@ class NamedFunctionCallArgumentsTest extends AbstractMethodUnitTest
             $tokens[$colon]['type'],
             'Token tokenized as '.$tokens[$colon]['type'].', not T_COLON (type)'
         );
-
     }//end testMixedPositionalAndNamedArgsWithTernary()
 
 
@@ -465,7 +460,6 @@ class NamedFunctionCallArgumentsTest extends AbstractMethodUnitTest
             $tokens[$colon]['type'],
             'Second arg ternary: Token tokenized as '.$tokens[$colon]['type'].', not T_INLINE_ELSE (type)'
         );
-
     }//end testNamedArgWithTernary()
 
 
@@ -546,7 +540,6 @@ class NamedFunctionCallArgumentsTest extends AbstractMethodUnitTest
             $tokens[$colon]['type'],
             'Function in else: Token tokenized as '.$tokens[$colon]['type'].', not T_COLON (type)'
         );
-
     }//end testTernaryWithFunctionCallsInThenElse()
 
 
@@ -576,7 +569,6 @@ class NamedFunctionCallArgumentsTest extends AbstractMethodUnitTest
             $tokens[$colon]['type'],
             'Token tokenized as '.$tokens[$colon]['type'].', not T_INLINE_ELSE (type)'
         );
-
     }//end testTernaryWithConstantsInThenElse()
 
 
@@ -638,7 +630,6 @@ class NamedFunctionCallArgumentsTest extends AbstractMethodUnitTest
             $tokens[$colon]['type'],
             'Default case: Token tokenized as '.$tokens[$colon]['type'].', not T_COLON (type)'
         );
-
     }//end testSwitchStatement()
 
 
@@ -684,7 +675,6 @@ class NamedFunctionCallArgumentsTest extends AbstractMethodUnitTest
             $tokens[$colon]['type'],
             'Token tokenized as '.$tokens[$colon]['type'].', not T_COLON (type)'
         );
-
     }//end testParseErrorVariableLabel()
 
 
@@ -735,7 +725,6 @@ class NamedFunctionCallArgumentsTest extends AbstractMethodUnitTest
             $tokens[$colon]['type'],
             'Token tokenized as '.$tokens[$colon]['type'].', not T_COLON (type)'
         );
-
     }//end testReservedKeywordsAsName()
 
 
@@ -849,15 +838,15 @@ class NamedFunctionCallArgumentsTest extends AbstractMethodUnitTest
 
             if ($keyword === 'and') {
                 $tokensTypes[] = T_LOGICAL_AND;
-            } else if ($keyword === 'die') {
+            } elseif ($keyword === 'die') {
                 $tokensTypes[] = T_EXIT;
-            } else if ($keyword === 'or') {
+            } elseif ($keyword === 'or') {
                 $tokensTypes[] = T_LOGICAL_OR;
-            } else if ($keyword === 'xor') {
+            } elseif ($keyword === 'xor') {
                 $tokensTypes[] = T_LOGICAL_XOR;
-            } else if ($keyword === '__halt_compiler') {
+            } elseif ($keyword === '__halt_compiler') {
                 $tokensTypes[] = T_HALT_COMPILER;
-            } else if (defined($tokenName) === true) {
+            } elseif (defined($tokenName) === true) {
                 $tokensTypes[] = constant($tokenName);
             }
 
@@ -875,8 +864,5 @@ class NamedFunctionCallArgumentsTest extends AbstractMethodUnitTest
         }//end foreach
 
         return $data;
-
     }//end dataReservedKeywordsAsName()
-
-
 }//end class

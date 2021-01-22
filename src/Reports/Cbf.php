@@ -110,7 +110,6 @@ class Cbf implements Report
         echo $report['filename'].">>$errorCount>>$warningCount>>$fixableCount>>$fixedCount".PHP_EOL;
 
         return $fixed;
-
     }//end generateFileReport()
 
 
@@ -243,8 +242,5 @@ class Cbf implements Report
         if ($toScreen === true && $interactive === false) {
             Util\Timing::printRunTime();
         }
-
     }//end generate()
-
-
 }//end class

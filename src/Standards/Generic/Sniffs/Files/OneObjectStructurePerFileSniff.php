@@ -28,7 +28,6 @@ class OneObjectStructurePerFileSniff implements Sniff
             T_INTERFACE,
             T_TRAIT,
         ];
-
     }//end register()
 
 
@@ -48,8 +47,5 @@ class OneObjectStructurePerFileSniff implements Sniff
             $error = 'Only one object structure is allowed in a file';
             $phpcsFile->addError($error, $nextClass, 'MultipleFound');
         }
-
     }//end process()
-
-
 }//end class

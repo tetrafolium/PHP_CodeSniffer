@@ -34,5 +34,4 @@ class DiscouragedFunctionsSniff extends GenericForbiddenFunctionsSniff
      * @var boolean
      */
     public $error = false;
-
 }//end class

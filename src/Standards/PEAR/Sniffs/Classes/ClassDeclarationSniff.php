@@ -28,7 +28,6 @@ class ClassDeclarationSniff implements Sniff
             T_INTERFACE,
             T_TRAIT,
         ];
-
     }//end register()
 
 
@@ -142,8 +141,5 @@ class ClassDeclarationSniff implements Sniff
                 }
             }
         }//end if
-
     }//end process()
-
-
 }//end class

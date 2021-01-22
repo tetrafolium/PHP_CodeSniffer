@@ -49,7 +49,6 @@ class AnonClassDeclarationUnitTest extends AbstractSniffUnitTest
             63 => 1,
             75 => 1,
         ];
-
     }//end getErrorList()
 
 
@@ -64,8 +63,5 @@ class AnonClassDeclarationUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

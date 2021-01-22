@@ -44,7 +44,6 @@ class HTML extends Generator
         ob_end_clean();
 
         echo $content;
-
     }//end generate()
 
 
@@ -128,7 +127,6 @@ class HTML extends Generator
         echo ' </head>'.PHP_EOL;
         echo ' <body>'.PHP_EOL;
         echo "  <h1>$standard Coding Standards</h1>".PHP_EOL;
-
     }//end printHeader()
 
 
@@ -153,7 +151,6 @@ class HTML extends Generator
         }
 
         echo '  </ul>'.PHP_EOL;
-
     }//end printToc()
 
 
@@ -175,7 +172,6 @@ class HTML extends Generator
 
         echo ' </body>'.PHP_EOL;
         echo '</html>'.PHP_EOL;
-
     }//end printFooter()
 
 
@@ -197,11 +193,10 @@ class HTML extends Generator
         foreach ($doc->childNodes as $node) {
             if ($node->nodeName === 'standard') {
                 $this->printTextBlock($node);
-            } else if ($node->nodeName === 'code_comparison') {
+            } elseif ($node->nodeName === 'code_comparison') {
                 $this->printCodeComparisonBlock($node);
             }
         }
-
     }//end processSniff()
 
 
@@ -222,7 +217,6 @@ class HTML extends Generator
         $content = str_replace('&lt;/em&gt;', '</em>', $content);
 
         echo "  <p class=\"text\">$content</p>".PHP_EOL;
-
     }//end printTextBlock()
 
 
@@ -263,8 +257,5 @@ class HTML extends Generator
         echo "    <td class=\"code-comparison-code\">$second</td>".PHP_EOL;
         echo '   </tr>'.PHP_EOL;
         echo '  </table>'.PHP_EOL;
-
     }//end printCodeComparisonBlock()
-
-
 }//end class

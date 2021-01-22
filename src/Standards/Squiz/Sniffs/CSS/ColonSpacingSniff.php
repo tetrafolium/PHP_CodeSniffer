@@ -32,7 +32,6 @@ class ColonSpacingSniff implements Sniff
     public function register()
     {
         return [T_COLON];
-
     }//end register()
 
 
@@ -100,8 +99,5 @@ class ColonSpacingSniff implements Sniff
                 }
             }
         }//end if
-
     }//end process()
-
-
 }//end class

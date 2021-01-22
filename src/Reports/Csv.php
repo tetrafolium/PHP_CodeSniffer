@@ -51,7 +51,6 @@ class Csv implements Report
         }
 
         return true;
-
     }//end generateFileReport()
 
 
@@ -84,8 +83,5 @@ class Csv implements Report
     ) {
         echo 'File,Line,Column,Type,Message,Source,Severity,Fixable'.PHP_EOL;
         echo $cachedData;
-
     }//end generate()
-
-
 }//end class

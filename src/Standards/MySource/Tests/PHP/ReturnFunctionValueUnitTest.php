@@ -26,7 +26,6 @@ class ReturnFunctionValueUnitTest extends AbstractSniffUnitTest
     public function getErrorList()
     {
         return [];
-
     }//end getErrorList()
 
 
@@ -45,8 +44,5 @@ class ReturnFunctionValueUnitTest extends AbstractSniffUnitTest
             3 => 1,
             4 => 1,
         ];
-
     }//end getWarningList()
-
-
 }//end class

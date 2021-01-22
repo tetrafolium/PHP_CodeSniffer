@@ -25,7 +25,6 @@ class ClassInstantiationSniff implements Sniff
     public function register()
     {
         return [T_NEW];
-
     }//end register()
 
 
@@ -94,8 +93,5 @@ class ClassInstantiationSniff implements Sniff
             $prev = $phpcsFile->findPrevious(Tokens::$emptyTokens, ($classNameEnd - 1), null, true);
             $phpcsFile->fixer->addContent($prev, '()');
         }
-
     }//end process()
-
-
 }//end class

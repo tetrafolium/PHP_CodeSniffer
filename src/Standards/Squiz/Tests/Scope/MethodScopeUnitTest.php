@@ -30,7 +30,6 @@ class MethodScopeUnitTest extends AbstractSniffUnitTest
             30 => 1,
             39 => 1,
         ];
-
     }//end getErrorList()
 
 
@@ -45,8 +44,5 @@ class MethodScopeUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

@@ -36,7 +36,6 @@ class MemberVarScopeSniff extends AbstractVariableSniff
         $error = 'Scope modifier not specified for member variable "%s"';
         $data  = [$tokens[$stackPtr]['content']];
         $phpcsFile->addError($error, $stackPtr, 'Missing', $data);
-
     }//end processMemberVar()
 
 
@@ -53,7 +52,6 @@ class MemberVarScopeSniff extends AbstractVariableSniff
         /*
             We don't care about normal variables.
         */
-
     }//end processVariable()
 
 
@@ -70,8 +68,5 @@ class MemberVarScopeSniff extends AbstractVariableSniff
         /*
             We don't care about normal variables.
         */
-
     }//end processVariableInString()
-
-
 }//end class

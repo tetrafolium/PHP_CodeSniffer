@@ -29,7 +29,6 @@ class ClosureLinterUnitTest extends AbstractSniffUnitTest
         }
 
         return false;
-
     }//end shouldSkipTest()
 
 
@@ -44,7 +43,6 @@ class ClosureLinterUnitTest extends AbstractSniffUnitTest
     public function getErrorList()
     {
         return [];
-
     }//end getErrorList()
 
 
@@ -62,8 +60,5 @@ class ClosureLinterUnitTest extends AbstractSniffUnitTest
             3 => 1,
             5 => 1,
         ];
-
     }//end getWarningList()
-
-
 }//end class

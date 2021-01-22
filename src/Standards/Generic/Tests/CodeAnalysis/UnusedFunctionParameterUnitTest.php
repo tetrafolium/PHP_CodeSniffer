@@ -26,7 +26,6 @@ class UnusedFunctionParameterUnitTest extends AbstractSniffUnitTest
     public function getErrorList()
     {
         return [];
-
     }//end getErrorList()
 
 
@@ -51,8 +50,5 @@ class UnusedFunctionParameterUnitTest extends AbstractSniffUnitTest
             121 => 2,
             125 => 2,
         ];
-
     }//end getWarningList()
-
-
 }//end class

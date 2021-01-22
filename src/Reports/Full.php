@@ -184,7 +184,6 @@ class Full implements Report
 
         echo PHP_EOL;
         return true;
-
     }//end generateFileReport()
 
 
@@ -224,8 +223,5 @@ class Full implements Report
         if ($toScreen === true && $interactive === false) {
             Util\Timing::printRunTime();
         }
-
     }//end generate()
-
-
 }//end class

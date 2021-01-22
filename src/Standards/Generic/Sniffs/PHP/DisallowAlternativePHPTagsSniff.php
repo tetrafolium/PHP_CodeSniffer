@@ -56,7 +56,6 @@ class DisallowAlternativePHPTagsSniff implements Sniff
             T_OPEN_TAG_WITH_ECHO,
             T_INLINE_HTML,
         ];
-
     }//end register()
 
 
@@ -84,7 +83,7 @@ class DisallowAlternativePHPTagsSniff implements Sniff
                 $error     = 'ASP style opening tag used; expected "<?php" but found "%s"';
                 $closer    = $this->findClosingTag($phpcsFile, $tokens, $stackPtr, '%>');
                 $errorCode = 'ASPOpenTagFound';
-            } else if (strpos($content, '<script ') !== false) {
+            } elseif (strpos($content, '<script ') !== false) {
                 $error     = 'Script style opening tag used; expected "<?php" but found "%s"';
                 $closer    = $this->findClosingTag($phpcsFile, $tokens, $stackPtr, '</script>');
                 $errorCode = 'ScriptOpenTagFound';
@@ -149,7 +148,7 @@ class DisallowAlternativePHPTagsSniff implements Sniff
                 $data    = ['<%='.$snippet];
 
                 $phpcsFile->addWarning($error, $stackPtr, 'MaybeASPShortOpenTagFound', $data);
-            } else if (strpos($content, '<%') !== false) {
+            } elseif (strpos($content, '<%') !== false) {
                 $error   = 'Possible use of ASP style opening tags detected; found: %s';
                 $snippet = $this->getSnippet($content, '<%');
                 $data    = ['<%'.$snippet];
@@ -157,7 +156,6 @@ class DisallowAlternativePHPTagsSniff implements Sniff
                 $phpcsFile->addWarning($error, $stackPtr, 'MaybeASPOpenTagFound', $data);
             }
         }
-
     }//end process()
 
 
@@ -187,7 +185,6 @@ class DisallowAlternativePHPTagsSniff implements Sniff
         }
 
         return $snippet;
-
     }//end getSnippet()
 
 
@@ -211,7 +208,6 @@ class DisallowAlternativePHPTagsSniff implements Sniff
         }
 
         return false;
-
     }//end findClosingTag()
 
 
@@ -246,8 +242,5 @@ class DisallowAlternativePHPTagsSniff implements Sniff
         $phpcsFile->fixer->replaceToken($openTagPointer, $openReplacement);
         $phpcsFile->fixer->replaceToken($closeTagPointer, $closeReplacement);
         $phpcsFile->fixer->endChangeset();
-
     }//end addChangeset()
-
-
 }//end class

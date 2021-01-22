@@ -57,7 +57,6 @@ abstract class AbstractSniffUnitTest extends TestCase
         $class = get_class($this);
         $this->standardsDir = $GLOBALS['PHP_CODESNIFFER_STANDARD_DIRS'][$class];
         $this->testsDir     = $GLOBALS['PHP_CODESNIFFER_TEST_DIRS'][$class];
-
     }//end setUp()
 
 
@@ -91,7 +90,6 @@ abstract class AbstractSniffUnitTest extends TestCase
         sort($testFiles);
 
         return $testFiles;
-
     }//end getTestFiles()
 
 
@@ -103,7 +101,6 @@ abstract class AbstractSniffUnitTest extends TestCase
     protected function shouldSkipTest()
     {
         return false;
-
     }//end shouldSkipTest()
 
 
@@ -205,7 +202,6 @@ abstract class AbstractSniffUnitTest extends TestCase
         if (empty($failureMessages) === false) {
             $this->fail(implode(PHP_EOL, $failureMessages));
         }
-
     }//end testSniff()
 
 
@@ -417,7 +413,6 @@ abstract class AbstractSniffUnitTest extends TestCase
         }//end foreach
 
         return $failureMessages;
-
     }//end generateFailureMessages()
 
 
@@ -432,7 +427,6 @@ abstract class AbstractSniffUnitTest extends TestCase
     public function setCliValues($filename, $config)
     {
         return;
-
     }//end setCliValues()
 
 
@@ -456,6 +450,4 @@ abstract class AbstractSniffUnitTest extends TestCase
      * @return array<int, int>
      */
     abstract protected function getWarningList();
-
-
 }//end class

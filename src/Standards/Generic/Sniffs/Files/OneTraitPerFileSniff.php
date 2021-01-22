@@ -24,7 +24,6 @@ class OneTraitPerFileSniff implements Sniff
     public function register()
     {
         return [T_TRAIT];
-
     }//end register()
 
 
@@ -44,8 +43,5 @@ class OneTraitPerFileSniff implements Sniff
             $error = 'Only one trait is allowed in a file';
             $phpcsFile->addError($error, $nextClass, 'MultipleFound');
         }
-
     }//end process()
-
-
 }//end class

@@ -35,7 +35,6 @@ class MemberVarScopeUnitTest extends AbstractSniffUnitTest
             66 => 2,
             67 => 1,
         ];
-
     }//end getErrorList()
 
 
@@ -50,8 +49,5 @@ class MemberVarScopeUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [71 => 1];
-
     }//end getWarningList()
-
-
 }//end class

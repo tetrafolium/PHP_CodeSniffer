@@ -30,7 +30,6 @@ class ValidLogicalOperatorsUnitTest extends AbstractSniffUnitTest
             11 => 1,
             17 => 2,
         ];
-
     }//end getErrorList()
 
 
@@ -45,8 +44,5 @@ class ValidLogicalOperatorsUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

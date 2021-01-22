@@ -48,7 +48,6 @@ class ControlStructureSpacingSniff implements Sniff
             T_ELSEIF,
             T_CATCH,
         ];
-
     }//end register()
 
 
@@ -99,7 +98,7 @@ class ControlStructureSpacingSniff implements Sniff
                     $padding = str_repeat(' ', $this->requiredSpacesAfterOpen);
                     if ($spaceAfterOpen === 0) {
                         $phpcsFile->fixer->addContent($parenOpener, $padding);
-                    } else if ($spaceAfterOpen === 'newline') {
+                    } elseif ($spaceAfterOpen === 'newline') {
                         $phpcsFile->fixer->replaceToken(($parenOpener + 1), '');
                     } else {
                         $phpcsFile->fixer->replaceToken(($parenOpener + 1), $padding);
@@ -134,8 +133,5 @@ class ControlStructureSpacingSniff implements Sniff
                 }
             }
         }//end if
-
     }//end process()
-
-
 }//end class

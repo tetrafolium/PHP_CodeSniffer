@@ -32,7 +32,6 @@ class CreateWidgetTypeCallbackSniff implements Sniff
     public function register()
     {
         return [T_OBJECT];
-
     }//end register()
 
 
@@ -96,7 +95,7 @@ class CreateWidgetTypeCallbackSniff implements Sniff
                     $nestedFunction = null;
                     continue;
                 }
-            } else if (($tokens[$i]['code'] === T_FUNCTION
+            } elseif (($tokens[$i]['code'] === T_FUNCTION
                 || $tokens[$i]['code'] === T_CLOSURE)
                 && isset($tokens[$i]['scope_closer']) === true
             ) {
@@ -112,7 +111,7 @@ class CreateWidgetTypeCallbackSniff implements Sniff
                 }
 
                 continue;
-            } else if ($tokens[$i]['code'] !== T_STRING
+            } elseif ($tokens[$i]['code'] !== T_STRING
                 || $tokens[$i]['content'] !== 'callback'
             ) {
                 continue;
@@ -211,8 +210,5 @@ class CreateWidgetTypeCallbackSniff implements Sniff
             $error = 'The create() method of a widget type must call the callback function';
             $phpcsFile->addError($error, $create, 'CallbackNotCalled');
         }
-
     }//end process()
-
-
 }//end class

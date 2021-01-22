@@ -32,7 +32,6 @@ class NamedColoursUnitTest extends AbstractSniffUnitTest
             11 => 1,
             12 => 1,
         ];
-
     }//end getErrorList()
 
 
@@ -47,8 +46,5 @@ class NamedColoursUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

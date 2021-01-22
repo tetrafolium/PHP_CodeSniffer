@@ -136,7 +136,6 @@ if (class_exists('PHP_CodeSniffer\Autoload', false) === false) {
             }
 
             return false;
-
         }//end load()
 
 
@@ -179,7 +178,6 @@ if (class_exists('PHP_CodeSniffer\Autoload', false) === false) {
             self::$loadedClasses[$path]    = $className;
             self::$loadedFiles[$className] = $path;
             return self::$loadedClasses[$path];
-
         }//end loadFile()
 
 
@@ -240,7 +238,6 @@ if (class_exists('PHP_CodeSniffer\Autoload', false) === false) {
             }
 
             return $className;
-
         }//end determineLoadedClass()
 
 
@@ -255,7 +252,6 @@ if (class_exists('PHP_CodeSniffer\Autoload', false) === false) {
         public static function addSearchPath($path, $nsPrefix='')
         {
             self::$searchPaths[$path] = rtrim(trim((string) $nsPrefix), '\\');
-
         }//end addSearchPath()
 
 
@@ -267,7 +263,6 @@ if (class_exists('PHP_CodeSniffer\Autoload', false) === false) {
         public static function getSearchPaths()
         {
             return self::$searchPaths;
-
         }//end getSearchPaths()
 
 
@@ -286,7 +281,6 @@ if (class_exists('PHP_CodeSniffer\Autoload', false) === false) {
             }
 
             return self::$loadedClasses[$path];
-
         }//end getLoadedClassName()
 
 
@@ -305,7 +299,6 @@ if (class_exists('PHP_CodeSniffer\Autoload', false) === false) {
             }
 
             return self::$loadedFiles[$class];
-
         }//end getLoadedFileName()
 
 
@@ -317,7 +310,6 @@ if (class_exists('PHP_CodeSniffer\Autoload', false) === false) {
         public static function getLoadedClasses()
         {
             return self::$loadedClasses;
-
         }//end getLoadedClasses()
 
 
@@ -329,10 +321,7 @@ if (class_exists('PHP_CodeSniffer\Autoload', false) === false) {
         public static function getLoadedFiles()
         {
             return self::$loadedFiles;
-
         }//end getLoadedFiles()
-
-
     }//end class
 
     // Register the autoloader before any existing autoloaders to ensure

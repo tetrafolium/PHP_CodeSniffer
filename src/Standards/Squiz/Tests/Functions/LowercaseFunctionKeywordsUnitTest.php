@@ -36,7 +36,6 @@ class LowercaseFunctionKeywordsUnitTest extends AbstractSniffUnitTest
             25 => 4,
             28 => 1,
         ];
-
     }//end getErrorList()
 
 
@@ -51,8 +50,5 @@ class LowercaseFunctionKeywordsUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

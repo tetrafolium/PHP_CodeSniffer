@@ -37,7 +37,6 @@ class DisallowObjectStringIndexUnitTest extends AbstractSniffUnitTest
             25 => 1,
             35 => 1,
         ];
-
     }//end getErrorList()
 
 
@@ -52,8 +51,5 @@ class DisallowObjectStringIndexUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

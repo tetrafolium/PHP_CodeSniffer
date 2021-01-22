@@ -67,7 +67,6 @@ abstract class ExactMatch extends Filter
         }
 
         return isset($this->whitelist[$filePath]);
-
     }//end accept()
 
 
@@ -85,7 +84,6 @@ abstract class ExactMatch extends Filter
         $children->blacklist = $this->blacklist;
         $children->whitelist = $this->whitelist;
         return $children;
-
     }//end getChildren()
 
 
@@ -103,6 +101,4 @@ abstract class ExactMatch extends Filter
      * @return array
      */
     abstract protected function getWhitelist();
-
-
 }//end class

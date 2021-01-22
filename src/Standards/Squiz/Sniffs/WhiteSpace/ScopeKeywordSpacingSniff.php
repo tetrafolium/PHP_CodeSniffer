@@ -27,7 +27,6 @@ class ScopeKeywordSpacingSniff implements Sniff
         $register   = Tokens::$scopeModifiers;
         $register[] = T_STATIC;
         return $register;
-
     }//end register()
 
 
@@ -138,8 +137,5 @@ class ScopeKeywordSpacingSniff implements Sniff
                 }
             }//end if
         }//end if
-
     }//end process()
-
-
 }//end class

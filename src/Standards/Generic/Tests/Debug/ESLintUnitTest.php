@@ -44,7 +44,6 @@ class ESLintUnitTest extends AbstractSniffUnitTest
 
         $cwd = getcwd();
         file_put_contents($cwd.'/.eslintrc.json', self::ESLINT_CONFIG);
-
     }//end setUp()
 
 
@@ -59,7 +58,6 @@ class ESLintUnitTest extends AbstractSniffUnitTest
 
         $cwd = getcwd();
         unlink($cwd.'/.eslintrc.json');
-
     }//end tearDown()
 
 
@@ -76,7 +74,6 @@ class ESLintUnitTest extends AbstractSniffUnitTest
         }
 
         return false;
-
     }//end shouldSkipTest()
 
 
@@ -91,7 +88,6 @@ class ESLintUnitTest extends AbstractSniffUnitTest
     public function getErrorList()
     {
         return [1 => 2];
-
     }//end getErrorList()
 
 
@@ -106,8 +102,5 @@ class ESLintUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

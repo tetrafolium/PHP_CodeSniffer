@@ -77,14 +77,13 @@ class Xml implements Report
         $content = $out->flush();
         if (strpos($content, PHP_EOL) !== false) {
             $content = substr($content, (strpos($content, PHP_EOL) + strlen(PHP_EOL)));
-        } else if (strpos($content, "\n") !== false) {
+        } elseif (strpos($content, "\n") !== false) {
             $content = substr($content, (strpos($content, "\n") + 1));
         }
 
         echo $content;
 
         return true;
-
     }//end generateFileReport()
 
 
@@ -119,8 +118,5 @@ class Xml implements Report
         echo '<phpcs version="'.Config::VERSION.'">'.PHP_EOL;
         echo $cachedData;
         echo '</phpcs>'.PHP_EOL;
-
     }//end generate()
-
-
 }//end class

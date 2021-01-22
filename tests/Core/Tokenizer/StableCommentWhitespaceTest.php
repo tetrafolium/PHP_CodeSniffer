@@ -45,7 +45,6 @@ class StableCommentWhitespaceTest extends AbstractMethodUnitTest
 
             ++$comment;
         }
-
     }//end testCommentTokenization()
 
 
@@ -1049,8 +1048,5 @@ class StableCommentWhitespaceTest extends AbstractMethodUnitTest
                 ],
             ],
         ];
-
     }//end dataCommentTokenization()
-
-
 }//end class

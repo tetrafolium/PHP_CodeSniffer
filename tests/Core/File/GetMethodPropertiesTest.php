@@ -34,7 +34,6 @@ class GetMethodPropertiesTest extends AbstractMethodUnitTest
         ];
 
         $this->getMethodPropertiesTestHelper('/* '.__FUNCTION__.' */', $expected);
-
     }//end testBasicFunction()
 
 
@@ -57,7 +56,6 @@ class GetMethodPropertiesTest extends AbstractMethodUnitTest
         ];
 
         $this->getMethodPropertiesTestHelper('/* '.__FUNCTION__.' */', $expected);
-
     }//end testReturnFunction()
 
 
@@ -80,7 +78,6 @@ class GetMethodPropertiesTest extends AbstractMethodUnitTest
         ];
 
         $this->getMethodPropertiesTestHelper('/* '.__FUNCTION__.' */', $expected);
-
     }//end testNestedClosure()
 
 
@@ -103,7 +100,6 @@ class GetMethodPropertiesTest extends AbstractMethodUnitTest
         ];
 
         $this->getMethodPropertiesTestHelper('/* '.__FUNCTION__.' */', $expected);
-
     }//end testBasicMethod()
 
 
@@ -126,7 +122,6 @@ class GetMethodPropertiesTest extends AbstractMethodUnitTest
         ];
 
         $this->getMethodPropertiesTestHelper('/* '.__FUNCTION__.' */', $expected);
-
     }//end testPrivateStaticMethod()
 
 
@@ -149,7 +144,6 @@ class GetMethodPropertiesTest extends AbstractMethodUnitTest
         ];
 
         $this->getMethodPropertiesTestHelper('/* '.__FUNCTION__.' */', $expected);
-
     }//end testFinalMethod()
 
 
@@ -172,7 +166,6 @@ class GetMethodPropertiesTest extends AbstractMethodUnitTest
         ];
 
         $this->getMethodPropertiesTestHelper('/* '.__FUNCTION__.' */', $expected);
-
     }//end testProtectedReturnMethod()
 
 
@@ -195,7 +188,6 @@ class GetMethodPropertiesTest extends AbstractMethodUnitTest
         ];
 
         $this->getMethodPropertiesTestHelper('/* '.__FUNCTION__.' */', $expected);
-
     }//end testPublicReturnMethod()
 
 
@@ -218,7 +210,6 @@ class GetMethodPropertiesTest extends AbstractMethodUnitTest
         ];
 
         $this->getMethodPropertiesTestHelper('/* '.__FUNCTION__.' */', $expected);
-
     }//end testNullableReturnMethod()
 
 
@@ -241,7 +232,6 @@ class GetMethodPropertiesTest extends AbstractMethodUnitTest
         ];
 
         $this->getMethodPropertiesTestHelper('/* '.__FUNCTION__.' */', $expected);
-
     }//end testMessyNullableReturnMethod()
 
 
@@ -264,7 +254,6 @@ class GetMethodPropertiesTest extends AbstractMethodUnitTest
         ];
 
         $this->getMethodPropertiesTestHelper('/* '.__FUNCTION__.' */', $expected);
-
     }//end testReturnNamespace()
 
 
@@ -287,7 +276,6 @@ class GetMethodPropertiesTest extends AbstractMethodUnitTest
         ];
 
         $this->getMethodPropertiesTestHelper('/* '.__FUNCTION__.' */', $expected);
-
     }//end testReturnMultilineNamespace()
 
 
@@ -310,7 +298,6 @@ class GetMethodPropertiesTest extends AbstractMethodUnitTest
         ];
 
         $this->getMethodPropertiesTestHelper('/* '.__FUNCTION__.' */', $expected);
-
     }//end testAbstractMethod()
 
 
@@ -333,7 +320,6 @@ class GetMethodPropertiesTest extends AbstractMethodUnitTest
         ];
 
         $this->getMethodPropertiesTestHelper('/* '.__FUNCTION__.' */', $expected);
-
     }//end testAbstractReturnMethod()
 
 
@@ -356,7 +342,6 @@ class GetMethodPropertiesTest extends AbstractMethodUnitTest
         ];
 
         $this->getMethodPropertiesTestHelper('/* '.__FUNCTION__.' */', $expected);
-
     }//end testInterfaceMethod()
 
 
@@ -379,7 +364,6 @@ class GetMethodPropertiesTest extends AbstractMethodUnitTest
         ];
 
         $this->getMethodPropertiesTestHelper('/* '.__FUNCTION__.' */', $expected);
-
     }//end testArrowFunction()
 
 
@@ -402,7 +386,6 @@ class GetMethodPropertiesTest extends AbstractMethodUnitTest
         ];
 
         $this->getMethodPropertiesTestHelper('/* '.__FUNCTION__.' */', $expected);
-
     }//end testReturnTypeStatic()
 
 
@@ -425,7 +408,6 @@ class GetMethodPropertiesTest extends AbstractMethodUnitTest
         ];
 
         $this->getMethodPropertiesTestHelper('/* '.__FUNCTION__.' */', $expected);
-
     }//end testPHP8MixedTypeHint()
 
 
@@ -448,7 +430,6 @@ class GetMethodPropertiesTest extends AbstractMethodUnitTest
         ];
 
         $this->getMethodPropertiesTestHelper('/* '.__FUNCTION__.' */', $expected);
-
     }//end testPHP8MixedTypeHintNullable()
 
 
@@ -471,7 +452,6 @@ class GetMethodPropertiesTest extends AbstractMethodUnitTest
         ];
 
         $this->getMethodPropertiesTestHelper('/* '.__FUNCTION__.' */', $expected);
-
     }//end testNamespaceOperatorTypeHint()
 
 
@@ -494,7 +474,6 @@ class GetMethodPropertiesTest extends AbstractMethodUnitTest
         ];
 
         $this->getMethodPropertiesTestHelper('/* '.__FUNCTION__.' */', $expected);
-
     }//end testPHP8UnionTypesSimple()
 
 
@@ -517,7 +496,6 @@ class GetMethodPropertiesTest extends AbstractMethodUnitTest
         ];
 
         $this->getMethodPropertiesTestHelper('/* '.__FUNCTION__.' */', $expected);
-
     }//end testPHP8UnionTypesTwoClasses()
 
 
@@ -540,7 +518,6 @@ class GetMethodPropertiesTest extends AbstractMethodUnitTest
         ];
 
         $this->getMethodPropertiesTestHelper('/* '.__FUNCTION__.' */', $expected);
-
     }//end testPHP8UnionTypesAllBaseTypes()
 
 
@@ -563,7 +540,6 @@ class GetMethodPropertiesTest extends AbstractMethodUnitTest
         ];
 
         $this->getMethodPropertiesTestHelper('/* '.__FUNCTION__.' */', $expected);
-
     }//end testPHP8UnionTypesAllPseudoTypes()
 
 
@@ -586,7 +562,6 @@ class GetMethodPropertiesTest extends AbstractMethodUnitTest
         ];
 
         $this->getMethodPropertiesTestHelper('/* '.__FUNCTION__.' */', $expected);
-
     }//end testPHP8UnionTypesNullable()
 
 
@@ -609,7 +584,6 @@ class GetMethodPropertiesTest extends AbstractMethodUnitTest
         ];
 
         $this->getMethodPropertiesTestHelper('/* '.__FUNCTION__.' */', $expected);
-
     }//end testPHP8PseudoTypeNull()
 
 
@@ -632,7 +606,6 @@ class GetMethodPropertiesTest extends AbstractMethodUnitTest
         ];
 
         $this->getMethodPropertiesTestHelper('/* '.__FUNCTION__.' */', $expected);
-
     }//end testPHP8PseudoTypeFalse()
 
 
@@ -655,7 +628,6 @@ class GetMethodPropertiesTest extends AbstractMethodUnitTest
         ];
 
         $this->getMethodPropertiesTestHelper('/* '.__FUNCTION__.' */', $expected);
-
     }//end testPHP8PseudoTypeFalseAndBool()
 
 
@@ -678,7 +650,6 @@ class GetMethodPropertiesTest extends AbstractMethodUnitTest
         ];
 
         $this->getMethodPropertiesTestHelper('/* '.__FUNCTION__.' */', $expected);
-
     }//end testPHP8ObjectAndClass()
 
 
@@ -701,7 +672,6 @@ class GetMethodPropertiesTest extends AbstractMethodUnitTest
         ];
 
         $this->getMethodPropertiesTestHelper('/* '.__FUNCTION__.' */', $expected);
-
     }//end testPHP8PseudoTypeIterableAndArray()
 
 
@@ -724,7 +694,6 @@ class GetMethodPropertiesTest extends AbstractMethodUnitTest
         ];
 
         $this->getMethodPropertiesTestHelper('/* '.__FUNCTION__.' */', $expected);
-
     }//end testPHP8DuplicateTypeInUnionWhitespaceAndComment()
 
 
@@ -742,8 +711,5 @@ class GetMethodPropertiesTest extends AbstractMethodUnitTest
         $found    = self::$phpcsFile->getMethodProperties($function);
 
         $this->assertArraySubset($expected, $found, true);
-
     }//end getMethodPropertiesTestHelper()
-
-
 }//end class

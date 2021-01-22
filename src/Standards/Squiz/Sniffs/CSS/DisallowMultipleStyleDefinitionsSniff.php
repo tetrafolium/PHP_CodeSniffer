@@ -31,7 +31,6 @@ class DisallowMultipleStyleDefinitionsSniff implements Sniff
     public function register()
     {
         return [T_STYLE];
-
     }//end register()
 
 
@@ -64,8 +63,5 @@ class DisallowMultipleStyleDefinitionsSniff implements Sniff
                 $phpcsFile->fixer->addNewlineBefore($next);
             }
         }
-
     }//end process()
-
-
 }//end class

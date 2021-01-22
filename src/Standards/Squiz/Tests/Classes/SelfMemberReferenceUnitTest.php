@@ -42,7 +42,6 @@ class SelfMemberReferenceUnitTest extends AbstractSniffUnitTest
             162 => 1,
             171 => 1,
         ];
-
     }//end getErrorList()
 
 
@@ -57,8 +56,5 @@ class SelfMemberReferenceUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

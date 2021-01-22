@@ -33,7 +33,6 @@ class CallTimePassByReferenceUnitTest extends AbstractSniffUnitTest
             23 => 1,
             30 => 1,
         ];
-
     }//end getErrorList()
 
 
@@ -48,8 +47,5 @@ class CallTimePassByReferenceUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

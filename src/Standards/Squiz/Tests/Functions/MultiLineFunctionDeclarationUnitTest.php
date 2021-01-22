@@ -77,7 +77,6 @@ class MultiLineFunctionDeclarationUnitTest extends AbstractSniffUnitTest
         }//end if
 
         return $errors;
-
     }//end getErrorList()
 
 
@@ -92,8 +91,5 @@ class MultiLineFunctionDeclarationUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class

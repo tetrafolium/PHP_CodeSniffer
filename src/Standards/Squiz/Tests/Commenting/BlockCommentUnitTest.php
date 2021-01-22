@@ -26,7 +26,6 @@ class BlockCommentUnitTest extends AbstractSniffUnitTest
     public function setCliValues($testFile, $config)
     {
         $config->tabWidth = 4;
-
     }//end setCliValues()
 
 
@@ -80,7 +79,6 @@ class BlockCommentUnitTest extends AbstractSniffUnitTest
         ];
 
         return $errors;
-
     }//end getErrorList()
 
 
@@ -95,8 +93,5 @@ class BlockCommentUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
-
     }//end getWarningList()
-
-
 }//end class
