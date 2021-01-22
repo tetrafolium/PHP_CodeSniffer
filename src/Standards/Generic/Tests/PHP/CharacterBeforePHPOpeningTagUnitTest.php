@@ -35,6 +35,7 @@ class CharacterBeforePHPOpeningTagUnitTest extends AbstractSniffUnitTest
             return [];
             break;
         }//end switch
+
     }//end getErrorList()
 
 
@@ -49,5 +50,8 @@ class CharacterBeforePHPOpeningTagUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

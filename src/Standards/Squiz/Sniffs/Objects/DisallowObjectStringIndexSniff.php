@@ -31,6 +31,7 @@ class DisallowObjectStringIndexSniff implements Sniff
     public function register()
     {
         return [T_OPEN_SQUARE_BRACKET];
+
     }//end register()
 
 
@@ -77,5 +78,8 @@ class DisallowObjectStringIndexSniff implements Sniff
             $error = 'Object indexes must be written in dot notation';
             $phpcsFile->addError($error, $prev, 'Found');
         }
+
     }//end process()
+
+
 }//end class

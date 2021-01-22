@@ -28,6 +28,7 @@ class ClassFileNameSniff implements Sniff
             T_INTERFACE,
             T_TRAIT,
         ];
+
     }//end register()
 
 
@@ -61,5 +62,8 @@ class ClassFileNameSniff implements Sniff
             ];
             $phpcsFile->addError($error, $stackPtr, 'NoMatch', $data);
         }
+
     }//end process()
+
+
 }//end class

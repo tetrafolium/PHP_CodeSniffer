@@ -31,10 +31,11 @@ class Text extends Generator
         foreach ($doc->childNodes as $node) {
             if ($node->nodeName === 'standard') {
                 $this->printTextBlock($node);
-            } elseif ($node->nodeName === 'code_comparison') {
+            } else if ($node->nodeName === 'code_comparison') {
                 $this->printCodeComparisonBlock($node);
             }
         }
+
     }//end processSniff()
 
 
@@ -57,6 +58,7 @@ class Text extends Generator
         echo strtoupper(PHP_EOL."| $standard CODING STANDARD: $title |".PHP_EOL);
         echo str_repeat('-', (strlen("$standard CODING STANDARD: $title") + 4));
         echo PHP_EOL.PHP_EOL;
+
     }//end printTitle()
 
 
@@ -110,6 +112,7 @@ class Text extends Generator
         }//end foreach
 
         echo implode(PHP_EOL, $lines).PHP_EOL.PHP_EOL;
+
     }//end printTextBlock()
 
 
@@ -137,7 +140,7 @@ class Text extends Generator
                     // so we are done.
                     $firstTitleLines[] = $tempTitle.$word;
                     $tempTitle         = '';
-                } elseif (strlen($tempTitle.$word) === 46) {
+                } else if (strlen($tempTitle.$word) === 46) {
                     // We are already at the edge, so we are done.
                     $firstTitleLines[] = $tempTitle.$word;
                     $tempTitle         = '';
@@ -172,7 +175,7 @@ class Text extends Generator
                     // so we are done.
                     $secondTitleLines[] = $tempTitle.$word;
                     $tempTitle          = '';
-                } elseif (strlen($tempTitle.$word) === 46) {
+                } else if (strlen($tempTitle.$word) === 46) {
                     // We are already at the edge, so we are done.
                     $secondTitleLines[] = $tempTitle.$word;
                     $tempTitle          = '';
@@ -243,5 +246,8 @@ class Text extends Generator
         }//end for
 
         echo str_repeat('-', 100).PHP_EOL.PHP_EOL;
+
     }//end printCodeComparisonBlock()
+
+
 }//end class

@@ -35,6 +35,7 @@ class ArrayBracketSpacingUnitTest extends AbstractSniffUnitTest
             30 => 1,
             31 => 2,
         ];
+
     }//end getErrorList()
 
 
@@ -49,5 +50,8 @@ class ArrayBracketSpacingUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

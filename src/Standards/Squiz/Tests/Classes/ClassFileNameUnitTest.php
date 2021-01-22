@@ -48,6 +48,7 @@ class ClassFileNameUnitTest extends AbstractSniffUnitTest
             33 => 1,
             34 => 1,
         ];
+
     }//end getErrorList()
 
 
@@ -62,5 +63,8 @@ class ClassFileNameUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

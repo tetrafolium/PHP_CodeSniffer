@@ -28,6 +28,7 @@ class TraitNameSuffixUnitTest extends AbstractSniffUnitTest
             3 => 1,
             9 => 1,
         ];
+
     }//end getErrorList()
 
 
@@ -42,5 +43,8 @@ class TraitNameSuffixUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

@@ -53,6 +53,7 @@ class FunctionSpacingSniff implements Sniff
     public function register()
     {
         return [T_FUNCTION];
+
     }//end register()
 
 
@@ -345,5 +346,8 @@ class FunctionSpacingSniff implements Sniff
                 }//end if
             }//end if
         }//end if
+
     }//end process()
+
+
 }//end class

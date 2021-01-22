@@ -78,6 +78,7 @@ class LongConditionClosingCommentUnitTest extends AbstractSniffUnitTest
             return [];
             break;
         }//end switch
+
     }//end getErrorList()
 
 
@@ -92,5 +93,8 @@ class LongConditionClosingCommentUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

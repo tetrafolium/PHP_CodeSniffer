@@ -48,6 +48,7 @@ class BrowserSpecificStylesSniff implements Sniff
     public function register()
     {
         return [T_STYLE];
+
     }//end register()
 
 
@@ -79,5 +80,8 @@ class BrowserSpecificStylesSniff implements Sniff
             $error = 'Browser-specific styles are not allowed';
             $phpcsFile->addError($error, $stackPtr, 'ForbiddenStyle');
         }
+
     }//end process()
+
+
 }//end class

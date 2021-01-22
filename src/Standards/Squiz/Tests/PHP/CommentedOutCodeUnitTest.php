@@ -26,6 +26,7 @@ class CommentedOutCodeUnitTest extends AbstractSniffUnitTest
     public function getErrorList()
     {
         return [];
+
     }//end getErrorList()
 
 
@@ -69,5 +70,8 @@ class CommentedOutCodeUnitTest extends AbstractSniffUnitTest
             return [];
             break;
         }//end switch
+
     }//end getWarningList()
+
+
 }//end class

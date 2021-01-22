@@ -26,6 +26,7 @@ class AjaxNullComparisonUnitTest extends AbstractSniffUnitTest
     public function getErrorList()
     {
         return [];
+
     }//end getErrorList()
 
 
@@ -47,5 +48,8 @@ class AjaxNullComparisonUnitTest extends AbstractSniffUnitTest
             92  => 1,
             122 => 1,
         ];
+
     }//end getWarningList()
+
+
 }//end class

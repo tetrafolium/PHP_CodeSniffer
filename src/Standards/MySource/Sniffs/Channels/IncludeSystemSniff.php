@@ -47,6 +47,7 @@ class IncludeSystemSniff extends AbstractScopeSniff
     public function __construct()
     {
         parent::__construct([T_FUNCTION], [T_DOUBLE_COLON, T_EXTENDS], true);
+
     }//end __construct()
 
 
@@ -111,8 +112,8 @@ class IncludeSystemSniff extends AbstractScopeSniff
             $name = $this->getIncludedClassFromToken($phpcsFile, $tokens, $i);
             if ($name !== false) {
                 $includedClasses[$name] = true;
-            // Special case for Widgets cause they are, well, special.
-            } elseif (strtolower($tokens[$i]['content']) === 'includewidget') {
+                // Special case for Widgets cause they are, well, special.
+            } else if (strtolower($tokens[$i]['content']) === 'includewidget') {
                 $typeName = $phpcsFile->findNext(T_CONSTANT_ENCAPSED_STRING, ($i + 1));
                 $typeName = trim($tokens[$typeName]['content'], " '");
                 $includedClasses[strtolower($typeName).'widgettype'] = true;
@@ -187,6 +188,7 @@ class IncludeSystemSniff extends AbstractScopeSniff
             $data  = [$className];
             $phpcsFile->addError($error, $stackPtr, 'NotIncludedCall', $data);
         }
+
     }//end processTokenWithinScope()
 
 
@@ -253,8 +255,8 @@ class IncludeSystemSniff extends AbstractScopeSniff
             $name = $this->getIncludedClassFromToken($phpcsFile, $tokens, $i);
             if ($name !== false) {
                 $includedClasses[$name] = true;
-            // Special case for Widgets cause they are, well, special.
-            } elseif (strtolower($tokens[$i]['content']) === 'includewidget') {
+                // Special case for Widgets cause they are, well, special.
+            } else if (strtolower($tokens[$i]['content']) === 'includewidget') {
                 $typeName = $phpcsFile->findNext(T_CONSTANT_ENCAPSED_STRING, ($i + 1));
                 $typeName = trim($tokens[$typeName]['content'], " '");
                 $includedClasses[strtolower($typeName).'widgettype'] = true;
@@ -272,6 +274,7 @@ class IncludeSystemSniff extends AbstractScopeSniff
                 $phpcsFile->addError($error, $stackPtr, 'NotIncludedCall', $data);
             }
         }
+
     }//end processTokenOutsideScope()
 
 
@@ -291,11 +294,11 @@ class IncludeSystemSniff extends AbstractScopeSniff
             $systemName = $phpcsFile->findNext(T_CONSTANT_ENCAPSED_STRING, ($stackPtr + 1));
             $systemName = trim($tokens[$systemName]['content'], " '");
             return strtolower($systemName);
-        } elseif (strtolower($tokens[$stackPtr]['content']) === 'includeasset') {
+        } else if (strtolower($tokens[$stackPtr]['content']) === 'includeasset') {
             $typeName = $phpcsFile->findNext(T_CONSTANT_ENCAPSED_STRING, ($stackPtr + 1));
             $typeName = trim($tokens[$typeName]['content'], " '");
             return strtolower($typeName).'assettype';
-        } elseif (isset(Tokens::$includeTokens[$tokens[$stackPtr]['code']]) === true) {
+        } else if (isset(Tokens::$includeTokens[$tokens[$stackPtr]['code']]) === true) {
             $filePath = $phpcsFile->findNext(T_CONSTANT_ENCAPSED_STRING, ($stackPtr + 1));
             $filePath = $tokens[$filePath]['content'];
             $filePath = trim($filePath, " '");
@@ -304,5 +307,8 @@ class IncludeSystemSniff extends AbstractScopeSniff
         }
 
         return false;
+
     }//end getIncludedClassFromToken()
+
+
 }//end class

@@ -43,6 +43,7 @@ class CyclomaticComplexitySniff implements Sniff
     public function register()
     {
         return [T_FUNCTION];
+
     }//end register()
 
 
@@ -97,7 +98,7 @@ class CyclomaticComplexitySniff implements Sniff
                 $this->absoluteComplexity,
             ];
             $phpcsFile->addError($error, $stackPtr, 'MaxExceeded', $data);
-        } elseif ($complexity > $this->complexity) {
+        } else if ($complexity > $this->complexity) {
             $warning = 'Function\'s cyclomatic complexity (%s) exceeds %s; consider refactoring the function';
             $data    = [
                 $complexity,
@@ -105,5 +106,8 @@ class CyclomaticComplexitySniff implements Sniff
             ];
             $phpcsFile->addWarning($warning, $stackPtr, 'TooHigh', $data);
         }
+
     }//end process()
+
+
 }//end class

@@ -42,6 +42,7 @@ class SwitchDeclarationSniff implements Sniff
     public function register()
     {
         return [T_SWITCH];
+
     }//end register()
 
 
@@ -276,7 +277,7 @@ class SwitchDeclarationSniff implements Sniff
                         }
                     }//end if
                 }//end if
-            } elseif ($type === 'Default') {
+            } else if ($type === 'Default') {
                 $error = 'DEFAULT case must have a breaking statement';
                 $phpcsFile->addError($error, $nextCase, 'DefaultNoBreak');
             }//end if
@@ -296,5 +297,8 @@ class SwitchDeclarationSniff implements Sniff
             $error = 'SWITCH statements must contain at least one CASE statement';
             $phpcsFile->addError($error, $stackPtr, 'MissingCase');
         }
+
     }//end process()
+
+
 }//end class

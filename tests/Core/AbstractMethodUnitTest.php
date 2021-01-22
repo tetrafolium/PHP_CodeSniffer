@@ -61,6 +61,7 @@ abstract class AbstractMethodUnitTest extends TestCase
 
         self::$phpcsFile = new DummyFile($contents, $ruleset, $config);
         self::$phpcsFile->process();
+
     }//end setUpBeforeClass()
 
 
@@ -72,6 +73,7 @@ abstract class AbstractMethodUnitTest extends TestCase
     public static function tearDownAfterClass()
     {
         self::$phpcsFile = null;
+
     }//end tearDownAfterClass()
 
 
@@ -131,5 +133,8 @@ abstract class AbstractMethodUnitTest extends TestCase
         }
 
         return $target;
+
     }//end getTargetToken()
+
+
 }//end class

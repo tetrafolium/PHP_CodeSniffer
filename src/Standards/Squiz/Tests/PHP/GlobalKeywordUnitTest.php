@@ -29,6 +29,7 @@ class GlobalKeywordUnitTest extends AbstractSniffUnitTest
             8 => 1,
             9 => 1,
         ];
+
     }//end getErrorList()
 
 
@@ -43,5 +44,8 @@ class GlobalKeywordUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

@@ -57,5 +57,8 @@ class PHP_CodeSniffer_AllTests
         $suite->addTest(Standards\AllSniffs::suite());
 
         return $suite;
+
     }//end suite()
+
+
 }//end class

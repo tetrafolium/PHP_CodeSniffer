@@ -34,6 +34,7 @@ class DisallowMultipleAssignmentsUnitTest extends AbstractSniffUnitTest
             14 => 1,
             15 => 1,
         ];
+
     }//end getErrorList()
 
 
@@ -48,5 +49,8 @@ class DisallowMultipleAssignmentsUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

@@ -48,6 +48,7 @@ class ObjectOperatorIndentSniff implements Sniff
     public function register()
     {
         return $this->targets;
+
     }//end register()
 
 
@@ -196,5 +197,8 @@ class ObjectOperatorIndentSniff implements Sniff
                 true
             );
         }//end while
+
     }//end process()
+
+
 }//end class

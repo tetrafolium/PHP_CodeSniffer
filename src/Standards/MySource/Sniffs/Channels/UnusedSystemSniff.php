@@ -24,6 +24,7 @@ class UnusedSystemSniff implements Sniff
     public function register()
     {
         return [T_DOUBLE_COLON];
+
     }//end register()
 
 
@@ -60,7 +61,7 @@ class UnusedSystemSniff implements Sniff
 
         if ($methodName === 'includeasset') {
             $systemName .= 'assettype';
-        } elseif ($methodName === 'includewidget') {
+        } else if ($methodName === 'includewidget') {
             $systemName .= 'widgettype';
         }
 
@@ -133,5 +134,8 @@ class UnusedSystemSniff implements Sniff
         $error = 'Included system "%s" is never used';
         $data  = [$systemName];
         $phpcsFile->addError($error, $stackPtr, 'Found', $data);
+
     }//end process()
+
+
 }//end class

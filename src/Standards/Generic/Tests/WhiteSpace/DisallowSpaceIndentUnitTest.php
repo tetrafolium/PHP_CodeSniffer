@@ -30,6 +30,7 @@ class DisallowSpaceIndentUnitTest extends AbstractSniffUnitTest
         }
 
         $config->tabWidth = 4;
+
     }//end setCliValues()
 
 
@@ -95,6 +96,7 @@ class DisallowSpaceIndentUnitTest extends AbstractSniffUnitTest
             return [];
             break;
         }//end switch
+
     }//end getErrorList()
 
 
@@ -109,5 +111,8 @@ class DisallowSpaceIndentUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

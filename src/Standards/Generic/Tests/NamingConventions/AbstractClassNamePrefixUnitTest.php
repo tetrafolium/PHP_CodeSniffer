@@ -31,6 +31,7 @@ class AbstractClassNamePrefixUnitTest extends AbstractSniffUnitTest
             23 => 1,
             42 => 1,
         ];
+
     }//end getErrorList()
 
 
@@ -45,5 +46,8 @@ class AbstractClassNamePrefixUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

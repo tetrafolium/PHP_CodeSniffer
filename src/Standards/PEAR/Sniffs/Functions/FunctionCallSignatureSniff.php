@@ -70,6 +70,7 @@ class FunctionCallSignatureSniff implements Sniff
         $tokens[] = T_CLOSE_PARENTHESIS;
 
         return $tokens;
+
     }//end register()
 
 
@@ -161,6 +162,7 @@ class FunctionCallSignatureSniff implements Sniff
         } else {
             $this->processSingleLineCall($phpcsFile, $stackPtr, $openBracket, $tokens);
         }
+
     }//end process()
 
 
@@ -185,6 +187,7 @@ class FunctionCallSignatureSniff implements Sniff
         }
 
         return false;
+
     }//end isMultiLineCall()
 
 
@@ -225,7 +228,7 @@ class FunctionCallSignatureSniff implements Sniff
             if ($fix === true) {
                 $phpcsFile->fixer->replaceToken(($openBracket + 1), '');
             }
-        } elseif ($requiredSpacesAfterOpen > 0) {
+        } else if ($requiredSpacesAfterOpen > 0) {
             $spaceAfterOpen = 0;
             if ($tokens[($openBracket + 1)]['code'] === T_WHITESPACE) {
                 $spaceAfterOpen = $tokens[($openBracket + 1)]['length'];
@@ -259,7 +262,7 @@ class FunctionCallSignatureSniff implements Sniff
 
         if ($tokens[$prev]['line'] !== $tokens[$closer]['line']) {
             $spaceBeforeClose = 'newline';
-        } elseif ($tokens[($closer - 1)]['code'] === T_WHITESPACE) {
+        } else if ($tokens[($closer - 1)]['code'] === T_WHITESPACE) {
             $spaceBeforeClose = $tokens[($closer - 1)]['length'];
         }
 
@@ -275,7 +278,7 @@ class FunctionCallSignatureSniff implements Sniff
 
                 if ($spaceBeforeClose === 0) {
                     $phpcsFile->fixer->addContentBefore($closer, $padding);
-                } elseif ($spaceBeforeClose === 'newline') {
+                } else if ($spaceBeforeClose === 'newline') {
                     $phpcsFile->fixer->beginChangeset();
 
                     $closingContent = ')';
@@ -314,6 +317,7 @@ class FunctionCallSignatureSniff implements Sniff
                 }//end if
             }//end if
         }//end if
+
     }//end processSingleLineCall()
 
 
@@ -617,5 +621,8 @@ class FunctionCallSignatureSniff implements Sniff
                 $argEnd   = $phpcsFile->findEndOfStatement($next);
             }//end if
         }//end for
+
     }//end processMultiLineCall()
+
+
 }//end class

@@ -102,6 +102,7 @@ class ForbiddenFunctionsSniff implements Sniff
         $this->forbiddenFunctions     = array_combine($this->forbiddenFunctionNames, $this->forbiddenFunctions);
 
         return array_unique($register);
+
     }//end register()
 
 
@@ -188,6 +189,7 @@ class ForbiddenFunctionsSniff implements Sniff
         }//end if
 
         $this->addError($phpcsFile, $stackPtr, $tokens[$stackPtr]['content'], $pattern);
+
     }//end process()
 
 
@@ -231,5 +233,8 @@ class ForbiddenFunctionsSniff implements Sniff
         } else {
             $phpcsFile->addWarning($error, $stackPtr, $type, $data);
         }
+
     }//end addError()
+
+
 }//end class

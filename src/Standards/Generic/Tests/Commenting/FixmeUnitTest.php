@@ -38,6 +38,7 @@ class FixmeUnitTest extends AbstractSniffUnitTest
             18 => 1,
             21 => 1,
         ];
+
     }//end getErrorList()
 
 
@@ -54,5 +55,8 @@ class FixmeUnitTest extends AbstractSniffUnitTest
     public function getWarningList($testFile='FixmeUnitTest.inc')
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

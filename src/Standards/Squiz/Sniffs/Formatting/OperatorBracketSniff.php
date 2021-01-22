@@ -35,6 +35,7 @@ class OperatorBracketSniff implements Sniff
     public function register()
     {
         return Tokens::$operators;
+
     }//end register()
 
 
@@ -226,7 +227,7 @@ class OperatorBracketSniff implements Sniff
             // It is not in a bracketed statement at all.
             $this->addMissingBracketsError($phpcsFile, $stackPtr);
             return;
-        } elseif ($tokens[$lastBracket]['parenthesis_closer'] < $stackPtr) {
+        } else if ($tokens[$lastBracket]['parenthesis_closer'] < $stackPtr) {
             // There are a set of brackets in front of it that don't include it.
             $this->addMissingBracketsError($phpcsFile, $stackPtr);
             return;
@@ -254,6 +255,7 @@ class OperatorBracketSniff implements Sniff
         if ($lastAssignment !== false && $lastAssignment > $lastBracket) {
             $this->addMissingBracketsError($phpcsFile, $stackPtr);
         }
+
     }//end process()
 
 
@@ -379,5 +381,8 @@ class OperatorBracketSniff implements Sniff
             $phpcsFile->fixer->replaceToken($after, $tokens[$after]['content'].')');
             $phpcsFile->fixer->endChangeset();
         }
+
     }//end addMissingBracketsError()
+
+
 }//end class

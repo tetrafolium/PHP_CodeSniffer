@@ -54,6 +54,7 @@ class ControlSignatureSniff implements Sniff
             T_ELSEIF,
             T_SWITCH,
         ];
+
     }//end register()
 
 
@@ -94,7 +95,7 @@ class ControlSignatureSniff implements Sniff
         $found = 1;
         if ($tokens[($stackPtr + 1)]['code'] !== T_WHITESPACE) {
             $found = 0;
-        } elseif ($tokens[($stackPtr + 1)]['content'] !== ' ') {
+        } else if ($tokens[($stackPtr + 1)]['content'] !== ' ') {
             if (strpos($tokens[($stackPtr + 1)]['content'], $phpcsFile->eolChar) !== false) {
                 $found = 'newline';
             } else {
@@ -228,7 +229,7 @@ class ControlSignatureSniff implements Sniff
                     $phpcsFile->fixer->endChangeset();
                 }
             }//end if
-        } elseif ($tokens[$stackPtr]['code'] === T_WHILE) {
+        } else if ($tokens[$stackPtr]['code'] === T_WHILE) {
             // Zero spaces after parenthesis closer, but only if followed by a semicolon.
             $closer       = $tokens[$stackPtr]['parenthesis_closer'];
             $nextNonEmpty = $phpcsFile->findNext(Tokens::$emptyTokens, ($closer + 1), null, true);
@@ -266,7 +267,7 @@ class ControlSignatureSniff implements Sniff
             ) {
                 return;
             }
-        } elseif ($tokens[$stackPtr]['code'] === T_ELSE
+        } else if ($tokens[$stackPtr]['code'] === T_ELSE
             || $tokens[$stackPtr]['code'] === T_ELSEIF
             || $tokens[$stackPtr]['code'] === T_CATCH
             || $tokens[$stackPtr]['code'] === T_FINALLY
@@ -291,9 +292,9 @@ class ControlSignatureSniff implements Sniff
         $found = 1;
         if ($tokens[($closer + 1)]['code'] !== T_WHITESPACE) {
             $found = 0;
-        } elseif ($tokens[$closer]['line'] !== $tokens[$stackPtr]['line']) {
+        } else if ($tokens[$closer]['line'] !== $tokens[$stackPtr]['line']) {
             $found = 'newline';
-        } elseif ($tokens[($closer + 1)]['content'] !== ' ') {
+        } else if ($tokens[($closer + 1)]['content'] !== ' ') {
             $found = $tokens[($closer + 1)]['length'];
         }
 
@@ -316,5 +317,8 @@ class ControlSignatureSniff implements Sniff
                 }
             }
         }
+
     }//end process()
+
+
 }//end class

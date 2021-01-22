@@ -93,6 +93,7 @@ class FileList implements \Iterator, \Countable
         }//end foreach
 
         reset($this->files);
+
     }//end __construct()
 
 
@@ -127,6 +128,7 @@ class FileList implements \Iterator, \Countable
             $this->files[$path] = $file;
             $this->numFiles++;
         }
+
     }//end addFile()
 
 
@@ -158,6 +160,7 @@ class FileList implements \Iterator, \Countable
         }
 
         return $filterClass;
+
     }//end getFilterClass()
 
 
@@ -169,6 +172,7 @@ class FileList implements \Iterator, \Countable
     public function rewind()
     {
         reset($this->files);
+
     }//end rewind()
 
 
@@ -185,6 +189,7 @@ class FileList implements \Iterator, \Countable
         }
 
         return $this->files[$path];
+
     }//end current()
 
 
@@ -196,6 +201,7 @@ class FileList implements \Iterator, \Countable
     public function key()
     {
         return key($this->files);
+
     }//end key()
 
 
@@ -207,6 +213,7 @@ class FileList implements \Iterator, \Countable
     public function next()
     {
         next($this->files);
+
     }//end next()
 
 
@@ -222,6 +229,7 @@ class FileList implements \Iterator, \Countable
         }
 
         return true;
+
     }//end valid()
 
 
@@ -233,5 +241,8 @@ class FileList implements \Iterator, \Countable
     public function count()
     {
         return $this->numFiles;
+
     }//end count()
+
+
 }//end class

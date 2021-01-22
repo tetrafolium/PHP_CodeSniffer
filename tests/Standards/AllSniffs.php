@@ -26,6 +26,7 @@ class AllSniffs
     public static function main()
     {
         TestRunner::run(self::suite());
+
     }//end main()
 
 
@@ -102,6 +103,7 @@ class AllSniffs
         }//end foreach
 
         return $suite;
+
     }//end suite()
 
 
@@ -114,5 +116,8 @@ class AllSniffs
     protected static function getInstalledStandardDetails()
     {
         return Standards::getInstalledStandardDetails(true);
+
     }//end getInstalledStandardDetails()
+
+
 }//end class

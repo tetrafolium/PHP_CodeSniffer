@@ -39,6 +39,7 @@ class StaticThisUsageUnitTest extends AbstractSniffUnitTest
             84 => 1,
             99 => 1,
         ];
+
     }//end getErrorList()
 
 
@@ -53,5 +54,8 @@ class StaticThisUsageUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

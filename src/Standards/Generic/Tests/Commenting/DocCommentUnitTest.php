@@ -26,6 +26,7 @@ class DocCommentUnitTest extends AbstractSniffUnitTest
     public function setCliValues($testFile, $config)
     {
         $config->tabWidth = 4;
+
     }//end setCliValues()
 
 
@@ -88,6 +89,7 @@ class DocCommentUnitTest extends AbstractSniffUnitTest
             248 => 1,
             249 => 1,
         ];
+
     }//end getErrorList()
 
 
@@ -102,5 +104,8 @@ class DocCommentUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

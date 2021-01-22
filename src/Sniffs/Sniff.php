@@ -75,4 +75,6 @@ interface Sniff
      *                  the rest of the file.
      */
     public function process(File $phpcsFile, $stackPtr);
+
+
 }//end interface

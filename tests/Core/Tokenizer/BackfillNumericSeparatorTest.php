@@ -33,6 +33,7 @@ class BackfillNumericSeparatorTest extends AbstractMethodUnitTest
         $this->assertSame(constant($testData['type']), $tokens[$number]['code']);
         $this->assertSame($testData['type'], $tokens[$number]['type']);
         $this->assertSame($testData['value'], $tokens[$number]['content']);
+
     }//end testBackfill()
 
 
@@ -139,6 +140,7 @@ class BackfillNumericSeparatorTest extends AbstractMethodUnitTest
                 ],
             ],
         ];
+
     }//end dataTestBackfill()
 
 
@@ -164,6 +166,7 @@ class BackfillNumericSeparatorTest extends AbstractMethodUnitTest
             $this->assertSame($expectedToken['code'], $tokens[$i]['code']);
             $this->assertSame($expectedToken['content'], $tokens[$i]['content']);
         }
+
     }//end testNoBackfill()
 
 
@@ -370,5 +373,8 @@ class BackfillNumericSeparatorTest extends AbstractMethodUnitTest
                 ],
             ],
         ];
+
     }//end dataNoBackfill()
+
+
 }//end class

@@ -73,6 +73,7 @@ class RuleInclusionAbsoluteLinuxTest extends TestCase
         // Initialize the config and ruleset objects for the test.
         $config        = new Config(["--standard={$this->standard}"]);
         $this->ruleset = new Ruleset($config);
+
     }//end setUp()
 
 
@@ -84,6 +85,7 @@ class RuleInclusionAbsoluteLinuxTest extends TestCase
     public function tearDown()
     {
         file_put_contents($this->standard, $this->contents);
+
     }//end tearDown()
 
 
@@ -109,5 +111,8 @@ class RuleInclusionAbsoluteLinuxTest extends TestCase
             '10',
             $this->ruleset->sniffs['PHP_CodeSniffer\Standards\Generic\Sniffs\Formatting\SpaceAfterNotSniff']->spacing
         );
+
     }//end testLinuxStylePathRuleInclusion()
+
+
 }//end class

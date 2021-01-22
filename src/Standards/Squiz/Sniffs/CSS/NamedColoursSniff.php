@@ -58,6 +58,7 @@ class NamedColoursSniff implements Sniff
     public function register()
     {
         return [T_STRING];
+
     }//end register()
 
 
@@ -85,5 +86,8 @@ class NamedColoursSniff implements Sniff
             $error = 'Named colours are forbidden; use hex, rgb, or rgba values instead';
             $phpcsFile->addError($error, $stackPtr, 'Forbidden');
         }
+
     }//end process()
+
+
 }//end class

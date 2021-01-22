@@ -31,6 +31,7 @@ class DuplicatePropertySniff implements Sniff
     public function register()
     {
         return [T_OBJECT];
+
     }//end register()
 
 
@@ -74,5 +75,8 @@ class DuplicatePropertySniff implements Sniff
 
             $next = $phpcsFile->findNext($wantedTokens, ($next + 1), $tokens[$stackPtr]['bracket_closer']);
         }//end while
+
     }//end process()
+
+
 }//end class

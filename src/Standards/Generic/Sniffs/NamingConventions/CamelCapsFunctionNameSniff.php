@@ -85,6 +85,7 @@ class CamelCapsFunctionNameSniff extends AbstractScopeSniff
     public function __construct()
     {
         parent::__construct(Tokens::$ooScopeTokens, [T_FUNCTION], true);
+
     }//end __construct()
 
 
@@ -171,6 +172,7 @@ class CamelCapsFunctionNameSniff extends AbstractScopeSniff
         } else {
             $phpcsFile->recordMetric($stackPtr, 'CamelCase method name', 'yes');
         }
+
     }//end processTokenWithinScope()
 
 
@@ -214,5 +216,8 @@ class CamelCapsFunctionNameSniff extends AbstractScopeSniff
         } else {
             $phpcsFile->recordMetric($stackPtr, 'CamelCase method name', 'yes');
         }
+
     }//end processTokenOutsideScope()
+
+
 }//end class

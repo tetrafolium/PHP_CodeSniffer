@@ -53,6 +53,7 @@ class OpeningFunctionBraceKernighanRitchieUnitTest extends AbstractSniffUnitTest
             197 => 1,
             203 => 1,
         ];
+
     }//end getErrorList()
 
 
@@ -67,5 +68,8 @@ class OpeningFunctionBraceKernighanRitchieUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

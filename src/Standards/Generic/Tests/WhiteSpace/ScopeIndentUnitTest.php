@@ -31,6 +31,7 @@ class ScopeIndentUnitTest extends AbstractSniffUnitTest
         } else {
             $config->tabWidth = 0;
         }
+
     }//end setCliValues()
 
 
@@ -182,6 +183,7 @@ class ScopeIndentUnitTest extends AbstractSniffUnitTest
             1489 => 1,
             1490 => 1,
         ];
+
     }//end getErrorList()
 
 
@@ -196,5 +198,8 @@ class ScopeIndentUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

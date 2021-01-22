@@ -37,6 +37,7 @@ class ControlStructureSpacingUnitTest extends AbstractSniffUnitTest
             64 => 1,
             69 => 1,
         ];
+
     }//end getErrorList()
 
 
@@ -51,5 +52,8 @@ class ControlStructureSpacingUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

@@ -25,6 +25,7 @@ class GitStaged extends ExactMatch
     protected function getBlacklist()
     {
         return [];
+
     }//end getBlacklist()
 
 
@@ -60,5 +61,8 @@ class GitStaged extends ExactMatch
         }
 
         return $modified;
+
     }//end getWhitelist()
+
+
 }//end class

@@ -42,6 +42,7 @@ class DisallowTabIndentSniff implements Sniff
     public function register()
     {
         return [T_OPEN_TAG];
+
     }//end register()
 
 
@@ -131,9 +132,9 @@ class DisallowTabIndentSniff implements Sniff
 
                     if ($foundIndentTabs > 0 && $foundIndentSpaces === 0) {
                         $phpcsFile->recordMetric($i, 'Line indent', 'tabs');
-                    } elseif ($foundIndentTabs === 0 && $foundIndentSpaces > 0) {
+                    } else if ($foundIndentTabs === 0 && $foundIndentSpaces > 0) {
                         $phpcsFile->recordMetric($i, 'Line indent', 'spaces');
-                    } elseif ($foundIndentTabs > 0 && $foundIndentSpaces > 0) {
+                    } else if ($foundIndentTabs > 0 && $foundIndentSpaces > 0) {
                         $spacePosition  = strpos($indentation, ' ');
                         $tabAfterSpaces = strpos($indentation, "\t", $spacePosition);
                         if ($tabAfterSpaces !== false) {
@@ -179,5 +180,8 @@ class DisallowTabIndentSniff implements Sniff
 
         // Ignore the rest of the file.
         return ($phpcsFile->numTokens + 1);
+
     }//end process()
+
+
 }//end class

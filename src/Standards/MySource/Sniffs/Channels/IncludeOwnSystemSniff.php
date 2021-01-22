@@ -24,6 +24,7 @@ class IncludeOwnSystemSniff implements Sniff
     public function register()
     {
         return [T_DOUBLE_COLON];
+
     }//end register()
 
 
@@ -69,6 +70,7 @@ class IncludeOwnSystemSniff implements Sniff
             $data  = [$ownClass];
             $phpcsFile->addError($error, $stackPtr, 'NotRequired', $data);
         }
+
     }//end process()
 
 
@@ -88,5 +90,8 @@ class IncludeOwnSystemSniff implements Sniff
         $stackPtr
     ) {
         return false;
+
     }//end getIncludedClassFromToken()
+
+
 }//end class

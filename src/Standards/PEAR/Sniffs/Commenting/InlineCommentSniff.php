@@ -24,6 +24,7 @@ class InlineCommentSniff implements Sniff
     public function register()
     {
         return [T_COMMENT];
+
     }//end register()
 
 
@@ -51,14 +52,17 @@ class InlineCommentSniff implements Sniff
                 $newComment = '// '.$newComment;
                 $phpcsFile->fixer->replaceToken($stackPtr, $newComment);
             }
-        } elseif ($tokens[$stackPtr]['content'][0] === '/'
+        } else if ($tokens[$stackPtr]['content'][0] === '/'
             && $tokens[$stackPtr]['content'][1] === '/'
         ) {
             $phpcsFile->recordMetric($stackPtr, 'Inline comment style', '// ...');
-        } elseif ($tokens[$stackPtr]['content'][0] === '/'
+        } else if ($tokens[$stackPtr]['content'][0] === '/'
             && $tokens[$stackPtr]['content'][1] === '*'
         ) {
             $phpcsFile->recordMetric($stackPtr, 'Inline comment style', '/* ... */');
         }
+
     }//end process()
+
+
 }//end class

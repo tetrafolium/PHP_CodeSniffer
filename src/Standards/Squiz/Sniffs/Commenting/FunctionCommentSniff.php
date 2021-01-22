@@ -133,7 +133,7 @@ class FunctionCommentSniff extends PEARFunctionCommentSniff
                             }
                         }
                     }//end if
-                } elseif ($returnType !== 'mixed' && in_array('void', $typeNames, true) === false) {
+                } else if ($returnType !== 'mixed' && in_array('void', $typeNames, true) === false) {
                     // If return type is not void, there needs to be a return statement
                     // somewhere in the function that returns something.
                     if (isset($tokens[$stackPtr]['scope_closer']) === true) {
@@ -171,6 +171,7 @@ class FunctionCommentSniff extends PEARFunctionCommentSniff
             $error = 'Missing @return tag in function comment';
             $phpcsFile->addError($error, $tokens[$commentStart]['comment_closer'], 'MissingReturn');
         }//end if
+
     }//end processReturn()
 
 
@@ -207,7 +208,7 @@ class FunctionCommentSniff extends PEARFunctionCommentSniff
             if ($exception === null) {
                 $error = 'Exception type and comment missing for @throws tag in function comment';
                 $phpcsFile->addError($error, $tag, 'InvalidThrows');
-            } elseif ($comment === null) {
+            } else if ($comment === null) {
                 $error = 'Comment missing for @throws tag in function comment';
                 $phpcsFile->addError($error, $tag, 'EmptyThrows');
             } else {
@@ -238,6 +239,7 @@ class FunctionCommentSniff extends PEARFunctionCommentSniff
                 }
             }//end if
         }//end foreach
+
     }//end processThrows()
 
 
@@ -391,22 +393,22 @@ class FunctionCommentSniff extends PEARFunctionCommentSniff
                 $suggestedTypeHint = '';
                 if (strpos($suggestedName, 'array') !== false || substr($suggestedName, -2) === '[]') {
                     $suggestedTypeHint = 'array';
-                } elseif (strpos($suggestedName, 'callable') !== false) {
+                } else if (strpos($suggestedName, 'callable') !== false) {
                     $suggestedTypeHint = 'callable';
-                } elseif (strpos($suggestedName, 'callback') !== false) {
+                } else if (strpos($suggestedName, 'callback') !== false) {
                     $suggestedTypeHint = 'callable';
-                } elseif (in_array($suggestedName, Common::$allowedTypes, true) === false) {
+                } else if (in_array($suggestedName, Common::$allowedTypes, true) === false) {
                     $suggestedTypeHint = $suggestedName;
                 }
 
                 if ($this->phpVersion >= 70000) {
                     if ($suggestedName === 'string') {
                         $suggestedTypeHint = 'string';
-                    } elseif ($suggestedName === 'int' || $suggestedName === 'integer') {
+                    } else if ($suggestedName === 'int' || $suggestedName === 'integer') {
                         $suggestedTypeHint = 'int';
-                    } elseif ($suggestedName === 'float') {
+                    } else if ($suggestedName === 'float') {
                         $suggestedTypeHint = 'float';
-                    } elseif ($suggestedName === 'bool' || $suggestedName === 'boolean') {
+                    } else if ($suggestedName === 'bool' || $suggestedName === 'boolean') {
                         $suggestedTypeHint = 'bool';
                     }
                 }
@@ -440,7 +442,7 @@ class FunctionCommentSniff extends PEARFunctionCommentSniff
                         }
 
                         $phpcsFile->addError($error, $stackPtr, $errorCode, $data);
-                    } elseif ($typeHint !== $compareTypeHint && $typeHint !== '?'.$compareTypeHint) {
+                    } else if ($typeHint !== $compareTypeHint && $typeHint !== '?'.$compareTypeHint) {
                         $error = 'Expected type hint "%s"; found "%s" for %s';
                         $data  = [
                             $suggestedTypeHint,
@@ -449,7 +451,7 @@ class FunctionCommentSniff extends PEARFunctionCommentSniff
                         ];
                         $phpcsFile->addError($error, $stackPtr, 'IncorrectTypeHint', $data);
                     }//end if
-                } elseif ($suggestedTypeHint === '' && isset($realParams[$pos]) === true) {
+                } else if ($suggestedTypeHint === '' && isset($realParams[$pos]) === true) {
                     $typeHint = $realParams[$pos]['type_hint'];
                     if ($typeHint !== '') {
                         $error = 'Unknown type hint "%s" found for %s';
@@ -533,7 +535,7 @@ class FunctionCommentSniff extends PEARFunctionCommentSniff
 
                     $phpcsFile->addError($error, $param['tag'], $code, $data);
                 }
-            } elseif (substr($param['var'], -4) !== ',...') {
+            } else if (substr($param['var'], -4) !== ',...') {
                 // We must have an extra parameter comment.
                 $error = 'Superfluous parameter comment';
                 $phpcsFile->addError($error, $param['tag'], 'ExtraParamComment');
@@ -571,6 +573,7 @@ class FunctionCommentSniff extends PEARFunctionCommentSniff
             $data  = [$neededParam];
             $phpcsFile->addError($error, $commentStart, 'MissingParamTag', $data);
         }
+
     }//end processParams()
 
 
@@ -629,6 +632,7 @@ class FunctionCommentSniff extends PEARFunctionCommentSniff
                 $phpcsFile->fixer->endChangeset();
             }//end if
         }//end if
+
     }//end checkSpacingAfterParamType()
 
 
@@ -687,5 +691,8 @@ class FunctionCommentSniff extends PEARFunctionCommentSniff
                 $phpcsFile->fixer->endChangeset();
             }//end if
         }//end if
+
     }//end checkSpacingAfterParamName()
+
+
 }//end class

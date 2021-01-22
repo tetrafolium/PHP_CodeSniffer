@@ -32,6 +32,7 @@ class SwitchDeclarationSniff implements Sniff
     public function register()
     {
         return [T_SWITCH];
+
     }//end register()
 
 
@@ -194,6 +195,7 @@ class SwitchDeclarationSniff implements Sniff
                 }
             }
         }//end while
+
     }//end process()
 
 
@@ -222,6 +224,7 @@ class SwitchDeclarationSniff implements Sniff
         }
 
         return $stackPtr;
+
     }//end findNextCase()
 
 
@@ -277,7 +280,7 @@ class SwitchDeclarationSniff implements Sniff
                         }
 
                         return $this->findNestedTerminator($phpcsFile, ($scopeOpener + 1), $scopeCloser);
-                    } elseif ($tokens[$prevToken]['code'] === T_ELSEIF
+                    } else if ($tokens[$prevToken]['code'] === T_ELSEIF
                         || $tokens[$prevToken]['code'] === T_ELSE
                     ) {
                         // If we find a terminating statement within this block,
@@ -297,7 +300,7 @@ class SwitchDeclarationSniff implements Sniff
                 } while ($currentCloser !== false && $tokens[$currentCloser]['code'] === T_CLOSE_CURLY_BRACKET);
 
                 return true;
-            } elseif ($tokens[$lastToken]['code'] === T_SEMICOLON) {
+            } else if ($tokens[$lastToken]['code'] === T_SEMICOLON) {
                 // We found the last statement of the CASE. Now we want to
                 // check whether it is a terminating one.
                 $terminator = $phpcsFile->findStartOfStatement(($lastToken - 1));
@@ -308,5 +311,8 @@ class SwitchDeclarationSniff implements Sniff
         }//end if
 
         return false;
+
     }//end findNestedTerminator()
+
+
 }//end class

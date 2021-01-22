@@ -66,6 +66,7 @@ class CamelCapsFunctionNameUnitTest extends AbstractSniffUnitTest
         ];
 
         return $errors;
+
     }//end getErrorList()
 
 
@@ -80,5 +81,8 @@ class CamelCapsFunctionNameUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

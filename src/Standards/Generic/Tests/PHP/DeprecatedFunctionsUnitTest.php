@@ -36,6 +36,7 @@ class DeprecatedFunctionsUnitTest extends AbstractSniffUnitTest
         }
 
         return $errors;
+
     }//end getErrorList()
 
 
@@ -50,5 +51,8 @@ class DeprecatedFunctionsUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

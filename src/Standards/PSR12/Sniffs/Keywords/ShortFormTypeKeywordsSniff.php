@@ -27,6 +27,7 @@ class ShortFormTypeKeywordsSniff implements Sniff
             T_BOOL_CAST,
             T_INT_CAST,
         ];
+
     }//end register()
 
 
@@ -67,5 +68,8 @@ class ShortFormTypeKeywordsSniff implements Sniff
 
             $phpcsFile->fixer->replaceToken($stackPtr, $replacement);
         }
+
     }//end process()
+
+
 }//end class

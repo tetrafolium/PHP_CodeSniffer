@@ -30,6 +30,7 @@ class ClassDeclarationUnitTest extends AbstractSniffUnitTest
         }
 
         $config->tabWidth = 4;
+
     }//end setCliValues()
 
 
@@ -65,6 +66,7 @@ class ClassDeclarationUnitTest extends AbstractSniffUnitTest
         default:
             return [];
         }//end switch
+
     }//end getErrorList()
 
 
@@ -85,5 +87,8 @@ class ClassDeclarationUnitTest extends AbstractSniffUnitTest
         }
 
         return[];
+
     }//end getWarningList()
+
+
 }//end class

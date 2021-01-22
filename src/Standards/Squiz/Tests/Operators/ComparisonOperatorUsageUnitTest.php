@@ -79,6 +79,7 @@ class ComparisonOperatorUsageUnitTest extends AbstractSniffUnitTest
             return [];
             break;
         }//end switch
+
     }//end getErrorList()
 
 
@@ -93,5 +94,8 @@ class ComparisonOperatorUsageUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

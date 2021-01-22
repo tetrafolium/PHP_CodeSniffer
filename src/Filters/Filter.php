@@ -77,6 +77,7 @@ class Filter extends \RecursiveFilterIterator
         $this->basedir = $basedir;
         $this->config  = $config;
         $this->ruleset = $ruleset;
+
     }//end __construct()
 
 
@@ -107,7 +108,7 @@ class Filter extends \RecursiveFilterIterator
             if ($this->config->local === true) {
                 return false;
             }
-        } elseif ($this->shouldProcessFile($filePath) === false) {
+        } else if ($this->shouldProcessFile($filePath) === false) {
             return false;
         }
 
@@ -117,6 +118,7 @@ class Filter extends \RecursiveFilterIterator
 
         $this->acceptedPaths[$realPath] = true;
         return true;
+
     }//end accept()
 
 
@@ -143,6 +145,7 @@ class Filter extends \RecursiveFilterIterator
         $children->ignoreFilePatterns = $this->ignoreFilePatterns;
         $children->acceptedPaths      = $this->acceptedPaths;
         return $children;
+
     }//end getChildren()
 
 
@@ -181,6 +184,7 @@ class Filter extends \RecursiveFilterIterator
         }
 
         return true;
+
     }//end shouldProcessFile()
 
 
@@ -271,5 +275,8 @@ class Filter extends \RecursiveFilterIterator
         }//end foreach
 
         return false;
+
     }//end shouldIgnorePath()
+
+
 }//end class

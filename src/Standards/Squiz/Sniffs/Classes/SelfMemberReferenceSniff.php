@@ -28,6 +28,7 @@ class SelfMemberReferenceSniff extends AbstractScopeSniff
     public function __construct()
     {
         parent::__construct([T_CLASS], [T_DOUBLE_COLON]);
+
     }//end __construct()
 
 
@@ -74,7 +75,7 @@ class SelfMemberReferenceSniff extends AbstractScopeSniff
 
                 return;
             }
-        } elseif ($tokens[$calledClassName]['code'] === T_STRING) {
+        } else if ($tokens[$calledClassName]['code'] === T_STRING) {
             // If the class is called with a namespace prefix, build fully qualified
             // namespace calls for both current scope class and requested class.
             $prevNonEmpty = $phpcsFile->findPrevious(Tokens::$emptyTokens, ($calledClassName - 1), null, true);
@@ -158,6 +159,7 @@ class SelfMemberReferenceSniff extends AbstractScopeSniff
                 $phpcsFile->fixer->endChangeset();
             }
         }
+
     }//end processTokenWithinScope()
 
 
@@ -173,6 +175,7 @@ class SelfMemberReferenceSniff extends AbstractScopeSniff
      */
     protected function processTokenOutsideScope(File $phpcsFile, $stackPtr)
     {
+
     }//end processTokenOutsideScope()
 
 
@@ -203,6 +206,7 @@ class SelfMemberReferenceSniff extends AbstractScopeSniff
 
         $nameParts = array_reverse($nameParts);
         return implode('', $nameParts);
+
     }//end getDeclarationNameWithNamespace()
 
 
@@ -229,5 +233,8 @@ class SelfMemberReferenceSniff extends AbstractScopeSniff
         }
 
         return $namespace;
+
     }//end getNamespaceOfScope()
+
+
 }//end class

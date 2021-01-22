@@ -114,6 +114,7 @@ class OperatorSpacingSniff implements Sniff
         $targets[] = T_INSTANCEOF;
 
         return $targets;
+
     }//end register()
 
 
@@ -215,7 +216,7 @@ class OperatorSpacingSniff implements Sniff
             }
 
             $phpcsFile->recordMetric($stackPtr, 'Space before operator', 0);
-        } elseif (isset(Tokens::$assignmentTokens[$tokens[$stackPtr]['code']]) === false
+        } else if (isset(Tokens::$assignmentTokens[$tokens[$stackPtr]['code']]) === false
             || $this->ignoreSpacingBeforeAssignments === false
         ) {
             // Throw an error for assignments only if enabled using the sniff property
@@ -308,6 +309,7 @@ class OperatorSpacingSniff implements Sniff
                 }
             }//end if
         }//end if
+
     }//end process()
 
 
@@ -372,5 +374,8 @@ class OperatorSpacingSniff implements Sniff
         }//end if
 
         return true;
+
     }//end isOperator()
+
+
 }//end class

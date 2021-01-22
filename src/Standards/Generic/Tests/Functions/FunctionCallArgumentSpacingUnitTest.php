@@ -53,6 +53,7 @@ class FunctionCallArgumentSpacingUnitTest extends AbstractSniffUnitTest
             133 => 2,
             134 => 1,
         ];
+
     }//end getErrorList()
 
 
@@ -67,5 +68,8 @@ class FunctionCallArgumentSpacingUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

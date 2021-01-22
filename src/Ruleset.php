@@ -225,6 +225,7 @@ class Ruleset
         if ($numSniffs === 0) {
             throw new RuntimeException('No sniffs were registered');
         }
+
     }//end __construct()
 
 
@@ -289,6 +290,7 @@ class Ruleset
             echo '  '.$sniff.PHP_EOL;
             $lastCount++;
         }//end foreach
+
     }//end explain()
 
 
@@ -360,7 +362,7 @@ class Ruleset
 
             if ($relativePath !== false && is_file($relativePath) === true) {
                 $autoloadPath = $relativePath;
-            } elseif (is_file($autoloadPath) === false) {
+            } else if (is_file($autoloadPath) === false) {
                 throw new RuntimeException('The specified autoload file "'.$autoload.'" does not exist');
             }
 
@@ -420,7 +422,7 @@ class Ruleset
                         echo str_repeat("\t", $depth);
                         echo "\t\t=> severity set to 5".PHP_EOL;
                     }
-                } elseif (empty($newSniffs) === false) {
+                } else if (empty($newSniffs) === false) {
                     $newSniff = $newSniffs[0];
                     if (in_array($newSniff, $ownSniffs, true) === false) {
                         // Including a sniff that hasn't been included higher up, but
@@ -598,6 +600,7 @@ class Ruleset
         }
 
         return $files;
+
     }//end processRuleset()
 
 
@@ -657,6 +660,7 @@ class Ruleset
         }//end foreach
 
         return $sniffs;
+
     }//end expandSniffDirectory()
 
 
@@ -737,7 +741,7 @@ class Ruleset
                     echo str_repeat("\t", $depth);
                     echo "\t\t=> ".Util\Common::stripBasepath($ref, $this->config->basepath).PHP_EOL;
                 }
-            } elseif (is_dir($ref) === false) {
+            } else if (is_dir($ref) === false) {
                 // Work out the sniff path.
                 $sepPos = strpos($ref, DIRECTORY_SEPARATOR);
                 if ($sepPos !== false) {
@@ -749,7 +753,7 @@ class Ruleset
                     if (count($parts) === 1) {
                         // A whole standard?
                         $path = '';
-                    } elseif (count($parts) === 2) {
+                    } else if (count($parts) === 2) {
                         // A directory of sniffs?
                         $path = DIRECTORY_SEPARATOR.'Sniffs'.DIRECTORY_SEPARATOR.$parts[1];
                     } else {
@@ -839,6 +843,7 @@ class Ruleset
                 return $this->processRuleset($ref, ($depth + 2));
             }
         }//end if
+
     }//end expandRulesetReference()
 
 
@@ -959,7 +964,7 @@ class Ruleset
                         $this->ruleset[$code] = [
                             'properties' => [],
                         ];
-                    } elseif (isset($this->ruleset[$code]['properties']) === false) {
+                    } else if (isset($this->ruleset[$code]['properties']) === false) {
                         $this->ruleset[$code]['properties'] = [];
                     }
 
@@ -1084,6 +1089,7 @@ class Ruleset
                 }
             }//end foreach
         }//end foreach
+
     }//end processRule()
 
 
@@ -1118,6 +1124,7 @@ class Ruleset
         }
 
         return false;
+
     }//end shouldProcessElement()
 
 
@@ -1182,6 +1189,7 @@ class Ruleset
         }//end foreach
 
         $this->sniffs = $listeners;
+
     }//end registerSniffs()
 
 
@@ -1264,6 +1272,7 @@ class Ruleset
                 }
             }
         }//end foreach
+
     }//end populateTokenListeners()
 
 
@@ -1295,9 +1304,9 @@ class Ruleset
         // Special case for booleans.
         if ($value === 'true') {
             $value = true;
-        } elseif ($value === 'false') {
+        } else if ($value === 'false') {
             $value = false;
-        } elseif (substr($name, -2) === '[]') {
+        } else if (substr($name, -2) === '[]') {
             $name   = substr($name, 0, -2);
             $values = [];
             if ($value !== null) {
@@ -1315,6 +1324,7 @@ class Ruleset
         }
 
         $this->sniffs[$sniffClass]->$name = $value;
+
     }//end setSniffProperty()
 
 
@@ -1340,6 +1350,7 @@ class Ruleset
         }
 
         return [];
+
     }//end getIgnorePatterns()
 
 
@@ -1365,5 +1376,8 @@ class Ruleset
         }
 
         return [];
+
     }//end getIncludePatterns()
+
+
 }//end class

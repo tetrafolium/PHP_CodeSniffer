@@ -42,7 +42,7 @@ class Diff implements Report
             if (PHP_CODESNIFFER_VERBOSITY === 1) {
                 $startTime = microtime(true);
                 echo 'DIFF report is parsing '.basename($report['filename']).' ';
-            } elseif (PHP_CODESNIFFER_VERBOSITY > 1) {
+            } else if (PHP_CODESNIFFER_VERBOSITY > 1) {
                 echo 'DIFF report is forcing parse of '.$report['filename'].PHP_EOL;
             }
 
@@ -88,6 +88,7 @@ class Diff implements Report
 
         echo $diff.PHP_EOL;
         return true;
+
     }//end generateFileReport()
 
 
@@ -122,5 +123,8 @@ class Diff implements Report
         if ($toScreen === true && $cachedData !== '') {
             echo PHP_EOL;
         }
+
     }//end generate()
+
+
 }//end class

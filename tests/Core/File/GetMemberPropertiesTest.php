@@ -31,6 +31,7 @@ class GetMemberPropertiesTest extends AbstractMethodUnitTest
         $result   = self::$phpcsFile->getMemberProperties($variable);
 
         $this->assertArraySubset($expected, $result, true);
+
     }//end testGetMemberProperties()
 
 
@@ -610,6 +611,7 @@ class GetMemberPropertiesTest extends AbstractMethodUnitTest
                 ],
             ],
         ];
+
     }//end dataGetMemberProperties()
 
 
@@ -629,6 +631,7 @@ class GetMemberPropertiesTest extends AbstractMethodUnitTest
     {
         $variable = $this->getTargetToken($identifier, T_VARIABLE);
         $result   = self::$phpcsFile->getMemberProperties($variable);
+
     }//end testNotClassPropertyException()
 
 
@@ -649,6 +652,7 @@ class GetMemberPropertiesTest extends AbstractMethodUnitTest
             ['/* testNestedMethodParam 1 */'],
             ['/* testNestedMethodParam 2 */'],
         ];
+
     }//end dataNotClassProperty()
 
 
@@ -664,5 +668,8 @@ class GetMemberPropertiesTest extends AbstractMethodUnitTest
     {
         $next   = $this->getTargetToken('/* testNotAVariable */', T_RETURN);
         $result = self::$phpcsFile->getMemberProperties($next);
+
     }//end testNotAVariableException()
+
+
 }//end class

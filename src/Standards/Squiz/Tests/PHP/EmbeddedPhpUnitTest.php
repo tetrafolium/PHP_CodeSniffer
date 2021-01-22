@@ -56,6 +56,7 @@ class EmbeddedPhpUnitTest extends AbstractSniffUnitTest
             116 => 1,
             117 => 1,
         ];
+
     }//end getErrorList()
 
 
@@ -70,5 +71,8 @@ class EmbeddedPhpUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

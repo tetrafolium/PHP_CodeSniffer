@@ -25,6 +25,7 @@ class EvalObjectFactorySniff implements Sniff
     public function register()
     {
         return [T_EVAL];
+
     }//end register()
 
 
@@ -55,7 +56,7 @@ class EvalObjectFactorySniff implements Sniff
         for ($i = ($openBracket + 1); $i < $closeBracket; $i++) {
             if (isset(Tokens::$stringTokens[$tokens[$i]['code']]) === true) {
                 $strings[$i] = $tokens[$i]['content'];
-            } elseif ($tokens[$i]['code'] === T_VARIABLE) {
+            } else if ($tokens[$i]['code'] === T_VARIABLE) {
                 $vars[$i] = $tokens[$i]['content'];
             }
         }
@@ -106,5 +107,8 @@ class EvalObjectFactorySniff implements Sniff
                 $phpcsFile->addWarning($error, $stackPtr, 'Found');
             }
         }
+
     }//end process()
+
+
 }//end class

@@ -38,6 +38,7 @@ class IncludeSystemUnitTest extends AbstractSniffUnitTest
             70 => 1,
             89 => 1,
         ];
+
     }//end getErrorList()
 
 
@@ -52,5 +53,8 @@ class IncludeSystemUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

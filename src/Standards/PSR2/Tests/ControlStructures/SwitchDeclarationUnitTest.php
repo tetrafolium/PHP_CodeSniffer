@@ -48,6 +48,7 @@ class SwitchDeclarationUnitTest extends AbstractSniffUnitTest
             236 => 1,
             260 => 1,
         ];
+
     }//end getErrorList()
 
 
@@ -62,5 +63,8 @@ class SwitchDeclarationUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

@@ -64,6 +64,7 @@ class LowerCaseTypeUnitTest extends AbstractSniffUnitTest
             73 => 3,
             74 => 3,
         ];
+
     }//end getErrorList()
 
 
@@ -78,5 +79,8 @@ class LowerCaseTypeUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

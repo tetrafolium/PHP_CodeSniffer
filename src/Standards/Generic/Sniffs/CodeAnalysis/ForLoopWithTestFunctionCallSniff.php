@@ -42,6 +42,7 @@ class ForLoopWithTestFunctionCallSniff implements Sniff
     public function register()
     {
         return [T_FOR];
+
     }//end register()
 
 
@@ -77,9 +78,9 @@ class ForLoopWithTestFunctionCallSniff implements Sniff
 
             if ($position < 1) {
                 continue;
-            } elseif ($position > 1) {
+            } else if ($position > 1) {
                 break;
-            } elseif ($code !== T_VARIABLE && $code !== T_STRING) {
+            } else if ($code !== T_VARIABLE && $code !== T_STRING) {
                 continue;
             }
 
@@ -93,5 +94,8 @@ class ForLoopWithTestFunctionCallSniff implements Sniff
                 break;
             }
         }//end for
+
     }//end process()
+
+
 }//end class

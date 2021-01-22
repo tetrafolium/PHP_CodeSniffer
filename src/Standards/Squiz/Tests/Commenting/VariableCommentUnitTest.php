@@ -59,6 +59,7 @@ class VariableCommentUnitTest extends AbstractSniffUnitTest
             361 => 1,
             364 => 1,
         ];
+
     }//end getErrorList()
 
 
@@ -73,5 +74,8 @@ class VariableCommentUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [93 => 1];
+
     }//end getWarningList()
+
+
 }//end class

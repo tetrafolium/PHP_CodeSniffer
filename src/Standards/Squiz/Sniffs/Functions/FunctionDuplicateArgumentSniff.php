@@ -24,6 +24,7 @@ class FunctionDuplicateArgumentSniff implements Sniff
     public function register()
     {
         return [T_FUNCTION];
+
     }//end register()
 
 
@@ -56,5 +57,8 @@ class FunctionDuplicateArgumentSniff implements Sniff
                 }
             }
         }
+
     }//end process()
+
+
 }//end class

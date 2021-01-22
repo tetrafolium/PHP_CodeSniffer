@@ -28,6 +28,7 @@ class OpeningBraceSameLineSniff implements Sniff
             T_INTERFACE,
             T_TRAIT,
         ];
+
     }//end register()
 
 
@@ -97,7 +98,7 @@ class OpeningBraceSameLineSniff implements Sniff
         // Is there precisely one space before the opening brace ?
         if ($tokens[($openingBrace - 1)]['code'] !== T_WHITESPACE) {
             $length = 0;
-        } elseif ($tokens[($openingBrace - 1)]['content'] === "\t") {
+        } else if ($tokens[($openingBrace - 1)]['content'] === "\t") {
             $length = '\t';
         } else {
             $length = $tokens[($openingBrace - 1)]['length'];
@@ -115,5 +116,8 @@ class OpeningBraceSameLineSniff implements Sniff
                 }
             }
         }
+
     }//end process()
+
+
 }//end class

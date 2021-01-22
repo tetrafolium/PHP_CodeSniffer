@@ -40,6 +40,7 @@ class DoubleQuoteUsageUnitTest extends AbstractSniffUnitTest
             30 => 1,
             32 => 1,
         ];
+
     }//end getErrorList()
 
 
@@ -54,5 +55,8 @@ class DoubleQuoteUsageUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

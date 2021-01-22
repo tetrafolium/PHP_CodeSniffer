@@ -28,6 +28,7 @@ class ClassCommentSniff extends FileCommentSniff
             T_INTERFACE,
             T_TRAIT,
         ];
+
     }//end register()
 
 
@@ -68,6 +69,7 @@ class ClassCommentSniff extends FileCommentSniff
 
         // Check each tag.
         $this->processTags($phpcsFile, $stackPtr, $tokens[$commentEnd]['comment_opener']);
+
     }//end process()
 
 
@@ -95,5 +97,8 @@ class ClassCommentSniff extends FileCommentSniff
                 $phpcsFile->addWarning($error, $tag, 'InvalidVersion', $data);
             }
         }
+
     }//end processVersion()
+
+
 }//end class

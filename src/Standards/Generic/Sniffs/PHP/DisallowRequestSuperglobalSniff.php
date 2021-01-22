@@ -24,6 +24,7 @@ class DisallowRequestSuperglobalSniff implements Sniff
     public function register()
     {
         return [T_VARIABLE];
+
     }//end register()
 
 
@@ -46,5 +47,8 @@ class DisallowRequestSuperglobalSniff implements Sniff
 
         $error = 'The $_REQUEST superglobal should not be used; use $_GET, $_POST, or $_COOKIE instead';
         $phpcsFile->addError($error, $stackPtr, 'Found');
+
     }//end process()
+
+
 }//end class

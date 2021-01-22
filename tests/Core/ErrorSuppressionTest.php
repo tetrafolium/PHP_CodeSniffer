@@ -170,6 +170,7 @@ class ErrorSuppressionTest extends TestCase
         $numErrors = $file->getErrorCount();
         $this->assertEquals(0, $numErrors);
         $this->assertCount(0, $errors);
+
     }//end testSuppressError()
 
 
@@ -245,6 +246,7 @@ class ErrorSuppressionTest extends TestCase
         $numErrors = $file->getErrorCount();
         $this->assertEquals(1, $numErrors);
         $this->assertCount(1, $errors);
+
     }//end testSuppressSomeErrors()
 
 
@@ -320,6 +322,7 @@ class ErrorSuppressionTest extends TestCase
         $numWarnings = $file->getWarningCount();
         $this->assertEquals(0, $numWarnings);
         $this->assertCount(0, $warnings);
+
     }//end testSuppressWarning()
 
 
@@ -438,6 +441,7 @@ class ErrorSuppressionTest extends TestCase
         $numErrors = $file->getErrorCount();
         $this->assertEquals(1, $numErrors);
         $this->assertCount(1, $errors);
+
     }//end testSuppressLine()
 
 
@@ -513,6 +517,7 @@ class ErrorSuppressionTest extends TestCase
         $numErrors = $file->getErrorCount();
         $this->assertEquals(0, $numErrors);
         $this->assertCount(0, $errors);
+
     }//end testNestedSuppressLine()
 
 
@@ -595,6 +600,7 @@ class ErrorSuppressionTest extends TestCase
         $numErrors = $file->getErrorCount();
         $this->assertEquals(0, $numErrors);
         $this->assertCount(0, $errors);
+
     }//end testSuppressScope()
 
 
@@ -740,6 +746,7 @@ class ErrorSuppressionTest extends TestCase
         $numWarnings = $file->getWarningCount();
         $this->assertEquals(0, $numWarnings);
         $this->assertCount(0, $warnings);
+
     }//end testSuppressFile()
 
 
@@ -886,6 +893,7 @@ class ErrorSuppressionTest extends TestCase
         $this->assertCount(0, $errors);
         $this->assertEquals(1, $numWarnings);
         $this->assertCount(1, $warnings);
+
     }//end testDisableSelected()
 
 
@@ -1058,6 +1066,7 @@ class ErrorSuppressionTest extends TestCase
         $this->assertCount(1, $errors);
         $this->assertEquals(2, $numWarnings);
         $this->assertCount(2, $warnings);
+
     }//end testEnableSelected()
 
 
@@ -1160,6 +1169,7 @@ class ErrorSuppressionTest extends TestCase
         $this->assertCount(1, $errors);
         $this->assertEquals(1, $numWarnings);
         $this->assertCount(1, $warnings);
+
     }//end testIgnoreSelected()
 
 
@@ -1248,5 +1258,8 @@ class ErrorSuppressionTest extends TestCase
         $this->assertCount(0, $errors);
         $this->assertEquals(0, $numWarnings);
         $this->assertCount(0, $warnings);
+
     }//end testCommenting()
+
+
 }//end class

@@ -25,6 +25,7 @@ class FileHeaderSniff implements Sniff
     public function register()
     {
         return [T_OPEN_TAG];
+
     }//end register()
 
 
@@ -87,7 +88,7 @@ class FileHeaderSniff implements Sniff
             }
 
             $openTag = $stackPtr;
-        } elseif (count($possibleHeaders) > 1) {
+        } else if (count($possibleHeaders) > 1) {
             // There are other PHP blocks before the file header.
             $error = 'The file header must be the first content in the file';
             $phpcsFile->addError($error, $openTag, 'HeaderPosition');
@@ -114,6 +115,7 @@ class FileHeaderSniff implements Sniff
         $this->processHeaderLines($phpcsFile, $possibleHeaders[$openTag]);
 
         return $phpcsFile->numTokens;
+
     }//end process()
 
 
@@ -253,6 +255,7 @@ class FileHeaderSniff implements Sniff
         } while ($next !== false);
 
         return $headerLines;
+
     }//end getHeaderLines()
 
 
@@ -285,7 +288,7 @@ class FileHeaderSniff implements Sniff
                     if ($fix === true) {
                         if ($tokens[$next]['line'] === $tokens[$line['end']]['line']) {
                             $phpcsFile->fixer->addContentBefore($next, $phpcsFile->eolChar.$phpcsFile->eolChar);
-                        } elseif ($tokens[$next]['line'] === ($tokens[$line['end']]['line'] + 1)) {
+                        } else if ($tokens[$next]['line'] === ($tokens[$line['end']]['line'] + 1)) {
                             $phpcsFile->fixer->addNewline($line['end']);
                         } else {
                             $phpcsFile->fixer->beginChangeset();
@@ -314,7 +317,7 @@ class FileHeaderSniff implements Sniff
                     ];
                     $phpcsFile->addError($error, $headerLines[($i + 1)]['start'], 'IncorrectGrouping', $data);
                 }
-            } elseif ($headerLines[($i + 1)]['type'] === $line['type']) {
+            } else if ($headerLines[($i + 1)]['type'] === $line['type']) {
                 // Still in the same block, so make sure there is no
                 // blank line after this statement.
                 $next = $phpcsFile->findNext(T_WHITESPACE, ($line['end'] + 1), null, true);
@@ -401,5 +404,8 @@ class FileHeaderSniff implements Sniff
                 $phpcsFile->addError($error, $found[$type]['start'], 'IncorrectOrder', $data);
             }//end if
         }//end foreach
+
     }//end processHeaderLines()
+
+
 }//end class

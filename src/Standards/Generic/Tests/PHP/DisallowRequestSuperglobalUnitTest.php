@@ -29,6 +29,7 @@ class DisallowRequestSuperglobalUnitTest extends AbstractSniffUnitTest
             12 => 1,
             13 => 1,
         ];
+
     }//end getErrorList()
 
 
@@ -43,5 +44,8 @@ class DisallowRequestSuperglobalUnitTest extends AbstractSniffUnitTest
     protected function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

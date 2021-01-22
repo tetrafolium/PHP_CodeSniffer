@@ -39,6 +39,7 @@ class FirebugConsoleUnitTest extends AbstractSniffUnitTest
             6 => 1,
             8 => 1,
         ];
+
     }//end getErrorList()
 
 
@@ -53,5 +54,8 @@ class FirebugConsoleUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

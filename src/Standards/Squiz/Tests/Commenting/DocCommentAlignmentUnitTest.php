@@ -48,6 +48,7 @@ class DocCommentAlignmentUnitTest extends AbstractSniffUnitTest
         }
 
         return $errors;
+
     }//end getErrorList()
 
 
@@ -62,5 +63,8 @@ class DocCommentAlignmentUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

@@ -29,6 +29,7 @@ class ObjectInstantiationUnitTest extends AbstractSniffUnitTest
             5 => 1,
             8 => 1,
         ];
+
     }//end getErrorList()
 
 
@@ -43,5 +44,8 @@ class ObjectInstantiationUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

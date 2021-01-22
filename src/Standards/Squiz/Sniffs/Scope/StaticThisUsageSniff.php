@@ -23,6 +23,7 @@ class StaticThisUsageSniff extends AbstractScopeSniff
     public function __construct()
     {
         parent::__construct([T_CLASS, T_TRAIT, T_ANON_CLASS], [T_FUNCTION]);
+
     }//end __construct()
 
 
@@ -68,6 +69,7 @@ class StaticThisUsageSniff extends AbstractScopeSniff
         $end  = $tokens[$stackPtr]['scope_closer'];
 
         $this->checkThisUsage($phpcsFile, $next, $end);
+
     }//end processTokenWithinScope()
 
 
@@ -103,6 +105,7 @@ class StaticThisUsageSniff extends AbstractScopeSniff
             $error = 'Usage of "$this" in static methods will cause runtime errors';
             $phpcsFile->addError($error, $next, 'Found');
         } while ($next !== false);
+
     }//end checkThisUsage()
 
 
@@ -118,5 +121,8 @@ class StaticThisUsageSniff extends AbstractScopeSniff
      */
     protected function processTokenOutsideScope(File $phpcsFile, $stackPtr)
     {
+
     }//end processTokenOutsideScope()
+
+
 }//end class

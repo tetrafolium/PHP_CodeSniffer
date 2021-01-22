@@ -42,6 +42,7 @@ class ControlStructureSpacingSniff implements Sniff
             T_ELSEIF,
             T_CATCH,
         ];
+
     }//end register()
 
 
@@ -183,5 +184,8 @@ class ControlStructureSpacingSniff implements Sniff
                 }
             }
         }
+
     }//end process()
+
+
 }//end class

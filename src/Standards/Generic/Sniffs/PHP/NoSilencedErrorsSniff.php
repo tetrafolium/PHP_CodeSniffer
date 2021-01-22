@@ -38,6 +38,7 @@ class NoSilencedErrorsSniff implements Sniff
     public function register()
     {
         return [T_ASPERAND];
+
     }//end register()
 
 
@@ -69,5 +70,8 @@ class NoSilencedErrorsSniff implements Sniff
             $error = 'Silencing errors is discouraged; found: %s';
             $phpcsFile->addWarning($error, $stackPtr, 'Discouraged', [$found]);
         }
+
     }//end process()
+
+
 }//end class

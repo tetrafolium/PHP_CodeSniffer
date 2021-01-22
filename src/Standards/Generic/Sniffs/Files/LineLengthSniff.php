@@ -55,6 +55,7 @@ class LineLengthSniff implements Sniff
     public function register()
     {
         return [T_OPEN_TAG];
+
     }//end register()
 
 
@@ -80,6 +81,7 @@ class LineLengthSniff implements Sniff
 
         // Ignore the rest of the file.
         return ($phpcsFile->numTokens + 1);
+
     }//end process()
 
 
@@ -142,9 +144,9 @@ class LineLengthSniff implements Sniff
         // Record metrics for common line length groupings.
         if ($lineLength <= 80) {
             $phpcsFile->recordMetric($stackPtr, 'Line length', '80 or less');
-        } elseif ($lineLength <= 120) {
+        } else if ($lineLength <= 120) {
             $phpcsFile->recordMetric($stackPtr, 'Line length', '81-120');
-        } elseif ($lineLength <= 150) {
+        } else if ($lineLength <= 150) {
             $phpcsFile->recordMetric($stackPtr, 'Line length', '121-150');
         } else {
             $phpcsFile->recordMetric($stackPtr, 'Line length', '151 or more');
@@ -183,7 +185,7 @@ class LineLengthSniff implements Sniff
 
             $error = 'Line exceeds maximum limit of %s characters; contains %s characters';
             $phpcsFile->addError($error, $stackPtr, 'MaxExceeded', $data);
-        } elseif ($lineLength > $this->lineLimit) {
+        } else if ($lineLength > $this->lineLimit) {
             $data = [
                 $this->lineLimit,
                 $lineLength,
@@ -192,5 +194,8 @@ class LineLengthSniff implements Sniff
             $warning = 'Line exceeds %s characters; contains %s characters';
             $phpcsFile->addWarning($warning, $stackPtr, 'TooLong', $data);
         }
+
     }//end checkLineLength()
+
+
 }//end class

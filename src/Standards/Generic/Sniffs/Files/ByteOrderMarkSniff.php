@@ -38,6 +38,7 @@ class ByteOrderMarkSniff implements Sniff
     public function register()
     {
         return [T_INLINE_HTML];
+
     }//end register()
 
 
@@ -72,5 +73,8 @@ class ByteOrderMarkSniff implements Sniff
         }
 
         $phpcsFile->recordMetric($stackPtr, 'Using byte order mark', 'no');
+
     }//end process()
+
+
 }//end class

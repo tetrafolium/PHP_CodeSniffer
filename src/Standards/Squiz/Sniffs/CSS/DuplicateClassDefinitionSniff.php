@@ -32,6 +32,7 @@ class DuplicateClassDefinitionSniff implements Sniff
     public function register()
     {
         return [T_OPEN_TAG];
+
     }//end register()
 
 
@@ -97,7 +98,7 @@ class DuplicateClassDefinitionSniff implements Sniff
             if ($name[0] === '@') {
                 // Media block has its own "scope".
                 $scope = $name;
-            } elseif (isset($classNames[$scope][$name]) === true) {
+            } else if (isset($classNames[$scope][$name]) === true) {
                 $first = $classNames[$scope][$name];
                 $error = 'Duplicate class definition found; first defined on line %s';
                 $data  = [$tokens[$first]['line']];
@@ -108,5 +109,8 @@ class DuplicateClassDefinitionSniff implements Sniff
 
             $next = $phpcsFile->findNext(T_OPEN_CURLY_BRACKET, ($next + 1));
         }//end while
+
     }//end process()
+
+
 }//end class

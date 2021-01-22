@@ -37,6 +37,7 @@ class CreateWidgetTypeCallbackUnitTest extends AbstractSniffUnitTest
             91  => 1,
             123 => 1,
         ];
+
     }//end getErrorList()
 
 
@@ -51,5 +52,8 @@ class CreateWidgetTypeCallbackUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

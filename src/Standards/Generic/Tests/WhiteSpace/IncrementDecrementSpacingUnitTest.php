@@ -44,6 +44,7 @@ class IncrementDecrementSpacingUnitTest extends AbstractSniffUnitTest
         default:
             return [];
         }//end switch
+
     }//end getErrorList()
 
 
@@ -58,5 +59,8 @@ class IncrementDecrementSpacingUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

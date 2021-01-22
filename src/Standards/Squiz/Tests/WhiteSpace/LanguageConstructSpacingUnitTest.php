@@ -38,6 +38,7 @@ class LanguageConstructSpacingUnitTest extends AbstractSniffUnitTest
             35 => 1,
             39 => 1,
         ];
+
     }//end getErrorList()
 
 
@@ -52,5 +53,8 @@ class LanguageConstructSpacingUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

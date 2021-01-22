@@ -23,6 +23,7 @@ class MethodScopeSniff extends AbstractScopeSniff
     public function __construct()
     {
         parent::__construct(Tokens::$ooScopeTokens, [T_FUNCTION]);
+
     }//end __construct()
 
 
@@ -57,7 +58,7 @@ class MethodScopeSniff extends AbstractScopeSniff
         for ($i = ($stackPtr - 1); $i > 0; $i--) {
             if ($tokens[$i]['line'] < $tokens[$stackPtr]['line']) {
                 break;
-            } elseif (isset(Tokens::$scopeModifiers[$tokens[$i]['code']]) === true) {
+            } else if (isset(Tokens::$scopeModifiers[$tokens[$i]['code']]) === true) {
                 $modifier = $i;
                 break;
             }
@@ -68,6 +69,7 @@ class MethodScopeSniff extends AbstractScopeSniff
             $data  = [$methodName];
             $phpcsFile->addError($error, $stackPtr, 'Missing', $data);
         }
+
     }//end processTokenWithinScope()
 
 
@@ -83,5 +85,8 @@ class MethodScopeSniff extends AbstractScopeSniff
      */
     protected function processTokenOutsideScope(File $phpcsFile, $stackPtr)
     {
+
     }//end processTokenOutsideScope()
+
+
 }//end class

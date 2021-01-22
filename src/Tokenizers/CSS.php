@@ -36,6 +36,7 @@ class CSS extends PHP
         }
 
         parent::__construct($content, $config, $eolChar);
+
     }//end __construct()
 
 
@@ -350,7 +351,7 @@ class CSS extends PHP
                         $finalTokens[($stackPtr + 1)]['content'] = $newContent;
                         unset($finalTokens[$stackPtr]);
                     }
-                } elseif ($finalTokens[($stackPtr + 1)]['code'] === T_LNUMBER) {
+                } else if ($finalTokens[($stackPtr + 1)]['code'] === T_LNUMBER) {
                     // They can also be used to provide negative numbers.
                     if (PHP_CODESNIFFER_VERBOSITY > 1) {
                         echo "\t\t* token is part of a negative number; adding content to next token and ignoring *".PHP_EOL;
@@ -449,7 +450,7 @@ class CSS extends PHP
                             echo "\t\t=> token content changed to: $content".PHP_EOL;
                         }
                     }
-                } elseif ($finalTokens[$stackPtr]['content'][0] === '-'
+                } else if ($finalTokens[$stackPtr]['content'][0] === '-'
                     && $finalTokens[($stackPtr + 1)]['code'] === T_STRING
                 ) {
                     if (isset($finalTokens[($stackPtr - 1)]) === true
@@ -514,6 +515,7 @@ class CSS extends PHP
         }
 
         return $finalTokens;
+
     }//end tokenize()
 
 
@@ -528,5 +530,8 @@ class CSS extends PHP
             We override this method because we don't want the PHP version to
             run during CSS processing because it is wasted processing time.
         */
+
     }//end processAdditional()
+
+
 }//end class

@@ -53,6 +53,7 @@ class IndentationUnitTest extends AbstractSniffUnitTest
         default:
             return [];
         }//end switch
+
     }//end getErrorList()
 
 
@@ -67,5 +68,8 @@ class IndentationUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

@@ -27,6 +27,7 @@ class ValidLogicalOperatorsSniff implements Sniff
             T_LOGICAL_AND,
             T_LOGICAL_OR,
         ];
+
     }//end register()
 
 
@@ -59,5 +60,8 @@ class ValidLogicalOperatorsSniff implements Sniff
             $replacements[$operator],
         ];
         $phpcsFile->addError($error, $stackPtr, 'NotAllowed', $data);
+
     }//end process()
+
+
 }//end class

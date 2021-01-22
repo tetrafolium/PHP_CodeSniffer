@@ -42,6 +42,7 @@ class DisallowSpaceIndentSniff implements Sniff
     public function register()
     {
         return [T_OPEN_TAG];
+
     }//end register()
 
 
@@ -122,7 +123,7 @@ class DisallowSpaceIndentSniff implements Sniff
                 if (isset($matches[2]) === true) {
                     $nonWhitespace = $matches[2];
                 }
-            } elseif (isset($tokens[($i + 1)]) === true
+            } else if (isset($tokens[($i + 1)]) === true
                 && $tokens[$i]['line'] < $tokens[($i + 1)]['line']
             ) {
                 // There is no content after this whitespace except for a newline.
@@ -193,7 +194,7 @@ class DisallowSpaceIndentSniff implements Sniff
                         // end of the whitespace.
                         continue;
                     }
-                } elseif ($recordMetrics === true) {
+                } else if ($recordMetrics === true) {
                     $phpcsFile->recordMetric($i, 'Line indent', 'mixed');
                 }
             }//end if
@@ -209,5 +210,8 @@ class DisallowSpaceIndentSniff implements Sniff
 
         // Ignore the rest of the file.
         return ($phpcsFile->numTokens + 1);
+
     }//end process()
+
+
 }//end class

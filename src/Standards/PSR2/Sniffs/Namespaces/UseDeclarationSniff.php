@@ -25,6 +25,7 @@ class UseDeclarationSniff implements Sniff
     public function register()
     {
         return [T_USE];
+
     }//end register()
 
 
@@ -260,6 +261,7 @@ class UseDeclarationSniff implements Sniff
                 }
             }
         }//end if
+
     }//end process()
 
 
@@ -288,5 +290,8 @@ class UseDeclarationSniff implements Sniff
         }
 
         return false;
+
     }//end shouldIgnoreUse()
+
+
 }//end class

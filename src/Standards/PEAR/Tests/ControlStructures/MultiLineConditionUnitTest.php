@@ -69,6 +69,7 @@ class MultiLineConditionUnitTest extends AbstractSniffUnitTest
         }
 
         return $errors;
+
     }//end getErrorList()
 
 
@@ -83,5 +84,8 @@ class MultiLineConditionUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

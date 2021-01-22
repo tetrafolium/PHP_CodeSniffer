@@ -31,6 +31,7 @@ class MissingColonSniff implements Sniff
     public function register()
     {
         return [T_OPEN_CURLY_BRACKET];
+
     }//end register()
 
 
@@ -79,9 +80,12 @@ class MissingColonSniff implements Sniff
 
             if ($tokens[$i]['code'] === T_STRING) {
                 $foundString = $i;
-            } elseif ($tokens[$i]['code'] === T_COLON) {
+            } else if ($tokens[$i]['code'] === T_COLON) {
                 $foundColon = $i;
             }
         }//end for
+
     }//end process()
+
+
 }//end class

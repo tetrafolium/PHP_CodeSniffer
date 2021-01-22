@@ -32,6 +32,7 @@ class ObjectMemberCommaSniff implements Sniff
     public function register()
     {
         return [T_CLOSE_OBJECT];
+
     }//end register()
 
 
@@ -56,5 +57,8 @@ class ObjectMemberCommaSniff implements Sniff
                 $phpcsFile->fixer->replaceToken($prev, '');
             }
         }
+
     }//end process()
+
+
 }//end class

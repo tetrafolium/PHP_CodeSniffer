@@ -30,6 +30,7 @@ class IsReferenceTest extends AbstractMethodUnitTest
         $bitwiseAnd = $this->getTargetToken($identifier, T_BITWISE_AND);
         $result     = self::$phpcsFile->isReference($bitwiseAnd);
         $this->assertSame($expected, $result);
+
     }//end testIsReference()
 
 
@@ -240,5 +241,8 @@ class IsReferenceTest extends AbstractMethodUnitTest
                 true,
             ],
         ];
+
     }//end dataIsReference()
+
+
 }//end class

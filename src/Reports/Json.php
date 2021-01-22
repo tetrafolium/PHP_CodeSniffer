@@ -65,6 +65,7 @@ class Json implements Report
         echo ']},';
 
         return true;
+
     }//end generateFileReport()
 
 
@@ -98,5 +99,8 @@ class Json implements Report
         echo '{"totals":{"errors":'.$totalErrors.',"warnings":'.$totalWarnings.',"fixable":'.$totalFixable.'},"files":{';
         echo rtrim($cachedData, ',');
         echo "}}".PHP_EOL;
+
     }//end generate()
+
+
 }//end class

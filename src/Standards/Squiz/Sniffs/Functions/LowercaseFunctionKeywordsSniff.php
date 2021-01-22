@@ -30,6 +30,7 @@ class LowercaseFunctionKeywordsSniff implements Sniff
         $tokens[] = T_FN;
 
         return $tokens;
+
     }//end register()
 
 
@@ -61,5 +62,8 @@ class LowercaseFunctionKeywordsSniff implements Sniff
                 $phpcsFile->fixer->replaceToken($stackPtr, $contentLc);
             }
         }
+
     }//end process()
+
+
 }//end class

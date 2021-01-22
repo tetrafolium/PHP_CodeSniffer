@@ -40,6 +40,7 @@ class EmptyStatementUnitTest extends AbstractSniffUnitTest
             68 => 1,
             72 => 2,
         ];
+
     }//end getErrorList()
 
 
@@ -54,5 +55,8 @@ class EmptyStatementUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

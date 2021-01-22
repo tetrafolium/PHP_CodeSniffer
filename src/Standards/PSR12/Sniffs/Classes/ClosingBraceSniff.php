@@ -29,6 +29,7 @@ class ClosingBraceSniff implements Sniff
             T_TRAIT,
             T_FUNCTION,
         ];
+
     }//end register()
 
 
@@ -58,5 +59,8 @@ class ClosingBraceSniff implements Sniff
 
         $error = 'Closing brace must not be followed by any comment or statement on the same line';
         $phpcsFile->addError($error, $closer, 'StatementAfter');
+
     }//end process()
+
+
 }//end class

@@ -29,6 +29,7 @@ class JSLintUnitTest extends AbstractSniffUnitTest
         }
 
         return false;
+
     }//end shouldSkipTest()
 
 
@@ -43,6 +44,7 @@ class JSLintUnitTest extends AbstractSniffUnitTest
     public function getErrorList()
     {
         return [];
+
     }//end getErrorList()
 
 
@@ -60,5 +62,8 @@ class JSLintUnitTest extends AbstractSniffUnitTest
             1 => 2,
             2 => 1,
         ];
+
     }//end getWarningList()
+
+
 }//end class

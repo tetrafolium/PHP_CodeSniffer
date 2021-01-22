@@ -60,6 +60,7 @@ class Source implements Report
         }
 
         return true;
+
     }//end generateFileReport()
 
 
@@ -267,6 +268,7 @@ class Source implements Report
         if ($toScreen === true && $interactive === false) {
             Timing::printRunTime();
         }
+
     }//end generate()
 
 
@@ -327,5 +329,8 @@ class Source implements Report
         $friendlyName[0] = strtoupper($friendlyName[0]);
 
         return $friendlyName;
+
     }//end makeFriendlyName()
+
+
 }//end class

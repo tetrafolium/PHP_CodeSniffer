@@ -32,6 +32,7 @@ class DuplicateClassDefinitionUnitTest extends AbstractSniffUnitTest
             86  => 1,
             101 => 1,
         ];
+
     }//end getErrorList()
 
 
@@ -46,5 +47,8 @@ class DuplicateClassDefinitionUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

@@ -29,6 +29,7 @@ class DebugCodeUnitTest extends AbstractSniffUnitTest
             2 => 1,
             3 => 1,
         ];
+
     }//end getErrorList()
 
 
@@ -43,5 +44,8 @@ class DebugCodeUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

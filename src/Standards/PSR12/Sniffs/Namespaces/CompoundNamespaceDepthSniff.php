@@ -31,6 +31,7 @@ class CompoundNamespaceDepthSniff implements Sniff
     public function register()
     {
         return [T_OPEN_USE_GROUP];
+
     }//end register()
 
 
@@ -72,5 +73,8 @@ class CompoundNamespaceDepthSniff implements Sniff
                 $depth = 1;
             }
         }
+
     }//end process()
+
+
 }//end class

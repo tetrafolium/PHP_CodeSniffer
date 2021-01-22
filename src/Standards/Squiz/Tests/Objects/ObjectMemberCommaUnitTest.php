@@ -31,6 +31,7 @@ class ObjectMemberCommaUnitTest extends AbstractSniffUnitTest
             38 => 1,
             45 => 1,
         ];
+
     }//end getErrorList()
 
 
@@ -45,5 +46,8 @@ class ObjectMemberCommaUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

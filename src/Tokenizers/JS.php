@@ -265,6 +265,7 @@ class JS extends Tokenizer
         }
 
         parent::__construct($content, $config, $eolChar);
+
     }//end __construct()
 
 
@@ -403,7 +404,7 @@ class JS extends Tokenizer
                         $stringChar      = null;
                         continue;
                     }//end if
-                } elseif ($inString === '') {
+                } else if ($inString === '') {
                     $inString        = $char;
                     $stringChar      = $i;
                     $preStringBuffer = $buffer;
@@ -548,7 +549,7 @@ class JS extends Tokenizer
 
                     $cleanBuffer = true;
                 }//end if
-            } elseif (isset($this->tokenValues[strtolower($char)]) === true) {
+            } else if (isset($this->tokenValues[strtolower($char)]) === true) {
                 // No matter what token we end up using, we don't
                 // need the content in the buffer any more because we have
                 // found a valid token.
@@ -659,7 +660,7 @@ class JS extends Tokenizer
                         echo "\t\t* looking for end of comment *".PHP_EOL;
                     }
                 }//end if
-            } elseif ($inComment !== '') {
+            } else if ($inComment !== '') {
                 if ($this->commentTokens[$inComment] === null) {
                     // Comment ends at the next newline.
                     if (strpos($buffer, "\n") !== false) {
@@ -895,6 +896,7 @@ class JS extends Tokenizer
         }
 
         return $finalTokens;
+
     }//end tokenize()
 
 
@@ -968,7 +970,7 @@ class JS extends Tokenizer
                 if ($chars[($next - 1)] !== '\\') {
                     // In the simple form: /.../ so we found the end.
                     break;
-                } elseif ($chars[($next - 2)] === '\\') {
+                } else if ($chars[($next - 2)] === '\\') {
                     // In the form: /...\\/ so we found the end.
                     break;
                 }
@@ -1036,6 +1038,7 @@ class JS extends Tokenizer
         ];
 
         return $token;
+
     }//end getRegexToken()
 
 
@@ -1096,7 +1099,7 @@ class JS extends Tokenizer
                 }//end if
 
                 continue;
-            } elseif ($this->tokens[$i]['code'] === T_OPEN_CURLY_BRACKET
+            } else if ($this->tokens[$i]['code'] === T_OPEN_CURLY_BRACKET
                 && isset($this->tokens[$i]['scope_condition']) === false
                 && isset($this->tokens[$i]['bracket_closer']) === true
             ) {
@@ -1184,9 +1187,9 @@ class JS extends Tokenizer
                         echo "\t\t* added T_OBJECT condition to $x ($type) *".PHP_EOL;
                     }
                 }
-            } elseif ($this->tokens[$i]['code'] === T_CLOSE_OBJECT) {
+            } else if ($this->tokens[$i]['code'] === T_CLOSE_OBJECT) {
                 $opener = array_pop($classStack);
-            } elseif ($this->tokens[$i]['code'] === T_COLON) {
+            } else if ($this->tokens[$i]['code'] === T_COLON) {
                 // If it is a scope opener, it belongs to a
                 // DEFAULT or CASE statement.
                 if (isset($this->tokens[$i]['scope_condition']) === true) {
@@ -1205,7 +1208,7 @@ class JS extends Tokenizer
                         }
 
                         continue(2);
-                    } elseif ($this->tokens[$x]['line'] < $this->tokens[$i]['line']) {
+                    } else if ($this->tokens[$x]['line'] < $this->tokens[$i]['line']) {
                         break;
                     }
                 }
@@ -1246,5 +1249,8 @@ class JS extends Tokenizer
         if (PHP_CODESNIFFER_VERBOSITY > 1) {
             echo "\t*** END ADDITIONAL JS PROCESSING ***".PHP_EOL;
         }
+
     }//end processAdditional()
+
+
 }//end class

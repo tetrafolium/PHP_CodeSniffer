@@ -25,6 +25,7 @@ class CastSpacingSniff implements Sniff
     public function register()
     {
         return Tokens::$castTokens;
+
     }//end register()
 
 
@@ -57,5 +58,8 @@ class CastSpacingSniff implements Sniff
                 $phpcsFile->fixer->replaceToken($stackPtr, $expected);
             }
         }
+
     }//end process()
+
+
 }//end class

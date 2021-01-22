@@ -31,6 +31,7 @@ class EmptyPHPStatementSniff implements Sniff
             T_SEMICOLON,
             T_CLOSE_TAG,
         ];
+
     }//end register()
 
 
@@ -154,5 +155,8 @@ class EmptyPHPStatementSniff implements Sniff
             // Deliberately left empty.
             break;
         }//end switch
+
     }//end process()
+
+
 }//end class

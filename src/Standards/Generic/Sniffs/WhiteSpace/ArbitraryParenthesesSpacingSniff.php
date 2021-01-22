@@ -68,6 +68,7 @@ class ArbitraryParenthesesSpacingSniff implements Sniff
             T_OPEN_PARENTHESIS,
             T_CLOSE_PARENTHESIS,
         ];
+
     }//end register()
 
 
@@ -159,7 +160,7 @@ class ArbitraryParenthesesSpacingSniff implements Sniff
                         if ($expected !== '') {
                             $phpcsFile->fixer->addContent($stackPtr, $expected);
                         }
-                    } elseif ($inside === 'newline') {
+                    } else if ($inside === 'newline') {
                         $phpcsFile->fixer->beginChangeset();
                         for ($i = ($stackPtr + 2); $i < $phpcsFile->numTokens; $i++) {
                             if ($tokens[$i]['code'] !== T_WHITESPACE) {
@@ -213,7 +214,7 @@ class ArbitraryParenthesesSpacingSniff implements Sniff
                         if ($expected !== '') {
                             $phpcsFile->fixer->addContentBefore($stackPtr, $expected);
                         }
-                    } elseif ($inside === 'newline') {
+                    } else if ($inside === 'newline') {
                         $phpcsFile->fixer->beginChangeset();
                         for ($i = ($stackPtr - 2); $i > 0; $i--) {
                             if ($tokens[$i]['code'] !== T_WHITESPACE) {
@@ -231,5 +232,8 @@ class ArbitraryParenthesesSpacingSniff implements Sniff
                 }//end if
             }//end if
         }//end if
+
     }//end process()
+
+
 }//end class

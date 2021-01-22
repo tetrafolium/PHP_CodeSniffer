@@ -28,6 +28,7 @@ class ValidClassNameSniff implements Sniff
             T_INTERFACE,
             T_TRAIT,
         ];
+
     }//end register()
 
 
@@ -89,5 +90,8 @@ class ValidClassNameSniff implements Sniff
                 $phpcsFile->addError($error, $stackPtr, 'Invalid', $data);
             }
         }//end if
+
     }//end process()
+
+
 }//end class

@@ -25,6 +25,7 @@ class ImportStatementSniff implements Sniff
     public function register()
     {
         return [T_USE];
+
     }//end register()
 
 
@@ -69,5 +70,8 @@ class ImportStatementSniff implements Sniff
         if ($fix === true) {
             $phpcsFile->fixer->replaceToken($next, '');
         }
+
     }//end process()
+
+
 }//end class

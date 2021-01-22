@@ -33,6 +33,7 @@ class AnonClassParenthesisOwnerTest extends AbstractMethodUnitTest
         $this->assertFalse(array_key_exists('parenthesis_owner', $tokens[$anonClass]));
         $this->assertFalse(array_key_exists('parenthesis_opener', $tokens[$anonClass]));
         $this->assertFalse(array_key_exists('parenthesis_closer', $tokens[$anonClass]));
+
     }//end testAnonClassNoParentheses()
 
 
@@ -59,6 +60,7 @@ class AnonClassParenthesisOwnerTest extends AbstractMethodUnitTest
         $closer = $this->getTargetToken($testMarker, T_CLOSE_PARENTHESIS);
         $this->assertTrue(array_key_exists('parenthesis_owner', $tokens[$closer]));
         $this->assertSame($function, $tokens[$closer]['parenthesis_owner']);
+
     }//end testAnonClassNoParenthesesNextOpenClose()
 
 
@@ -76,6 +78,7 @@ class AnonClassParenthesisOwnerTest extends AbstractMethodUnitTest
             ['/* testNoParentheses */'],
             ['/* testNoParenthesesAndEmptyTokens */'],
         ];
+
     }//end dataAnonClassNoParentheses()
 
 
@@ -117,6 +120,7 @@ class AnonClassParenthesisOwnerTest extends AbstractMethodUnitTest
         $this->assertSame($anonClass, $tokens[$closer]['parenthesis_owner']);
         $this->assertSame($opener, $tokens[$closer]['parenthesis_opener']);
         $this->assertSame($closer, $tokens[$closer]['parenthesis_closer']);
+
     }//end testAnonClassWithParentheses()
 
 
@@ -133,5 +137,8 @@ class AnonClassParenthesisOwnerTest extends AbstractMethodUnitTest
             ['/* testWithParentheses */'],
             ['/* testWithParenthesesAndEmptyTokens */'],
         ];
+
     }//end dataAnonClassWithParentheses()
+
+
 }//end class

@@ -26,6 +26,7 @@ class LowercasedFilenameUnitTest extends AbstractSniffUnitTest
     public function getErrorList()
     {
         return [1 => 1];
+
     }//end getErrorList()
 
 
@@ -40,5 +41,8 @@ class LowercasedFilenameUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

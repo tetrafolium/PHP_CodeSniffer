@@ -24,6 +24,7 @@ class ReturnFunctionValueSniff implements Sniff
     public function register()
     {
         return [T_RETURN];
+
     }//end register()
 
 
@@ -55,5 +56,8 @@ class ReturnFunctionValueSniff implements Sniff
             $phpcsFile->addWarning($error, $stackPtr, 'NotAssigned');
             break;
         }
+
     }//end process()
+
+
 }//end class

@@ -27,6 +27,7 @@ class DoubleQuoteUsageSniff implements Sniff
             T_CONSTANT_ENCAPSED_STRING,
             T_DOUBLE_QUOTED_STRING,
         ];
+
     }//end register()
 
 
@@ -136,5 +137,8 @@ class DoubleQuoteUsageSniff implements Sniff
         }
 
         return $skipTo;
+
     }//end process()
+
+
 }//end class

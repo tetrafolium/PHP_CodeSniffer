@@ -31,6 +31,7 @@ class LowercaseStyleDefinitionUnitTest extends AbstractSniffUnitTest
             5  => 2,
             11 => 1,
         ];
+
     }//end getErrorList()
 
 
@@ -45,5 +46,8 @@ class LowercaseStyleDefinitionUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

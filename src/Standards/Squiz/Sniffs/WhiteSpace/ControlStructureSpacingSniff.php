@@ -47,6 +47,7 @@ class ControlStructureSpacingSniff implements Sniff
             T_CATCH,
             T_FINALLY,
         ];
+
     }//end register()
 
 
@@ -313,7 +314,7 @@ class ControlStructureSpacingSniff implements Sniff
                     $phpcsFile->fixer->endChangeset();
                 }
             }
-        } elseif ($tokens[$trailingContent]['code'] !== T_ELSE
+        } else if ($tokens[$trailingContent]['code'] !== T_ELSE
             && $tokens[$trailingContent]['code'] !== T_ELSEIF
             && $tokens[$trailingContent]['code'] !== T_CATCH
             && $tokens[$trailingContent]['code'] !== T_FINALLY
@@ -339,5 +340,8 @@ class ControlStructureSpacingSniff implements Sniff
                 }
             }
         }//end if
+
     }//end process()
+
+
 }//end class

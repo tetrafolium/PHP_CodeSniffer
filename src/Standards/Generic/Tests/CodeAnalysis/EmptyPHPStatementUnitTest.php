@@ -26,6 +26,7 @@ class EmptyPHPStatementUnitTest extends AbstractSniffUnitTest
     public function getErrorList()
     {
         return [];
+
     }//end getErrorList()
 
 
@@ -60,5 +61,8 @@ class EmptyPHPStatementUnitTest extends AbstractSniffUnitTest
             72 => 1,
             80 => 1,
         ];
+
     }//end getWarningList()
+
+
 }//end class

@@ -30,6 +30,7 @@ class CompoundNamespaceDepthUnitTest extends AbstractSniffUnitTest
             18 => 1,
             21 => 1,
         ];
+
     }//end getErrorList()
 
 
@@ -44,5 +45,8 @@ class CompoundNamespaceDepthUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

@@ -25,6 +25,7 @@ class UseDeclarationSniff implements Sniff
     public function register()
     {
         return [T_USE];
+
     }//end register()
 
 
@@ -220,7 +221,7 @@ class UseDeclarationSniff implements Sniff
                             $phpcsFile->fixer->endChangeset();
                         }
                     }//end if
-                } elseif ($tokens[$next]['code'] !== T_USE) {
+                } else if ($tokens[$next]['code'] !== T_USE) {
                     // Comments are allowed on the same line as the use statement, so make sure
                     // we don't error for those.
                     for ($next = ($end + 1); $next < $tokens[$ooToken]['scope_closer']; $next++) {
@@ -266,6 +267,7 @@ class UseDeclarationSniff implements Sniff
         }//end foreach
 
         return $tokens[$ooToken]['scope_closer'];
+
     }//end process()
 
 
@@ -323,7 +325,7 @@ class UseDeclarationSniff implements Sniff
             if ($fix === true) {
                 $phpcsFile->fixer->addContentBefore($opener, ' ');
             }
-        } elseif ($tokens[($opener - 1)]['content'] !== ' ') {
+        } else if ($tokens[($opener - 1)]['content'] !== ' ') {
             $prev = $phpcsFile->findPrevious(T_WHITESPACE, ($opener - 1), null, true);
             if ($tokens[$prev]['line'] !== $tokens[$opener]['line']) {
                 $found = 'newline';
@@ -394,7 +396,7 @@ class UseDeclarationSniff implements Sniff
                 if ($fix === true) {
                     $phpcsFile->fixer->addContent($i, ' ');
                 }
-            } elseif ($tokens[($i + 1)]['content'] !== ' ') {
+            } else if ($tokens[($i + 1)]['content'] !== ' ') {
                 $next = $phpcsFile->findNext(T_WHITESPACE, ($i + 1), $opener, true);
                 if ($tokens[$next]['line'] !== $tokens[$i]['line']) {
                     $found = 'newline';
@@ -429,7 +431,7 @@ class UseDeclarationSniff implements Sniff
                     if ($fix === true) {
                         $phpcsFile->fixer->addContentBefore($i, ' ');
                     }
-                } elseif ($tokens[($i - 1)]['content'] !== ' ') {
+                } else if ($tokens[($i - 1)]['content'] !== ' ') {
                     $prev = $phpcsFile->findPrevious(T_WHITESPACE, ($i - 1), $opener, true);
                     if ($tokens[$prev]['line'] !== $tokens[$i]['line']) {
                         $found = 'newline';
@@ -467,7 +469,7 @@ class UseDeclarationSniff implements Sniff
                     if ($fix === true) {
                         $phpcsFile->fixer->addContent($i, ' ');
                     }
-                } elseif ($tokens[($i + 1)]['content'] !== ' ') {
+                } else if ($tokens[($i + 1)]['content'] !== ' ') {
                     $next = $phpcsFile->findNext(T_WHITESPACE, ($i + 1), $closer, true);
                     if ($tokens[$next]['line'] !== $tokens[$i]['line']) {
                         $found = 'newline';
@@ -507,7 +509,7 @@ class UseDeclarationSniff implements Sniff
                     if ($fix === true) {
                         $phpcsFile->fixer->addContentBefore($i, ' ');
                     }
-                } elseif ($tokens[($i - 1)]['content'] !== ' ') {
+                } else if ($tokens[($i - 1)]['content'] !== ' ') {
                     $prev = $phpcsFile->findPrevious(T_WHITESPACE, ($i - 1), $opener, true);
                     if ($tokens[$prev]['line'] !== $tokens[$i]['line']) {
                         $found = 'newline';
@@ -545,7 +547,7 @@ class UseDeclarationSniff implements Sniff
                     if ($fix === true) {
                         $phpcsFile->fixer->addContent($i, ' ');
                     }
-                } elseif ($tokens[($i + 1)]['content'] !== ' ') {
+                } else if ($tokens[($i + 1)]['content'] !== ' ') {
                     $next = $phpcsFile->findNext(T_WHITESPACE, ($i + 1), $closer, true);
                     if ($tokens[$next]['line'] !== $tokens[$i]['line']) {
                         $found = 'newline';
@@ -633,6 +635,7 @@ class UseDeclarationSniff implements Sniff
                 }
             }
         }//end if
+
     }//end processUseGroup()
 
 
@@ -656,7 +659,7 @@ class UseDeclarationSniff implements Sniff
             if ($fix === true) {
                 $phpcsFile->fixer->addContent($stackPtr, ' ');
             }
-        } elseif ($tokens[($stackPtr + 1)]['content'] !== ' ') {
+        } else if ($tokens[($stackPtr + 1)]['content'] !== ' ') {
             $next = $phpcsFile->findNext(T_WHITESPACE, ($stackPtr + 1), null, true);
             if ($tokens[$next]['line'] !== $tokens[$stackPtr]['line']) {
                 $found = 'newline';
@@ -690,5 +693,8 @@ class UseDeclarationSniff implements Sniff
                 $phpcsFile->fixer->replaceToken($next, ';'.$phpcsFile->eolChar.$padding.'use ');
             }
         }
+
     }//end processUseStatement()
+
+
 }//end class

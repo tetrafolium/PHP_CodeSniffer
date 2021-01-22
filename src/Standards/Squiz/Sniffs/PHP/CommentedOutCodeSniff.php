@@ -43,6 +43,7 @@ class CommentedOutCodeSniff implements Sniff
     public function register()
     {
         return [T_COMMENT];
+
     }//end register()
 
 
@@ -246,7 +247,7 @@ class CommentedOutCodeSniff implements Sniff
             if (isset($emptyTokens[$stringTokens[$i]['code']]) === true) {
                 // Looks like comment.
                 $numComment++;
-            } elseif (isset(Tokens::$comparisonTokens[$stringTokens[$i]['code']]) === true
+            } else if (isset(Tokens::$comparisonTokens[$stringTokens[$i]['code']]) === true
                 || isset(Tokens::$arithmeticTokens[$stringTokens[$i]['code']]) === true
                 || $stringTokens[$i]['code'] === T_GOTO_LABEL
             ) {
@@ -280,5 +281,8 @@ class CommentedOutCodeSniff implements Sniff
         }
 
         return ($lastCommentBlockToken + 1);
+
     }//end process()
+
+
 }//end class

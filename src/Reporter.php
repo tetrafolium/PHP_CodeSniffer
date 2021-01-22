@@ -114,10 +114,10 @@ class Reporter
                 }
 
                 $reportClassName = Autoload::loadFile($filename);
-            } elseif (class_exists('PHP_CodeSniffer\Reports\\'.ucfirst($type)) === true) {
+            } else if (class_exists('PHP_CodeSniffer\Reports\\'.ucfirst($type)) === true) {
                 // PHPCS native report.
                 $reportClassName = 'PHP_CodeSniffer\Reports\\'.ucfirst($type);
-            } elseif (class_exists($type) === true) {
+            } else if (class_exists($type) === true) {
                 // FQN of a custom report.
                 $reportClassName = $type;
             } else {
@@ -162,6 +162,7 @@ class Reporter
                 file_put_contents($output, '');
             }
         }//end foreach
+
     }//end __construct()
 
 
@@ -185,6 +186,7 @@ class Reporter
         }
 
         return $toScreen;
+
     }//end printReports()
 
 
@@ -250,6 +252,7 @@ class Reporter
                 unset($this->tmpFiles[$report]);
             }
         }
+
     }//end printReport()
 
 
@@ -317,6 +320,7 @@ class Reporter
                 $this->totalFixable += $reportData['fixable'];
             }
         }
+
     }//end cacheFileReport()
 
 
@@ -412,5 +416,8 @@ class Reporter
         ksort($errors);
         $report['messages'] = $errors;
         return $report;
+
     }//end prepareFileReport()
+
+
 }//end class

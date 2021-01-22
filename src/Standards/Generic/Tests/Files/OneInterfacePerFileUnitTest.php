@@ -29,6 +29,7 @@ class OneInterfacePerFileUnitTest extends AbstractSniffUnitTest
             6  => 1,
             10 => 1,
         ];
+
     }//end getErrorList()
 
 
@@ -43,5 +44,8 @@ class OneInterfacePerFileUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

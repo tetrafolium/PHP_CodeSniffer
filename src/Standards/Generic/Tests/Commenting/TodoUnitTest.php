@@ -28,6 +28,7 @@ class TodoUnitTest extends AbstractSniffUnitTest
     public function getErrorList($testFile='TodoUnitTest.inc')
     {
         return [];
+
     }//end getErrorList()
 
 
@@ -53,5 +54,8 @@ class TodoUnitTest extends AbstractSniffUnitTest
             18 => 1,
             21 => 1,
         ];
+
     }//end getWarningList()
+
+
 }//end class

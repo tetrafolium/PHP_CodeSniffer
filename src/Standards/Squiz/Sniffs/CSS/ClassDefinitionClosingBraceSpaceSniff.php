@@ -32,6 +32,7 @@ class ClassDefinitionClosingBraceSpaceSniff implements Sniff
     public function register()
     {
         return [T_CLOSE_CURLY_BRACKET];
+
     }//end register()
 
 
@@ -80,7 +81,7 @@ class ClassDefinitionClosingBraceSpaceSniff implements Sniff
                     if ($found < 0) {
                         // Next statement on same line as the closing brace.
                         $phpcsFile->fixer->addContentBefore($next, $phpcsFile->eolChar.$phpcsFile->eolChar);
-                    } elseif ($found === 0) {
+                    } else if ($found === 0) {
                         // Next statement on next line, no blank line.
                         $phpcsFile->fixer->addContentBefore($firstOnLine, $phpcsFile->eolChar);
                     } else {
@@ -126,5 +127,8 @@ class ClassDefinitionClosingBraceSpaceSniff implements Sniff
                 $phpcsFile->fixer->addNewlineBefore($stackPtr);
             }
         }
+
     }//end process()
+
+
 }//end class

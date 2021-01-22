@@ -34,6 +34,7 @@ class UpperCaseConstantNameUnitTest extends AbstractSniffUnitTest
             28 => 1,
             30 => 1,
         ];
+
     }//end getErrorList()
 
 
@@ -48,5 +49,8 @@ class UpperCaseConstantNameUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

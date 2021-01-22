@@ -40,6 +40,7 @@ class Info implements Report
         }
 
         return true;
+
     }//end generateFileReport()
 
 
@@ -164,5 +165,8 @@ class Info implements Report
         if ($toScreen === true && $interactive === false) {
             Timing::printRunTime();
         }
+
     }//end generate()
+
+
 }//end class

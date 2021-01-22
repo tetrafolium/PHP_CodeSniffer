@@ -38,6 +38,7 @@ class ClassDeclarationSniff extends PSR2ClassDeclarationSniff
             $error = 'Only one interface or class is allowed in a file';
             $phpcsFile->addError($error, $nextClass, 'MultipleClasses');
         }
+
     }//end process()
 
 
@@ -81,6 +82,7 @@ class ClassDeclarationSniff extends PSR2ClassDeclarationSniff
                 }
             }//end if
         }//end if
+
     }//end processOpen()
 
 
@@ -142,7 +144,7 @@ class ClassDeclarationSniff extends PSR2ClassDeclarationSniff
                     $phpcsFile->fixer->addNewlineBefore($closeBrace);
                 }
             }
-        } elseif ($tokens[($closeBrace - 1)]['code'] === T_WHITESPACE) {
+        } else if ($tokens[($closeBrace - 1)]['code'] === T_WHITESPACE) {
             $prevContent = $tokens[($closeBrace - 1)]['content'];
             if ($prevContent !== $phpcsFile->eolChar) {
                 $blankSpace = substr($prevContent, strpos($prevContent, $phpcsFile->eolChar));
@@ -186,7 +188,7 @@ class ClassDeclarationSniff extends PSR2ClassDeclarationSniff
                     for ($i = ($closeBrace + 1); $i < $nextContent; $i++) {
                         if ($tokens[$i]['line'] <= ($tokens[$closeBrace]['line'] + 1)) {
                             continue;
-                        } elseif ($tokens[$i]['line'] === $tokens[$nextContent]['line']) {
+                        } else if ($tokens[$i]['line'] === $tokens[$nextContent]['line']) {
                             break;
                         }
 
@@ -197,5 +199,8 @@ class ClassDeclarationSniff extends PSR2ClassDeclarationSniff
                 }
             }
         }//end if
+
     }//end processClose()
+
+
 }//end class

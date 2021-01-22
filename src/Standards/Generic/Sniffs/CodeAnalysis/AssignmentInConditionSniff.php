@@ -61,6 +61,7 @@ class AssignmentInConditionSniff implements Sniff
             T_CASE,
             T_WHILE,
         ];
+
     }//end register()
 
 
@@ -98,7 +99,7 @@ class AssignmentInConditionSniff implements Sniff
 
             $closer = $semicolon;
             unset($semicolon);
-        } elseif ($token['code'] === T_CASE) {
+        } else if ($token['code'] === T_CASE) {
             if (isset($token['scope_opener']) === false) {
                 return;
             }
@@ -162,5 +163,8 @@ class AssignmentInConditionSniff implements Sniff
 
             $startPos = $hasAssignment;
         } while ($startPos < $closer);
+
     }//end process()
+
+
 }//end class

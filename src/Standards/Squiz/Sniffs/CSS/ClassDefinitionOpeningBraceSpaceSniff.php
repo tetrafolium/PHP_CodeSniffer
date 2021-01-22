@@ -32,6 +32,7 @@ class ClassDefinitionOpeningBraceSpaceSniff implements Sniff
     public function register()
     {
         return [T_OPEN_CURLY_BRACKET];
+
     }//end register()
 
 
@@ -53,7 +54,7 @@ class ClassDefinitionOpeningBraceSpaceSniff implements Sniff
             $length = 0;
             if ($tokens[$stackPtr]['line'] !== $tokens[$prevNonWhitespace]['line']) {
                 $length = 'newline';
-            } elseif ($tokens[($stackPtr - 1)]['code'] === T_WHITESPACE) {
+            } else if ($tokens[($stackPtr - 1)]['code'] === T_WHITESPACE) {
                 if (strpos($tokens[($stackPtr - 1)]['content'], "\t") !== false) {
                     $length = 'tab';
                 } else {
@@ -67,7 +68,7 @@ class ClassDefinitionOpeningBraceSpaceSniff implements Sniff
                 if ($fix === true) {
                     $phpcsFile->fixer->addContentBefore($stackPtr, ' ');
                 }
-            } elseif ($length !== 1) {
+            } else if ($length !== 1) {
                 $error = 'Expected 1 space before opening brace of class definition; %s found';
                 $data  = [$length];
                 $fix   = $phpcsFile->addFixableError($error, $stackPtr, 'Before', $data);
@@ -148,7 +149,7 @@ class ClassDefinitionOpeningBraceSpaceSniff implements Sniff
                     if ($found < 0) {
                         // First statement on same line as the opening brace.
                         $phpcsFile->fixer->addContentBefore($nextNonWhiteSpace, $phpcsFile->eolChar.$phpcsFile->eolChar);
-                    } elseif ($found === 0) {
+                    } else if ($found === 0) {
                         // Next statement on next line, no blank line.
                         $phpcsFile->fixer->addNewlineBefore($firstOnNextLine);
                     } else {
@@ -168,5 +169,8 @@ class ClassDefinitionOpeningBraceSpaceSniff implements Sniff
                 }//end if
             }//end if
         }//end if
+
     }//end process()
+
+
 }//end class

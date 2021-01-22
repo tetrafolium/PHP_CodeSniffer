@@ -34,6 +34,7 @@ class DisallowShortOpenTagUnitTest extends AbstractSniffUnitTest
         }
 
         return $testFiles;
+
     }//end getTestFiles()
 
 
@@ -67,6 +68,7 @@ class DisallowShortOpenTagUnitTest extends AbstractSniffUnitTest
         default:
             return [];
         }//end switch
+
     }//end getErrorList()
 
 
@@ -94,5 +96,8 @@ class DisallowShortOpenTagUnitTest extends AbstractSniffUnitTest
         default:
             return [];
         }//end switch
+
     }//end getWarningList()
+
+
 }//end class

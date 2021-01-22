@@ -38,6 +38,7 @@ class UnnecessaryFinalModifierSniff implements Sniff
     public function register()
     {
         return [T_CLASS];
+
     }//end register()
 
 
@@ -77,5 +78,8 @@ class UnnecessaryFinalModifierSniff implements Sniff
                 $phpcsFile->addWarning($error, $next, 'Found');
             }
         }
+
     }//end process()
+
+
 }//end class

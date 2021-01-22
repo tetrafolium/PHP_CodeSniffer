@@ -35,6 +35,7 @@ class DisallowShortOpenTagSniff implements Sniff
         }
 
         return $targets;
+
     }//end register()
 
 
@@ -109,7 +110,7 @@ class DisallowShortOpenTagSniff implements Sniff
                 if ($closerFound !== false) {
                     if ($i !== $stackPtr) {
                         break;
-                    } elseif ($closerFound > $openerFound) {
+                    } else if ($closerFound > $openerFound) {
                         break;
                     } else {
                         $closerFound = false;
@@ -130,6 +131,7 @@ class DisallowShortOpenTagSniff implements Sniff
                 }
             }
         }//end if
+
     }//end process()
 
 
@@ -159,5 +161,8 @@ class DisallowShortOpenTagSniff implements Sniff
         }
 
         return $snippet;
+
     }//end getSnippet()
+
+
 }//end class

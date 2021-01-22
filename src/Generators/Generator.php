@@ -57,6 +57,7 @@ abstract class Generator
                 $this->docFiles[] = $docFile;
             }
         }
+
     }//end __construct()
 
 
@@ -72,6 +73,7 @@ abstract class Generator
     protected function getTitle(\DOMNode $doc)
     {
         return $doc->getAttribute('title');
+
     }//end getTitle()
 
 
@@ -93,6 +95,7 @@ abstract class Generator
             $documentation = $doc->getElementsByTagName('documentation')->item(0);
             $this->processSniff($documentation);
         }
+
     }//end generate()
 
 
@@ -109,4 +112,6 @@ abstract class Generator
      * @see    generate()
      */
     abstract protected function processSniff(\DOMNode $doc);
+
+
 }//end class

@@ -33,6 +33,7 @@ class EmptyCatchCommentUnitTest extends AbstractSniffUnitTest
             51 => 1,
             52 => 1,
         ];
+
     }//end getErrorList()
 
 
@@ -47,5 +48,8 @@ class EmptyCatchCommentUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

@@ -34,6 +34,7 @@ class RequireStrictTypesUnitTest extends AbstractSniffUnitTest
         }
 
         return [1 => 1];
+
     }//end getErrorList()
 
 
@@ -48,5 +49,8 @@ class RequireStrictTypesUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

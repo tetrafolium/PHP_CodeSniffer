@@ -26,6 +26,7 @@ class UselessOverridingMethodUnitTest extends AbstractSniffUnitTest
     public function getErrorList()
     {
         return [];
+
     }//end getErrorList()
 
 
@@ -43,5 +44,8 @@ class UselessOverridingMethodUnitTest extends AbstractSniffUnitTest
             4  => 1,
             16 => 1,
         ];
+
     }//end getWarningList()
+
+
 }//end class

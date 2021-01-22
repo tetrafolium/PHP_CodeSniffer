@@ -43,6 +43,7 @@ class ClosingTagUnitTest extends AbstractSniffUnitTest
         default:
             return [];
         }
+
     }//end getErrorList()
 
 
@@ -57,5 +58,8 @@ class ClosingTagUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [];
+
     }//end getWarningList()
+
+
 }//end class

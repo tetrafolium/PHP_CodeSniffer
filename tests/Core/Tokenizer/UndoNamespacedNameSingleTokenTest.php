@@ -48,6 +48,7 @@ class UndoNamespacedNameSingleTokenTest extends AbstractMethodUnitTest
 
             ++$identifier;
         }
+
     }//end testIdentifierTokenization()
 
 
@@ -1287,5 +1288,8 @@ class UndoNamespacedNameSingleTokenTest extends AbstractMethodUnitTest
                 ],
             ],
         ];
+
     }//end dataIdentifierTokenization()
+
+
 }//end class

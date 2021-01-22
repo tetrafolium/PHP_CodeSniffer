@@ -46,6 +46,7 @@ class ShorthandSizeSniff implements Sniff
     public function register()
     {
         return [T_STYLE];
+
     }//end register()
 
 
@@ -140,7 +141,7 @@ class ShorthandSizeSniff implements Sniff
                 // Both values are different, so it is already shorthand.
                 return;
             }
-        } elseif ($values[0][0] !== $values[2][0] || $values[1][0] !== $values[3][0]) {
+        } else if ($values[0][0] !== $values[2][0] || $values[1][0] !== $values[3][0]) {
             // Can't shorthand this.
             return;
         }
@@ -173,5 +174,8 @@ class ShorthandSizeSniff implements Sniff
 
             $phpcsFile->fixer->endChangeset();
         }
+
     }//end process()
+
+
 }//end class

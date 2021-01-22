@@ -24,6 +24,7 @@ class DebugCodeSniff implements Sniff
     public function register()
     {
         return [T_DOUBLE_COLON];
+
     }//end register()
 
 
@@ -47,5 +48,8 @@ class DebugCodeSniff implements Sniff
             $data   = [$tokens[$method]['content']];
             $phpcsFile->addError($error, $stackPtr, 'Found', $data);
         }
+
     }//end process()
+
+
 }//end class

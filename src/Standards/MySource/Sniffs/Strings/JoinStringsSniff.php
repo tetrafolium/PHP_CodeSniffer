@@ -32,6 +32,7 @@ class JoinStringsSniff implements Sniff
     public function register()
     {
         return [T_STRING];
+
     }//end register()
 
 
@@ -68,5 +69,8 @@ class JoinStringsSniff implements Sniff
                 $phpcsFile->addError($error, $stackPtr, 'ArrayNotAllowed');
             }
         }
+
     }//end process()
+
+
 }//end class
