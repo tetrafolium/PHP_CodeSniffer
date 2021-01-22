@@ -90,7 +90,7 @@ class RuleInclusionAbsoluteLinuxTest extends TestCase
 
 
     /**
-     * Test that sniffs registed with a Linux absolute path are correctly recognized and that
+     * Test that sniffs registered with a Linux absolute path are correctly recognized and that
      * properties are correctly set for them.
      *
      * @return void

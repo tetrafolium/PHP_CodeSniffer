@@ -731,7 +731,7 @@ class GetMethodPropertiesTest extends AbstractMethodUnitTest
     /**
      * Test helper.
      *
-     * @param string $commentString The comment which preceeds the test.
+     * @param string $commentString The comment which precedes the test.
      * @param array  $expected      The expected function output.
      *
      * @return void

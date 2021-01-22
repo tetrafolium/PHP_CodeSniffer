@@ -91,7 +91,7 @@ class RuleInclusionAbsoluteWindowsTest extends TestCase
 
 
     /**
-     * Test that sniffs registed with a Windows absolute path are correctly recognized and that
+     * Test that sniffs registered with a Windows absolute path are correctly recognized and that
      * properties are correctly set for them.
      *
      * @return void

@@ -115,18 +115,18 @@ class JumbledIncrementerSniff implements Sniff
         $start = ++$token['parenthesis_opener'];
         $end   = --$token['parenthesis_closer'];
 
-        $incrementers = [];
+        $increments = [];
         $semicolons   = 0;
         for ($next = $start; $next <= $end; ++$next) {
             $code = $tokens[$next]['code'];
             if ($code === T_SEMICOLON) {
                 ++$semicolons;
             } else if ($semicolons === 2 && $code === T_VARIABLE) {
-                $incrementers[] = $tokens[$next]['content'];
+                $increments[] = $tokens[$next]['content'];
             }
         }
 
-        return $incrementers;
+        return $increments;
 
     }//end findIncrementers()
 
